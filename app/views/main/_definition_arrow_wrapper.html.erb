@@ -1,0 +1,128 @@
+
+<div id = "def_box"  class="first_middle" >
+  	<div class = "second_middle">
+    	<div class = "left_definition_arrow" >
+			<div class = "float_left">
+				
+				<% if @definition != @all_definitions[0]  %>
+						<%= link_to_remote image_tag("left_def_arrow.jpg"), 
+							:update => "phrase_#{@phrase.id}", 
+							:loading =>"Element.show('definition_change_indicator#{@phrase.id}')",
+							:loaded => "Element.hide('definition_change_indicator#{@phrase.id}')",
+							:url => {
+									:action => 'definition_browse', 
+									:phrase => @phrase.id, 
+									:new_index => (@definition_index - 1)
+									} -%>
+				<% else %>
+						<%= image_tag("left_gray_def_arrow.jpg") %> 
+				<% end %>
+			</div>
+		</div><!-- left_definition_arrow -->
+	</div><!-- second_middle-->
+
+
+	<div class = "inside_def_box">
+		<% @element = @definition %>
+			<div class = "main_ranking" %> 
+					<%= render :partial => 'phrases/rank_one' if @element != nil %> 		
+			</div><!-- main_ranking -->
+
+			<% @flag_language = @phrase.language %>
+			<% @element = @definition %>
+
+			<% @element = @phrase %>
+			<b class = "main_phrase">
+				<span class = "" 
+					onmouseover= <%= "DisplayDIV('main_rank_#{@element.id}')" %> 
+							onmouseout= <%= "HideDIV('main_rank_#{@element.id}');" %>
+					 		style="cursor:pointer">
+					
+					<%= render :partial => 'flags' %>
+			
+					<%= link_to "#{@element.word}", :action => 'show', 
+					:word => @element.word, :language => @element.language 
+					-%>
+						<span class = "thumbs_up_entry" id = <%= "main_rank_#{@element.id}"%> style="display:none;">
+							<%= render :partial => 'rank_one' %>
+
+
+						</span><!-- invisible span -->
+				</span><!-- big span -->
+						
+						
+						
+			</b>
+
+			<% if @definition != nil %>
+					<p class = "arrow_wraper_def">
+						<b><%= t 'definitions.def' %> <%= @definition_index + 1 %>)</b>
+						<div class = "def_tab">
+							<%= @definition.meaning %>
+						</div>
+					</p>
+					<div class = "space-line"></div>
+					<p class = "top_slang"><%= t 'synonyms'%>:</p>
+					<p class = "syn_ant_tab">			
+						<% @children = @definition.children %>				    
+						<% for @element in @children %>
+								<% if @element.variety == "synonym"%>
+									<%= render :partial => 'main/children' %>
+								<% end %> <!-- if child.variety -->
+						<% end %>    <!-- for child in @definition -->
+
+					</p>  <!-- top slang -->
+
+					<p class = "top_slang"><%= t 'antonyms'%>:</p>
+					<p class = "syn_ant_tab">			
+							<% for @element in @children %>
+									<% if @element.variety == "antonym"%>
+										<%= render :partial => 'main/children' %>
+									<% end %> <!-- if child.variety -->
+							<% end %>    <!-- for child in @definition -->		
+					</p>
+
+					<p id = "defined_by_user"> 
+						<i>
+							<%= t 'added_by' %>:
+							<% if @definition.user_id != nil %>
+									<% @user = User.find(@definition.user_id)%>
+									<%= link_to "#{@user.login}", :action=> 'user_search' , 
+									:controller => 'phrases', :id => @user.id  %>
+							<% else %>
+									Anon.
+							<% end %><!-- if @definition.user_id != nil-->
+						</i>
+					</p>			
+			<% else %>
+			<div class = "center">
+			<p><b><%= t 'every_time' %> <%= t 'phrase' %> <%= t 'gets_a' %>
+					<%= t "definition" %><%= t "an_angel" %><%= t 'dictionary' %><%= t "out" %>
+			</b></p>
+			</div>
+	<% end %><!-- if definition != nil   -->
+	
+	
+	
+	
+	</div>
+	<div class = "second_middle">
+    <div class = "right_definition_arrow" >
+
+		<div class = "float_right">
+				<% if @definition != @all_definitions[@all_definitions.size-1] && @all_definitions.size != 1 %>
+						<%= link_to_remote(image_tag("right_def_arrow.jpg"), 
+									:update => "phrase_#{@phrase.id}", 
+									:loading => "Element.show('definition_change_indicator#{@phrase.id}')",		
+									:loaded => "Element.hide('definition_change_indicator#{@phrase.id}')",
+									:url => {   
+									:action => 'definition_browse', 
+									:phrase => @phrase.id, 
+									:new_index => (@definition_index + 1)}) -%>
+				<% else %>
+						<%= image_tag("right_gray_def_arrow.jpg") %> 
+				<% end %>
+		</div><!-- float_right -->
+	  </div><!-- middle_box two -->
+	</div><!-- middle_box one -->
+</div><!-- def_box class= "greenBorder" -->

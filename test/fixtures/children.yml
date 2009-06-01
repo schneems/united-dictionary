@@ -1,0 +1,33 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+duplicate_child:
+     word: "alreadyexists"
+     language: "English"
+     variety: "synonym"
+     definition: duplicate_definition
+     rank: 1     
+     
+breast_synonym:
+  word: "boobs"
+  language: "English"
+  variety: "synonym"
+  definition: breast_definition
+  rank: 1   
+  
+breast_antonym:
+    word: "sausage"
+    language: "English"
+    variety: "antonym"
+    definition: breast_definition
+    rank: 1
+    
+breast_synonym_same_as_phrase:
+    word: "breasts"
+    language: "English"
+    variety: "synonym"
+    definition: breast_definition
+    rank: 1    
+     
+#
+# two:
+#   column: value

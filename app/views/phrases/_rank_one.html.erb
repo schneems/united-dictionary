@@ -1,0 +1,76 @@
+<% @element.rank = 1 if @element.rank == nil %>
+
+<b>
+<span class="rank">
+<span id= "<%= "#{@element.class}+#{@element.id}" %>">
+		<% if @state == "one" || @state == nil %>
+				<% value_up = 1 %>
+				<% value_down = -1 %>
+				<% rank_up = "two" %>
+				<% rank_down = "three" %>
+				<% image_up = "/images/up_gray.gif" %>
+				<% image_down = "/images/down_gray.gif" %>
+		<% elsif @state == "two" %>
+				<% value_up = -1 %>
+				<% value_down = -1 %>
+				<% rank_up = "one" %>
+				<% rank_down = "one" %>
+				<% image_up = "/images/up_green.gif" %>
+				<% image_down = "/images/down_gray.gif" %>
+		<% elsif @state == "three" %>
+				<% value_up = 1 %>
+				<% value_down = 1 %>
+				<% rank_up = "one" %>
+				<% rank_down = "one" %>
+				<% image_up = "/images/up_gray.gif" %>
+				<% image_down = "/images/down_red.gif" %>
+		<% end %>
+
+
+					<%=h @element.rank -%>
+						<%= link_to_remote( image_tag("#{image_up}"), 
+								:update => "#{@element.class}+#{@element.id}",
+								:loading => "Element.show('indicator_#{@element.class}+#{@element.id}')" ,
+								:loaded => "Element.hide('indicator_#{@element.class}+#{@element.id}')",
+								:url => {
+									 :action => 'rank_it',
+									 :rank_to => rank_up,
+									 :element => @element.id,
+									 :type => @element.class, 
+							         :value => value_up
+							}) -%>
+
+						<%= link_to_remote( image_tag("#{image_down}"), 
+								:update => "#{@element.class}+#{@element.id}",
+								:loading => "Element.show('indicator_#{@element.class}+#{@element.id}')" ,
+								:loaded => "Element.hide('indicator_#{@element.class}+#{@element.id}')",
+								:url => {
+									:action => 'rank_it',
+									:rank_to => rank_down,
+									:element => @element.id,
+									:type => @element.class, 
+									:value => value_down 
+							}) -%>
+					<% @time = @time||Time %>
+					<% if (@element.rank < 0 || (@time.now - @element.created_at) < 86400 )  && @show_delete != false %>	
+
+						<% if @element.class.to_s.downcase != "child" %>
+							<% @type = @element.class %>
+						<% else %>			
+							<% @type = @element.variety %>
+						<% end %>
+
+					<%= link_to_remote_redbox(image_tag("/images/delete.gif"), link_to_remote_options = 
+								{:url => {:action => 'show_delete_form', 
+								:element => @element.id, 
+								:type => @element.class}}) %>		 
+					<% end %><!-- if @definition.rank  0 --> 
+
+
+					<span class = "indicator">
+					<%= image_tag("loading_small.gif",
+								   :id     =>  "indicator_#{@element.class}+#{@element.id}",
+								   :style  =>  'display:none;') %>
+					</span>
+				</span>
+		</b>

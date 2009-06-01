@@ -1,0 +1,56 @@
+<center>
+<div id="add_child">
+	<% ## @type = @type.to_s %><br />
+	<% constant = "model.add." + @type %>
+	<b><p class = "legend"> <%= "Add  #{@type.capitalize}" %> <% "#{ t 'model.add.type'}" %></p></b>
+	
+	<% @child = Child.new||@child %>
+			<% form_for @child, :url => { :action => "add_child", 
+							:phrase => @phrase, :definition => @definition.id,
+							:variety => @type } do  |@f| -%> 
+			
+				</p>
+				
+				<div class = "add_child_form" id = "simple_form" >
+					<% @over_ride = @child_language %>
+					<% @default_language = params[:language]||@over_ride||"English" %>
+					<% @default_language = "English" if @default_language == "All" %>
+					<table>
+						<tr><td><label class="required"><%= t 'forms.language' %></label></td><td>
+							<%= select_tag(:language, options_for_select([["#{I18n.t 'languages.chinese'.to_sym}", "Chinese"],
+							                    ["#{I18n.t 'languages.dutch'.to_sym}", "Dutch"],
+							                    ["#{I18n.t 'languages.english'.to_sym}","English"],
+							                    ["#{I18n.t 'languages.french'.to_sym}", "French"],
+							                    ["#{I18n.t 'languages.german'.to_sym}", "German"],
+							                    ["#{I18n.t 'languages.greek'.to_sym}", "Greek"],
+							                    ["#{I18n.t 'languages.italian'.to_sym}", "Italian"],
+							                    ["#{I18n.t 'languages.japanese'.to_sym}", "Japanese"],
+							                    ["#{I18n.t 'languages.korean'.to_sym}", "Korean"],
+							                    ["#{I18n.t 'languages.portuguese'.to_sym}", "Portuguese"],
+							                    ["#{I18n.t 'languages.russian'.to_sym}", "Russian"],
+							                    ["#{I18n.t 'languages.spanish'.to_sym}", "Spanish"]], @default_language),
+									:onchange=> remote_function(:with => "'language='+this.value",
+									:update => 'chinese_child_form_#{@definition.id}',
+									:loading => "Element.show('language_indicator')" ,
+									:loaded => "Element.hide('language_indicator')",
+									:url => {:action => :update_create_for_chinese_add_child} )) %>
+						</td>
+					</tr>
+					</table>
+					
+					<div id = "chinese_child_form_#{@definition.id}">
+						<table >
+							<%= render :partial => 'forms/add_child_form_partial', :locals => { :f => @f } %>
+						</table>
+					</div>
+					
+				</div><!-- add_child_form -->	
+					<%= show_simple_captcha if logged_in? == false %>
+						<%= @f.submit "Add #{@type.capitalize}" %>
+		</div><!--add child -->	
+<% end %>
+
+
+
+
+</center>

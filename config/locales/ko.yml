@@ -1,0 +1,207 @@
+ko:
+  phrase:                         " 기본 항목" 
+  phrases:                        " 기본 항목" 
+  definition:                     "  정의"
+  definitions:                     "정의" 
+  synonym:                         "동의어" 
+  synonyms:                        "동의어" 
+  antonym:                         "Antonym"
+  antonyms:                        "Antonyms" 
+  mugshot:                         "사진" 
+  mugshots:                        "사진" 
+  comment:                         "코멘트" 
+  comments:                        "코멘트" 
+  search:                       
+    submit:                        "제출" 
+    all:                           "모든 것" 
+    simplified:                    "중국어 간체" 
+    pinyin:                        "병음" 
+    traditional:                   "전통" 
+  header:                       
+    navigation:                 
+      add:                         "추가" 
+      home:                        "홈" 
+      game:                       " 더 게임" 
+      orphans:                    " 얘들아" 
+      recent:                       "최근에"
+      random:                     " 랜덤" 
+      top_users:                   "탑 사용자들" 
+      download:                    "다운로드" 
+      a_z:                        " 한 - Z부터" 
+    login:                      
+      no_username:                 "여기를 클릭하여 사용자 설정" 
+      logout:                      "로그아웃" 
+      login:                       "로그" 
+      signup:                      "가입하기" 
+  footer:                       
+    terms:                        "를 사용하여  약관" 
+    privacy:                      " 개인 정보" 
+    contact:                      " 연락처" 
+    about:                         " 에 대하여"
+  welcome:                      
+    main:                         " 사용자가 - 사전 제출" 
+    message:                     " 만약 당신이 그것을 좋아하지 않아 ... 계급 및 삭제  만약 당신이 그것을 볼 수 없어 ... 추가"
+    top_ranked:                   " 상위 순위 정의!! "
+  forms:                        
+    entry:                        " 입력 :" 
+    synonym:                      " 동의어 : "
+    antonym:                      "Antonym : "
+    update:                       " 업데이트 "
+    not_required:                  " 필수"
+    required:                     "  필수"
+    close:                        " 닫기 X 는 # # X는 그냥 거기에있는 사용자를 클릭 뭔가 보답을하고있다"
+    language:                     " 언어 :" 
+    simplified:                   " 중국어 간체 : 중국어 간체" # # 마찬가지로
+    traditional:                  " 전통 :" # #   
+    trad:                         " 트라드" 
+    pinyin:                       " 병음" 
+  user:                         
+    added_by:                     " 으로 올린날짜"
+  comments:                     
+    add_comment:                  " 코멘트 추가"
+    submit:                       " 제출 귀하의 코멘트" 
+    comments_for:                " 이 항목에 대한  코멘트" #  코멘트 
+    no_comments:                   "아니 댓글 그러나 올린날짜"
+    name:                         " 이름 :" #  당신의 이름을 입력하십시오 : 
+    comments:                      "댓글 :" 
+    add_new:                       " 새 댓글 올리기"
+  delete:                       
+    delete_this:                   "삭제" 
+    start:                        " 카운트 다운을 시작?" 
+    note_one:                     " 참고 :이 옵션은 해당" 
+    note_two:                     " 부정이나 계급이 24 시간 미만의 나이와 함께" 
+    marked:                     
+      first:                       "이" # # 대문자
+      second:                     " 이미 삭제 표시되었습니다. 만약" 
+      third:                         "s 순위 제외어에서 입니다"
+      fourth:                      "그것은 Slangasaur하고 먹이 될 멸망할 것이다! 저장하려는 경우에는이" 
+      fifth:                      " 엄지손가락을 클릭하여 다음의 순위를 증가! "
+    explain:                    
+      first:                        " 제출 버튼을 클릭하면, (우) 무서운이 침묵의 deathclock가 시작됩니다"
+      second:                     " 이 시계가 30 분 이내에 제로 파업이 "
+      third:                         "s 순위 그것은 부정적이다 Slangasaur 먹이되며 멸망할 것이다! 긍정적인면 용서를 받아야한다, 당신이 괜찮 엔트리를 판단 하겠는가??" 
+  definitions:                  
+    def:                           "Def." 
+    add:                          " 추가 정의"
+    defined:                      " 로 정의 :" 
+    example:                      " 예" 
+    pos:                         " 연설의  부" 
+    description:                 " 자세한 설명을 위해  (클릭)" 
+    noun:                          "명사" 
+    pronoun:                      " 대명사" 
+    verb:                          "동사" 
+    adverb:                        "Adverb" 
+    adjective:                    " 형용사" 
+    preposition:                  " 없나요" 
+    conjunction:                   "함께" 
+    interjection:                 " 감탄사" 
+    phrase:                       " 구문" 
+    no_clue:                      " 오리 무중" 
+    remove:                       " 제거 정의"
+    warning:                      " 모든 데이터는 정의 양식에서, 진행을 잃게 될 것인가?" 
+  model:                        
+    add:                        
+      add_new:                    " 새로 추가 : "
+      comment:                    " 추가" 
+      definition:                  "추가 새 의 정의"
+      phrase:                      " 새로운 주요 항목 추가"
+      antonym:                    " Antonym" # 모자 추가
+      synonym:                    " 동의어 "# 모자 추가
+  languages:                    
+    chinese:                        "중국어"
+    dutch:                         "네덜란드" 
+    english:                       "영어" 
+    french:                         "프렌치"
+    german:                        "독일" 
+    greek:                          "그리스어"
+    italian:                        "이탈리아"
+    japanese:                       "일본어"
+    korean:                         "한국"
+    portuguese:                    "포르투갈어" 
+    russian:                       "러시아" 
+    spanish:                      " 야 Spanish"
+  guidelines:                   
+    first:                       " 많은 청중 (인사이드 농담)   쓰기 위해"
+    second:                      " 공공 피규어를 제외하고  이름 "
+    third:                        " 정의를 추가하여 항목에서 가장 잡아두쇼, 동의어, antonyms, 그리고 사진을 "
+  meta:                         
+    title:                        "Slangasaurus - 속어 사전, 유의어 도시 쓴"
+    description:                  " 속어 동의어, Antonyms, 정의, 번역, 그리고 이미지에 대한 "
+    altdescription:               " 속어 Slangasaurusaurus 사용자 유의어 사전에 제출했다. 검색하고, 정의를 추가할 속어, 동의어, antonyms, 번역, 그리고 사진, 중국어, 네덜란드어, 영어, 프랑스어, 독일어, 그리스어, 이탈리아어, 한국어, 포르투갈어, 러시아어, 일본어 스페인어.  "
+    keywords:                     " 속어, 정의, 동의어, antonym, 번역, 도시 사전, 동의어 "
+    altkeywords:                  " 속어, 도시 사전, 사전, 속어 유의어, 속어 slangasaurus, 번역, 속어, 속어 속어, 사용자, 사용자가 제출한 정의"
+  products:                     
+    title:                        " 제품 "
+    released:                     "  출시"
+  flash:                        
+    login:                        " 성공적으로 기록된다. "
+    new_success:                  " 성공적으로 새 추가"
+    update_success:               " 성공적으로 업데이트"
+    error:                        " 오류하면서 절약"
+    correct:                      " 정답 "
+    incorrect:                    "  잘못된"
+    three_zero_one:                " 이동이 URL을했다"
+    ticking:                     "  30 분 ... 시간이 촉박합니다! "
+    search_one:                  "  아무도 추가했다"
+    search_two:                   "그것을 추가하여  도움말을 모두 밖으로! "
+  error:                        
+    captcha:                      "상자에서  편지 그 이미지에서 일치하지 않습니다"
+    saving:                       " 오류하면서 절약"
+  download:                     
+    explain:                       "! 다운로드 귀하의 언어 자라도록하고 빌드가 도운 게 이러한 사전을 사용합니다. <br /> 귀하의 단어를 추가하여 다른 사람 도움을 잊지 마세요! "
+  contact_me:                     " 제발 - 메일 어떤 의견과 위의 문제 전자 보낼 수있습니다. 난 후, 여러분의 도움을 주셔서 감사합니다 양식을 쓸거야!! "
+  a_z:                          
+    begin_with:                   " 모든 항목은 편지와 함께 시작"
+    no_words:                     " 단어 가 추가되었습니다"
+    that_begin_with:                "시작"
+  about:                        
+    welcome:                      " 환영합니다, 이것은 멀티 - 언어를 구사하는 사용자 유의어 제출, 당신을 보러와 단어를 추가, 속어, 그리고 여러 언어로 된 문구를줍니다. "
+    why:                            "<h3> But why...? </h3><p>Sure there are a ton of dictionaries online, but how many of them have the freshest definitions that provide you with the words and phrases people from all over the world are 실제로 사용하고 있지 않습니까? 다른 사용자 - 제출한 사전, 난 wiktionary 좋습니다,하지만 난 그들의 제한도 위의 기능을 넘어 사용자 - 인터페이스를 가지 위해 노력하고있습니다. 생기면 아무도 웹사이트 또는 조직의 언어 리소스에 목을 잡아해야한다고 생각하기 때문에 사용 모든 것은 거기서 거기이다.이 사람들을 위해 자신의 역사를 쓸 수있는 도구, 그리고 서로 연결할 수있습니다. </ p 하이라이트>  "
+    how:                           "<h3>하지만 어떻게 ...? </ h3> <p> 본 사이트의 레일에있는 웹 프로그래밍 프레임 워크가 루비를 사용하여 작성되었다. 그것은 상자에서 서버로 전송되고하는 것들을 입력할 수있는에 저장 데이터베이스. 아시고  꽤 멋지지. </ p 하이라이트>  "
+    who:                           "<h3>하지만 누가 ...? </ h3> <p> 리차드와 1 년 미만 Schneeman 조금, 이것도 잃고 포함하는 응용 프로그램을 최대한 활용할 수 있도록 처음부터이 정도로 배울 수 있었던 배경이 전혀 웹 프로그래밍 그의 모든 코드를 자신의 컴퓨터가 도난당한 두 번째. 그는 기계 엔지니어는 조지아 공대를 졸업한 2008년 5월입니다. 그는 웨이크 사랑, 스노우 보드, 동굴 탐험, 등산, 미친 물건을하고있다. 그는 현재 내쇼날 인스 트루먼 트를위한 작품 (그들이 ) 데이터 수집 소프트웨어와 하드웨어,하지 계산기하게, 오스틴 Tx는에 살고있다. </ p 하이라이트>  "
+  orphans:                      
+    without_synonyms:              "동의어 또는 <br /> Antonyms없이 "
+    without_definitions:           "<br /> 정의없이 "
+    no_orphans:                    "모든 기업의 정의들을 유지하는 데 도움이 동의어와 antonyms. 예이 그들을 위해 "
+  recently_added:                  "최근 올린날짜"
+  search_results:                  "검색 결과 "
+  translations:                    "번역 "
+  add:                              "add "# 귀하의 목록에 추가 # 추가
+  yet:                            " 아직은 "
+  or:                             " 또는 "
+  to:                              " to "# #이 성공적으로이 항목을  새로운 동의어 추가로
+  in:                              "에서" # #    찬장 에서 이 넣어
+  dictionary:                      "사전" 
+  alpha:                          " 이 기능은 아직 알파에, 나중에 다시 시도하십시오 "
+  user:                            "사용자" 
+  rank:                            "순위" 
+  added_by:                        "에 의해 추가"
+  no_definitions_added:          " 아직은  어떤 정의를 추가 당신이"
+  no_phrases_added:               "아직은  모든 주요 항목이 추가되지 당신이"
+  top_users:                      " 탑 25 사용자 "
+  login:                           "로그인" 
+  skip_authentication:            ' 건너뛰기 인증' 
+  username:                       " 사용자" 
+  password:                       " 비밀 번호" 
+  remember_me:                    " 나 기억해? "
+  open_id:                        " 오픈 "
+  url:                            " 홈페이지" 
+  log_in:                          "로그인" 
+  email:                           "전자 - 메일 "
+  status:                         " 상태 "
+  my_profile:                     " 내 프로필 "
+  my_definitions:                 " 보기 나의 정의" 
+  show_my:                         "show_my" 
+  then:                            "다음" 
+  get_an:                           " "# # 오픈 로그!
+  weird_login:                     "당신이 지금 당장에 로그인하지 않은 어떤 이상한 이유로, 로그 인한 후 다시 시도 "
+  signup_locally:                  "... 또는 로컬 사용자 계정 만들기" 
+  confirm:                         "확인" 
+  never_spam:                     " 절대, 절대 스팸 항복! "
+  edit:                            "편집" 
+  every_time:                     " 매 시간" 
+  gets_a:                          "가되면" 
+  an_angel:                       " 천사 날개가 될꺼야! <br /> 일본 / 케이,하지만 심각하게 도움 "
+  out:                            " 나가!! "
+                                
+ 

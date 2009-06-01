@@ -1,0 +1,21 @@
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div id="top_users">
+	<b><%= t 'top_users' %></b>
+	<ol>
+	<% for user in @users %>
+	<% @user = user %>
+					<li><%= link_to "#{@user.login}", :action=> 'user_search' , 
+						:controller => 'phrases', :id => @user.id  %>
+						<%= t 'rank' %>: <%= @user.rank||1 %>
+					</li>
+	<% end %>
+	</ol>
+</div><!-- top_users -->
+	

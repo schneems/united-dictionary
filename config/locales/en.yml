@@ -1,0 +1,208 @@
+en:
+  phrase:                     " Main Entry "
+  phrases:                    " Main Entries "
+  definition:                 " Definition "
+  definitions:                " Definitions "
+  synonym:                    " Synonym "
+  synonyms:                   " Synonyms "
+  antonym:                    " Antonym "
+  antonyms:                   " Antonyms "
+  mugshot:                    " Picture "
+  mugshots:                   " Pictures "
+  comment:                    " Comment "
+  comments:                   " Comments "
+  search:                       
+    submit:                   " Submit "
+    all:                      " All "
+    simplified:               " Simplified "
+    pinyin:                   " Pinyin "
+    traditional:              " Traditional "
+  header:                       
+    navigation:                 
+      add:                    " Add "
+      home:                   " Home "
+      game:                   " The Game "
+      orphans:                " Orphans"
+      recent:                 " Recent"
+      random:                 " Random"
+      top_users:              " Top Users"
+      download:               " Download"
+      a_z:                    " A-Z"
+    login:                      
+      no_username:            ' Click Here to set your Username'
+      logout:                 ' logout'
+      login:                  ' login'
+      signup:                 ' Sign Up'
+  footer:                       
+    terms:                    " Terms of Use"
+    privacy:                  " Privacy"
+    contact:                  " Contact"
+    about:                    " About"
+    contribute:               " Contribute "
+  welcome:                      
+    main:                     " is a user-submitted dictionary"
+    message:                  " If you don't see it...add it, if you don't like it...rank & delete it"
+    top_ranked:               " Top Ranked Definitions!!"
+  forms:                        
+    entry:                    " Entry"
+    synonym:                  " Synonym:"
+    antonym:                  " Antonym:"
+    update:                   " Update"
+    not_required:             " Not Required"
+    required:                 " Required"
+    close:                    " Close X" ## The X is just there to give the user something to click on 
+    language:                 " Language:"
+    simplified:               " Simplified" ## as in simplified chinese
+    traditional:              " Traditional" ## '' 
+    trad:                     " Trad"
+    pinyin:                   " Pinyin" 
+  user:                         
+    added_by:                 " Added By"
+  comments:                     
+    add_comment:              ' Add a Comment'
+    submit:                   "  Submit your Comment"
+    comments_for:             " Comments For" #" Comments for this entry"
+    no_comments:              " No Comments Added Yet"
+    name:                     " Name: " # 'Please type your Name: '
+    comments:                 " Comment:"
+    add_new:                  " Add New Comment"
+  delete:                       
+    delete_this:              " Delete This"
+    start:                    " Start The Countdown?"
+    note_one:                 " Note: This option is only available for"
+    note_two:                 "  with a negative rank or less than 24 hours old"
+    marked:                     
+      first:                  " This" ## capitalized
+      second:                 " has already been marked for deletion.	If the "
+      third:                  " 's rank is negative at "
+      fourth:                 " it will be fed to the Slangasaur and will cease to exist! If you wish to save this "
+      fifth:                  " then increase its rank by clicking the thumbs up!"
+    explain:                    
+      first:                  " By clicking on the submit button, you will start the silent deathclock (ooooh scary) for this "
+      second:                 " When the clock strikes zero in 30 minutes if this "
+      third:                  " 's rank is negative it will be fed to the Slangasaur	and will cease to exist!! If positive it will be spared, do you wish to judge this fine Entry??"
+  definitions:                  
+    def:                      " Def. "
+    add:                      " Add Definition"
+    defined:                  " Defined As"
+    example:                  " Example"
+    pos:                      " Part of Speech"
+    description:              " (click for more description)"
+    noun:                     " Noun "
+    pronoun:                  " Pronoun"
+    verb:                     " Verb"
+    adverb:                   " Adverb"
+    adjective:                " Adjective"
+    preposition:              " Preposition"
+    conjunction:              " Conjunction"
+    interjection:             " Interjection"
+    phrase:                   " Phrase"
+    no_clue:                  " No Clue"
+    remove:                   " Remove This Definition"
+    warning:                  " All Data in the Definition Form will be Lost, Proceed?"
+  model:                        
+    add:                        
+      add_new:                " Add New:"
+      comment:                " Add a "
+      definition:             " Add a New Definition"
+      phrase:                 " Add a New Main Entry"
+      antonym:                " Add an Antonym" #caps
+      synonym:                " Add a Synonym" #caps
+  languages:                    
+    chinese:                  " Chinese"
+    dutch:                    " Dutch"
+    english:                  " English"
+    french:                   " French"
+    german:                   " German"
+    greek:                    " Greek"
+    italian:                  " Italian"
+    japanese:                 " Japanese"
+    korean:                   " Korean"
+    portuguese:               " Portuguese"
+    russian:                  " Russian"
+    spanish:                  " Spanish"
+  guidelines:                   
+    first:                    "  Write For a Large Audience (No Inside Jokes)"
+    second:                   " No Names, Except For Public Figures"
+    third:                    " Get the most from your entry by adding definitions, synonyms, antonyms, and pictures"
+  meta:                         
+    title:                    " Slangasaurus - The Slang Dictionary, and Urban Thesaurus You Wrote "
+    description:              " Slang Synonyms, Antonyms, Definitions, Translations, and Pictures for"
+    altdescription:           " Slangasaurusaurus a user submitted slang thesaurus and dictionary. Search and add slang, definitions, synonyms, antonyms, translations, and pictures; in Chinese, Dutch, English, French, German, Greek, Italian, Japanese, Korean, Portuguese, Russian, and Spanish."
+    keywords:                 " slang, definition, synonym, antonym, translation, urban dictionary, thesaurus"
+    altkeywords:              " slang, urban dictionary, slang dictionary, slang thesaurus, slangasaurus, slang translation, slang slang, user defined, user submitted"
+  products:                     
+    title:                    " Products"
+    released:                 " Released"
+  flash:                        
+    login:                    " Logged in successfully. "
+    new_success:              " Successfully added a new "
+    update_success:           " Successfully updated "
+    error:                    " Error while saving "
+    correct:                  " Correct"
+    incorrect:                " incorrect"
+    three_zero_one:           " This URL was moved"
+    ticking:                  " 30 Minutes ...The Clock is Ticking!"
+    search_one:               " No one has added "
+    search_two:               " Help everyone out by adding it! "
+  error:                        
+    captcha:                  " Letters from the box do not match those from the image"
+    saving:                   " Error while saving "
+  download:                     
+    explain:                  " Let Your Language Grow! Download and use these dictionaries that you've helped to build. <br /> 	Don't forget to help everyone else out by adding your own words!!"
+  contact_me:                 " 	Please send any comments and problems to the above e-mail. I'll write a form later, thanks for your help!!"
+  a_z:                          
+    begin_with:               " All Entries that begin with the Letter "
+    no_words:                 "  No Words Have Been Added to "
+    that_begin_with:          "  that begin with  "
+  about:                        
+    welcome:                  " Welcome, This is the first open source multi-lingual user submitted dictionary and thesaurus (wow)!! We let you look up and add words, slang, and phrases in multiple languages. if you want to contribute to the source code please go to:"
+    why:                      " <h3> But why...? </h3><p>Sure there are a ton of dictionaries online, but how many of them have the freshest definitions that provide you with the words and phrases people from all over the world are actually using? Other user-submitted dictionaries exist, i recommend wiktionary, but I also strive to go above and beyond their limited capabilities, and user-interfaces. If anything no one website or organization should have a strangle hold on language resources, so use everything that  there is out there. This is a tool for people to write their own history, and connect with one another.  </p>"
+    how:                      "  <h3> But how...? </h3> <p>This site was written using Ruby on Rails which is a web programming  framework. It allows the things you type in boxes to be sent to a server and saved to a database. Tis' quite awesome. </p>"
+    who:                      "  <h3> But who...? </h3> <p> Richard Schneeman has absolutely no web programming background and was able to learn enough to make most of this application from scratch in a little under a year, this also includes losing all of his code when his computer was stolen for the second time. He is A Mechanical Engineer that graduated from Georgia Tech May 2008. He loves wakeboarding, snowboarding, caving, climbing, and doing crazy stuff. He currently works for National Instruments  (they make data acquisition software and hardware, not calculators) and lives in Austin, Tx.  </p>"
+  orphans:                      
+    without_synonyms:         " Without Synonyms or <br /> Antonyms"
+    without_definitions:      " Without <br /> Definitions"
+    no_orphans:               " All the definitions have synonyms and antonyms to help keep them company. Yay for them"
+  recently_added:             " Recently Added"
+  search_results:             "  Search Results"
+  translations:               " Translations"
+  add:                        " add" ## add this to your list
+  yet:                        "  yet "
+  or:                         "  or "
+  to:                         "  to " ## successfully added a new synonym "to" this entry
+  in:                         "  in " ## "put this 'in' the cupboard"
+  dictionary:                 " Dictionary"
+  alpha:                      "  This feature is still in alpha, please try again later"
+  user:                       " User"
+  rank:                       " Rank"
+  added_by:                   " added by"
+  no_definitions_added:       " You haven't added any definitions yet"
+  no_phrases_added:           " You haven't added any main entries yet"
+  top_users:                  " Top 25 Users"
+  login:                      " Login"
+  skip_authentication:        " to Skip Authentication"
+  username:                   " Username"
+  password:                   " Password"
+  remember_me:                " Remember me ?"
+  open_id:                    " OpenID"
+  url:                        " URL"
+  log_in:                     " Log In"
+  email:                      " E-Mail"
+  status:                     " Status"
+  my_profile:                 " My Profile"
+  my_definitions:             " Show My Definitions"
+  show_my:                    " show_my"
+  then:                       " then"
+  get_an:                     " Get An" ## OpenID login
+  weird_login:                " for some strange reason you're not logged in right now, please sign in and try again"
+  signup_locally:             " ...or Create a Local User Account"
+  confirm:                    " Confirm"
+  never_spam:                 " Never Surrender, Never Spam !"
+  edit:                       " Edit"
+  every_time:                 " Every Time a "
+  gets_a:                     "  gets a "
+  an_angel:                   " , an Angel gets it's wings!!! <br /> J/K, But seriously help a "
+  out:                        "  out!!"
+  child_form_translate:       "  "
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

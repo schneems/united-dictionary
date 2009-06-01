@@ -1,0 +1,128 @@
+<% @child_controller_language = @child_controller_language||@change_child_language||"All" %>
+	<% for definition in @definitions %>
+		<% @child_language_array = definition.children.collect {|child| child.language} %>
+		<% if @child_language_array.include?(@change_child_language)||@change_child_language == nil %> 
+			<% @definition_index = @definitions.index(definition) %>
+			<div id="def_box">
+				<span id = "definition_rank">
+					<% @element = definition %>
+							<%= render :partial => 'rank_one' %>
+				</span><!-- definition_rank -->
+			
+				<span class = "definition_label"> <%= t 'definitions.def' %> <%= @definition_index + 1 %>)</span>
+				<div class = "meaning"><%=h definition.meaning %></div></span>
+				<div class = "indent">
+					<p><%= t 'definitions.pos' %>: <%=h definition.part_of_speech -%></p>
+					<p><i> <%= "#{t 'definitions.example'}: #{definition.example}" if definition.example != nil && definition.example != ""  -%></i></p>	
+					By:<%= link_to "#{definition.user.login},", :action=> 'user_search' , 
+										:controller => 'phrases', :id => definition.user.id  if definition.user != nil %>
+									  <%= "Anon." if definition.user == nil %>
+									  <%= @phrase.created_at.to_s(:my_time)%></p>
+							</p>
+					</span>
+				</div><!-- indent  -->
+	<!-- SYNONYMS_HERE-->
+				<p class = "top_slang">Synonyms:</p>
+				<p class = "syn_ant_tab" >
+				<% for child in definition.children %>
+						<% @element = child %>
+						<% @flag_language = @element.language %>
+					<% if @element.variety == "synonym" %>
+					<% if @element.language == @change_child_language ||  @child_controller_language == "All"  %>
+					<span id = "dontwrap">
+							<%= render :partial => 'flags' -%>
+							<span id = "<%= "definition+#{definition.id}+#{@element.class}+#{@element.id}" %>">
+								<%= render :partial => 'rank_one' %>
+							</span><!-- id = alot of stuff -->
+							<%=link_to "#{@element.word}", :action => 'show', :word => @element.word, :language => @element.language %><%=  render :partial => 'multiple_language_phrase' %><i>,</i>
+					</span>
+					<!-- class = children -->
+					<% end %><!-- if right language -->
+					<% end %><!-- if is synonym -->		
+				<% end %><!-- @synonyms_array.each do |@element|  -->
+			
+				</p><!-- synonyms -->
+			
+	<!-- ANTONYMS HERE -->			
+				<p class = "top_slang">Antonyms:</p>
+				<p class = "syn_ant_tab" >	
+				<% @antonyms = [] %>
+				<% for child in definition.children %>
+						<% @element = child %>
+						<% @flag_language = @element.language %>	
+					<% if @element.variety == "antonym" %>
+					<% if @element.language == @change_child_language ||  @child_controller_language == "All"  %>
+				
+					<!-- shows only selected language -->	
+					<% @antonyms << @element %>
+					<span id = "dontwrap">
+								<%= render :partial => 'flags' -%>
+								<span id = "<%= "definition+#{definition.id}+#{@element.class}+#{@element.id}" %>">
+									<%= render :partial => 'rank_one' %>
+								</span><!-- id = alot of stuff -->
+								<%=link_to "#{@element.word}", :action => 'show', :word => @element.word, 
+													:language => @element.language %>
+								<%=  render :partial => 'multiple_language_phrase' %>,
+								</span>
+						<% end %><!-- if is correct language-->
+					<% end %><!-- if is antonym -->		
+				<% end %><!-- @antonyms_array.each do |@element|  -->
+
+			
+			
+			
+			</b>			
+				</p><!-- antonyms -->
+				</div><!-- def box -->
+			
+			
+
+
+				<div id = "add_new_bar">
+				<p><%= t 'model.add.add_new' %>
+				<% if definition!= nil %>
+						<span class = "add_new">
+							<%= link_to_remote( "Synonym", :type=> "submit", 
+										:update => "add_child#{definition.id}", 
+										:loading =>"Element.show('add_child_indicator#{definition.id}')",
+										:loaded => "Element.hide('add_child_indicator#{definition.id}');
+													newEffect.Shake('add_child#{definition.id}', {duration: 1})",
+										:url => {:action => 'show_child_add', :phrase => @phrase.id, 
+										:definition => definition, :type => "synonym"}) %>|	
+						</span><!-- add_synonym -->
+
+							<span  class = "add_new">
+								<%= link_to_remote( "Antonym", :type=> "submit", 
+											:update => "add_child#{definition.id}", 
+											:loading => "Element.show('add_child_indicator#{definition.id}')",
+											:loaded => "Element.hide('add_child_indicator#{definition.id}');new 
+											Effect.Shake('add_child#{definition.id}', {duration: 1})",
+											:url => {:action => 'show_child_add', :phrase => @phrase.id, 
+											:definition => definition, :type => "antonym", 
+											:child_language => @child_language,  }) -%>| 	
+							</span><!-- add_antonym -->
+				<% end %><!-- if definition== nil -->
+
+					<span class = "add_new_def">
+					 	<%= link_to_remote_redbox("#{t 'definition'}", link_to_remote_options = 
+								{ :url => {:action => 'show_definition_add', :phrase => @phrase.id, 
+									:type => "Definition", 
+									:child_language => @child_language}}) -%>
+						</span>		
+				</div><!-- add_new_bar -->
+				<hr width = "650" align = "center">
+			
+
+					<% if definition!= nil %>
+						<div id= <%="add_child#{definition.id}" %> 
+							<span id = "indicator"><%= image_tag("redbox_spinner.gif",
+										   :id     =>  "add_child_indicator#{definition.id}",
+										   :style  =>  'display:none;') %>
+							</span><!-- indicator -->
+						</div>
+				<% end %><!-- if definition!= nil -->
+			<% end %><!-- if @change_child_language includes or @change_child_language == nil -->
+		<% end %><!-- for definition.each do -->
+		
+<div id = "pagination"><div class= "flickr_pagination"><%= will_paginate @definitions %></div></div><br /><br />
+		

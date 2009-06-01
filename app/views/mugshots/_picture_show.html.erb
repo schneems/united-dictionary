@@ -1,0 +1,25 @@
+<div id ="mugshots">
+		<% for mugshot in @mugshots %>
+				<div id = "each_picture">
+					<%= link_to image_tag(mugshot.public_filename(:thumb)),  mugshot.public_filename, 
+							:target => "_blank" %><br />
+					<% @element = mugshot %><%= render :partial => 'rank_one' %>
+				</div><!-- each picture -->
+		<% end %><!-- for mugshot in @mugshots  -->
+		<div id = "pagination">
+				<div class= "flickr_pagination"> 
+					<%= will_paginate @mugshots %><br/>
+				</div>
+		</div>
+		<p><%= "No Pictures Have been added yet for #{@phrase.word}" if @mugshots.empty? == true %></p>
+</div><!-- mugshots -->
+<div id = "add_picture">
+	<% @element = @phrase %>
+		<%= link_to_remote "Add New Picture", :update => "add_picture", 
+							:loading => "Element.show('picture_indicator')", 
+							:loaded => "Element.hide('picture_indicator');new Effect.Shake('add_picture', 
+							{duration: 1})", :url => {:action => 'picture_add_show', :type => @element.class, :value => @element.id } %>
+		<%= image_tag("redbox_spinner.gif",
+					   :id     =>  "picture_indicator",
+					   :style  =>  'display:none;') %>
+</div><br /><!-- "add_picture" -->

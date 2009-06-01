@@ -1,0 +1,410 @@
+ja:
+  phrase:                     "メインエントリ"
+  phrases:                    "主なエントリー"
+  definition:                 " 定義されています"
+  definitions:                "定義"
+  synonym:                    "類義語"
+  synonyms:                   "類義語"
+  antonym:                    "反意語"
+  antonyms:                   " Antonyms "
+  mugshot:                    "画像"
+  mugshots:                   "写真"
+  comment:                    "コメント"
+  comments:                   "コメント"
+  search:                     
+    submit:                   "送信"
+    all:                      "すべて"
+    simplified:               "簡体字"
+    pinyin:                   "ピンイン"
+    traditional:              "伝統"
+  header:                     
+    navigation:               
+      add:                    " を追加"
+      home:                   "ホーム"
+      game:                   "ゲーム"
+      orphans:                "孤児"
+      recent:                 " 最近の"
+      random:                 "ランダム"
+      top_users:              "トップユーザー"
+      download:               "ダウンロード"
+      a_z:                    " - Z を"
+    login:                    
+      no_username:             "ここをクリックして設定するユーザ名 "
+      logout:                  "ログアウト "
+      login:                   "ログイン" 
+      signup:                  "登録" 
+  footer:                     
+    terms:                  " 使用の 利用規約"
+    privacy:                  "プライバシー"
+    contact:                  "お問い合わせ"
+    about:                    " について"
+  welcome:                    
+    main:                     "ユーザーは、辞書を提出"
+    message:                 " あなたが好きではない...ランク＆削除 が表示されない場合は... を追加"
+    top_ranked:               "トップランキング定義！ ！ "
+  forms:                      
+    entry:                    "エントリ： "
+    synonym:                  "類義語： "
+    antonym:                  "反意語： "
+    update:                   "更新"
+    not_required:             "なし が必要"
+    required:                 " 必要"
+    close:                    "閉じるX が＃ ＃は、 Xをクリックするだけで、ユーザーが何かを与えることです"
+    language:                 "言語： "
+    simplified:               "簡体字： 簡体字中国語＃ ＃のように"
+    traditional:              "伝統：" 
+    trad:                     "繁"
+    pinyin:                   "ピンイン"
+  user:                       
+    added_by:                 "で 追加"
+  comments:                   
+    add_comment:              " は、コメントを追加"
+    submit:                   "送信あなたのコメント"
+    comments_for:             "このエントリの コメント" 
+    no_comments:              "まだコメントがありません を追加"
+    name:                     "名前： " 
+    comments:                 "コメント： "
+    add_new:                  " 新しいコメントの追加 "
+  delete:                     
+    delete_this:              "削除この"
+    start:                    "カウントダウンを開始か？ "
+    note_one:                 "注意：このオプションのみがご利用いただけます"
+    note_two:                 "負のランクや昔の24時間未満"
+    marked:                   
+      first:                  "これは"
+      second:                 "はすでに削除の対象としてマークされている場合には"
+      third:                  "  ランクのマイナスでは"
+      fourth:                 "それはSlangasaurに供給される存在することをやめるだろう！保存する場合は、この"
+      fifth:                  "して、親指をクリックして、その地位を高める！ "
+    explain:                  
+      first:                  "送信ボタンをクリックすれば、 （ ooooh ）怖いこの サイレントdeathclockが開始されます"
+      second:                 "時計を30分でゼロのストライキが、この"
+      third:                  "  秒ランクはSlangasaurに供給されるとマイナスが存在しなくなる！脇になる場合は正の場合は、この素晴らしいエントリを判断したいですか？ "
+  definitions:                
+    def:                      "デフ。 "
+    add:                      "追加 定義されています"  
+    defined:                  "のように定義： "
+    example:                  "例"
+    pos:                      "言論の パート"
+    description:              "詳細説明については、  （クリック） "
+    noun:                     "名詞"
+    pronoun:                  "代名詞"
+    verb:                     "動詞"
+    adverb:                   "副詞"
+    adjective:                "形容詞"
+    preposition:              "前置詞"
+    conjunction:              "連携"
+    interjection:             "かんたん"
+    phrase:                   "フレーズ"
+    no_clue:                  "殺人ゲームへの招待"
+    remove:                   "削除この 定義されています"
+    warning:                  "すべてのデータの定義書では、進んで失われるのですか？ "
+  model:                      
+    add:                      
+      add_new:                "新規追加： "
+      comment:                "を追加する"
+      definition:             "を追加する新たな 定義されています"
+      phrase:                 " 新しいメインエントリを追加"
+      antonym:                "反意語 ＃キャップ追加"
+      synonym:                "シノニム ＃キャップ追加"
+  languages:                  
+    chinese:                  " 中国語"
+    dutch:                    "オランダ"
+    english:                  "英語"
+    french:                   " フランス語"
+    german:                   " ドイツ語"
+    greek:                    " ギリシア"
+    italian:                  " イタリア語"
+    japanese:                 " 日本"
+    korean:                   " 韓国語"
+    portuguese:               "ポルトガル語"
+    russian:                  "ロシア"
+    spanish:                  " スペイン語"
+  guidelines:                 
+    first:                    "大勢の聴衆（インサイドジョークなし ここでは"
+    second:                   "公共のフィギュアを除い ての名称は、 "
+    third:                    "の定義を追加して、エントリから最も入手し、類義語、 antonyms 、写真"
+  meta:                       
+    title:                    " Slangasaurus -俗語辞典、シソーラス都市書いた"
+    description:              "俗語類義語、 Antonyms 、定義、翻訳、写真の"
+    altdescription:           "ユーザーSlangasaurusaurusシソーラス辞書俗語を提出した。検索し、定義俗語を追加すると、類義語、 antonyms 、翻訳、写真、中国語、オランダ語、英語、フランス語、ドイツ語、ギリシャ語、イタリア語、韓国語、ポルトガル語、ロシア語、日本語スペイン語。 "
+    keywords:                 "スラング、定義、同義語、反意語、翻訳、都市辞典、シソーラス"
+    altkeywords:              "スラング、都市辞書、辞典、シソーラススラング、俗語slangasaurus 、翻訳俗語、スラング俗語、ユーザは、ユーザが投稿した と定義されて"
+  products:                   
+    title:                    "製品情報"
+    released:                 " をリリース"
+  flash:                      
+    login:                    "正常に記録される。 "
+    new_success:              "成功 は、新たな付加"
+    update_success:           "成功 を更新"
+    error:                    "エラーは、 貯蓄"
+    correct:                  "正しい"
+    incorrect:                " 間違って "
+    three_zero_one:           " このURLに移動されました"
+    ticking:                  " 30分...クロック刻々と過ぎている！ "
+    search_one:               " 1 を追加した"
+    search_two:               "それを追加してヘルプみんなを！ "
+  error:                      
+    captcha:                  "ボックスから 手紙 は、イメージから一致しない"
+    saving:                   "エラーは、 貯蓄"
+  download:                   
+    explain:                  " ！ダウンロードしようとするあなたの言語の成長に貢献したビルドでは、これらの辞書を使用してください。 <br />自分の言葉を追加することで皆を助けることを忘れないでください！ ！ "
+  contact_me:                 "以下はコメントとは、 eメールの上に問題を送信します。私は後に、ご協力のおかげでフォームを作成します！ ！ "
+  a_z:                        
+    begin_with:               "すべてのエントリは、文字で 開始 "
+    no_words:                 "言葉 が追加されました"
+    that_begin_with:          "は、 開始"
+  about:                      
+    welcome:                  "ようこそ、これは、多言語ユーザーシソーラスに提出され、自分を参照して、単語を追加すると、俗語で、複数の言語で表現することができます。 "
+    why:                      " ... <h3>しかし、なぜですか。 < / h3の> <p>確かにある辞書のオンライントンですが、それらの多くの方法から、単語やフレーズは、世界中の人々と新鮮な定義を提供している実際の使用ですか？他のユーザーが提出した辞書、私はお勧めウィクショナリーが、私も上記の制限機能、およびユーザーインターフェイスを超えて行くに努めて存在している。何もない場合は1つのウェブサイトまたは組織の言語資源を絞めを行う必要があるので、使用すべてはないのだが、この人が自分史を書くためのツールは、互いに接続されています。 < / p > "
+    how:                      " <h3>でもどうやって... ？ < / h3の> on Railsを<p>このサイトは、 Webプログラミングフレームワークですルビーを使用して書かれています。このボックス内のサーバーに送信されることを可能にすると入力した場合に保存データベースです。 Tis  非常に素晴らしい。 < / p > "
+    who:                      " <h3>しかし、誰... ？ < / h3の> <p>リチャードSchneemanと1歳未満のほとんどは、これも損失が含まれていますが最初からこのアプリケーションを最大限に活用するのに十分な学習することができた背景を全くしているWebプログラミングすべてのコードの場合、 2度目の彼のコンピュータが盗まれました。彼は2008年5月機械エンジニアは、ジョージア工科大学を卒業されています。彼を愛してウェークボード、スノーボード、洞窟探検、登山、狂ったものがあります。彼は現在ナショナルインスツルメンツの作品（彼ら）データ収集ソフトウェアとハードウェアではなく、計算機を作り、オースティン、のTxに住んでいます。 < / p > "
+  orphans:                    
+    without_synonyms:         "類義語例2 <br /> Antonymsなし"
+    without_definitions:      " <br />定義がなければ "
+    no_orphans:               "すべての定義を支援する会社を維持antonyms類義語としている。イェーイて"
+  recently_added:             "最近 を追加"
+  search_results:             "検索結果"
+  translations:               "翻訳"
+  add:                        " ＃あなたのリストに追加＃追加"
+  yet:                        "まだ"
+  or:                         "または"
+  to:                         " or " 
+  in:                         " in " 
+  dictionary:                 "辞書"
+  alpha:                      "この機能はまだαで、再度保存してみてください"
+  user:                       "ユーザー"
+  rank:                       "ランク"
+  added_by:                   " に追加"
+  no_definitions_added:      " まだ すべての定義を追加 がある"
+  no_phrases_added:           "まだ すべての主要なエントリを追加しない がある"
+  top_users:                  "トップ25のユーザー"
+  login:                      "ログイン"
+  skip_authentication:        "認証をスキップする"
+  username:                   "ユーザー名"
+  password:                   "パスワード"
+  remember_me:                "私覚えてる？ "
+  open_id:                    " OpenIDを"
+  url:                        " URL  は"
+  log_in:                     "ログで"
+  email:                      "電子メール"
+  status:                     "ステータス"
+  my_profile:                 "マイプロフィール"
+  my_definitions:             "私の定義を表示する"
+  show_my:                    " show_my "
+  then:                       "それから"
+  get_an:                     " get an " 
+  weird_login:                "今すぐにログインしていないしているいくつかの奇妙な理由で、ログインして、もう一度やり直してください"
+  signup_locally:             " ...か、ローカルユーザーアカウントの作成"
+  confirm:                    "確認"
+  never_spam:                 "決して、決して降伏迷惑！ "
+  edit:                       "編集"
+  every_time:                 "すべての時間を"
+  gets_a:                     "される"
+  an_angel:                   "天使の羽の取得も！ <br /> J /韓国、しかし、真剣に助けを"
+  out:                        "発売！ ！ "
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              

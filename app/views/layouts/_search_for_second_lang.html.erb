@@ -1,0 +1,6 @@
+<% @default = params[:language]||@lanugage_over_ride||"English" %>
+<% if @default == "Chinese" %>
+		<%= select_tag(:second_language, 
+			options_for_select([["#{I18n.t 'search.all' }", "All"], ["#{I18n.t 'search.simplified' }", "Simplified"] ,["#{I18n.t 'search.traditional' }", "Traditional"], ["#{I18n.t 'search.pinyin' }", "Pinyin"]], @second_language||"All")) %>	
+		<% end %>
+

@@ -1,0 +1,18 @@
+<div id= "edit_second_language_form">
+	<p class = "legend"> <%= t 'forms.update' %> <%= @element.word %></p>
+		
+	<% form_for @child, :url => { :action => "update_second_language", :something => "Exists",
+				:element => @element.id, :type => @element.class} do |@f| %>	
+		<table id = "slang_form_partial">
+			<%= render :partial => 'forms/add_child_form_partial' %>
+		</table>
+		<%= show_simple_captcha if !logged_in? %><br />
+	
+		<%= @f.submit "#{t 'forms.update'} #{@element.word}" %><br />
+		
+		<% end %><!-- form_for -->
+	
+	<span class = "close"><%= link_to_close_redbox("#{t 'forms.close'}") %> </span>
+
+</div><!-- edit_second_language_form -->
+

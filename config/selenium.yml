@@ -1,0 +1,6 @@
+environments:
+  - test
+
+browsers:
+  firefox: '/Applications/Firefox.app/Contents/MacOS/firefox-bin'
+  safari: '/Applications/Safari.app/Contents/MacOS/Safari'

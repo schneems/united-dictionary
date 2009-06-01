@@ -1,0 +1,24 @@
+If you can see this please contact the administrator, with instructions on how you got here plz.
+<!--
+<div id="comments">
+	<b><%= t 'comments.comments_for' %>
+		 <% @flag_language = @phrase.language %>
+		 <%= render :partial => 'phrases/flags'%>
+		 <%= @phrase.word %> 
+		</b>
+		<% if @phrase.comments[0] == nil%>
+			<p><%= t 'comments.no_comments' %></p>
+		<% else %>
+			<% for comment in @phrase.comments %>
+			<div id ="individual comments">
+				Name: <%= comment.name %>
+				<% @element = comment %> <br />
+				<%= comment.comment_field %>
+			</div>
+			<% end %>
+		<% end %> 
+		<%= render_component :controller=> 'comments', :action => 'new', :id => @phrase %>
+</div>
+
+
+-->

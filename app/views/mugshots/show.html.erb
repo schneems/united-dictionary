@@ -1,0 +1,7 @@
+<h1>Pictures</h1>
+<% for mugshot in @mugshots -%>
+  <%= link_to image_tag(mugshot.public_filename(:thumb)),  mugshot.public_filename %>
+  <%= mugshot.phrase_id  = 88 %>
+  <%= mugshot.save! %><br />
+<% end -%>
+

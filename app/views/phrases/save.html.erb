@@ -1,0 +1,128 @@
+<html>
+<body>
+<head>
+<%= javascript_include_tag :defaults %>
+
+
+<%= stylesheet_link_tag 'google' %> 
+
+<% @phrase = Phrase.new %>
+
+
+
+<%= javascript_include_tag 'swfobject' %>
+<script type="text/javascript">
+  	var flashvars = false;
+	var params = {
+	  loop: "false"
+	};
+	var flashvars = {};
+	var params = {};
+	 params.loop = "false";
+	var attributes = {};
+	swfobject.embedSWF("flash/greenersound.swf", "myContent", "430", "320", "9.0.0" , "expressInstall.swf", flashvars, params, attributes); 
+ 	
+	function enable() {
+	var button = document.getElementById("phrase_submit"); 
+	button.disabled = false;
+	}
+	
+	
+	swfobject.addLoadEvent(enable);
+</script>
+
+
+
+</head>
+<% form_for @phrase, :url => { :action => 'function'} do  |f| -%> 
+<div id = "flashy" style = "display:none;" >
+
+   <div id="light" class="white_content">
+	<center>
+		<div id="flashcontent" >
+			<div id="myContent">
+				 <strong>You need to upgrade your Flash Player</strong>
+				  This is replaced by the Flash content. 
+				  Place your alternate content here and users without the
+				  Flash plugin or with Javascript turned off will see this.
+				  Content here allows you to leave out <code>noscript</code>
+				  tags.
+			</div>
+		</div>			    
+</center></div>
+	<div id="fade" class="black_overlay"></div>
+</div>
+
+<div class="main-float-wrapper">
+	<div class="main-first-col_greener"></div>
+	<div id = "main-second-col_greener" >
+		<div id = "greener">
+			<div class = "center" >
+				<div class = "top_marg">	
+					<%= f.text_field :word %><br />
+					<span class = ""  >
+					<%= f.submit 'Greener Search', :onclick =>  remote_function(
+					:loading => "Element.hide('description'),Element.show('flashy')") , :disabled => true %>
+					</span>
+				</div>
+			</div>	
+		</div>
+		<div id = "float_for_no_reason">
+			<div id = "description">
+				<p><b>FACT:</b>
+				Google search produces 0.2 grams of carbon for every search executed.
+				<br /><br />
+				<b>FACT:</b>
+					Greener Than Google Searches are fueled by the power of search, like a dam is powered
+					 by water. So every search eliminates 20 grams of carbon. <br /><br />
+				<b>FACT:</b>
+					Carbon killed the unicorns.
+					</p>
+					
+					
+				
+				<center>
+				<p>Sponsored By:
+					 <a href= "http://www.uniteddictionary.com"><br />
+					<%= image_tag( "/images/united.png") %>					
+					<br /> The User Submitted Dictionary, Redefined </a></p>
+				</center>
+			</div>
+
+
+
+
+
+			
+		</div>
+	</div>
+	</div>
+	<div class="main-third-col_greener"></div>
+	<div class = "space-line" ></div>
+	
+</div>
+
+
+<% end %>
+
+
+
+<br />
+<br />
+
+
+<sub>*All claims have a relative certainty of plus or minus 100% </sub>
+</body>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5070471-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+</html>

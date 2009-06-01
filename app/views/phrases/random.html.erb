@@ -1,0 +1,20 @@
+<div class="table-row">
+	
+	<div class="left-container">
+		<div class = "center">
+			<h1><%= link_to "#{ t 'header.navigation.random'}", :action=> 'random' , 
+							:controller => 'phrases'  %></h1>
+	 	</div>
+		<%= render :partial => 'main/recent_partial' %>
+	</div><!-- main_left -->
+
+	<div class="right-container">
+		<br />
+			<%= render :partial => 'main/vertical_ad' %><br /><br />
+			<%= render :partial => 'main/vertical_ad' %>
+	</div><!-- right_nav -->
+	
+	
+	<div class="space-line"></div>
+
+</div><!-- main_left -->

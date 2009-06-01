@@ -1,0 +1,25 @@
+<%  if  @not_cacheable %>
+	<% if @new_phrases != nil %>
+		<% for @phrase in  @new_phrases %> 			
+				<%= render :partial => 'main/def_move' %>	
+		<% end %><!-- for phrase in @new_phrase -->
+			<div class= "flickr_pagination"> <%= will_paginate @new_phrases %><br/></div>
+	<% end %><!-- if @new_phrases != nil -->
+<% else %>
+	<% cache ({:page => params[:page] || 1}) do %>
+		<% if @new_phrases != nil %>
+			<% for @phrase in  @new_phrases %> 			
+					<%= render :partial => 'main/def_move' %>	
+			<% end %><!-- for phrase in @new_phrase -->
+				<div class= "flickr_pagination"> <%= will_paginate @new_phrases %><br/></div>
+		<% end %><!-- if @new_phrases != nil -->
+	<% end  %><!-- Cache -->
+<% end %>
+
+<br />
+
+	<div class = "center">
+		<%= render :partial => "forms/slang_form" %><br />
+		<%= render :partial => "main/horizontal_ad" %>
+	</div>
+	

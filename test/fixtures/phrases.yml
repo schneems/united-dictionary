@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+duplicate_phrase:
+  word: "allreadyexists"
+  language: "English"
+  rank: 1
+
+breasts:
+  word: "breasts"
+  language: "English"
+  rank: 1

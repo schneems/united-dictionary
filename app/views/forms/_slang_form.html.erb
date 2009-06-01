@@ -1,0 +1,66 @@
+<%= error_messages_for :phrase %> 
+<div id = "create_phrase_form">
+	<div id="slang_form">
+	<b><p class = "legend"><%= t 'model.add.phrase'%> </p></b>
+	<% @phrase = @phrase_search || Phrase.new(:language => "English")%>
+	<% form_for @phrase, :action => 'create' do  |@f| -%> 
+	
+		<p> 
+			<div>
+				<tr>
+					<td><label class="required"><%= t 'forms.language' %></label></td>
+						<td>
+							<% language_array = ["Chinese", "Dutch", "English", "French","German",
+										"Greek", "Italian", "Japanese", "Korean", "Portuguese", "Russian", "Spanish"] %>
+							<%=  @f.select(:language, [["#{I18n.t 'languages.chinese'.to_sym}", "Chinese"],
+										                    ["#{I18n.t 'languages.dutch'.to_sym}", "Dutch"],
+										                    ["#{I18n.t 'languages.english'.to_sym}","English"],
+										                    ["#{I18n.t 'languages.french'.to_sym}", "French"],
+										                    ["#{I18n.t 'languages.german'.to_sym}", "German"],
+										                    ["#{I18n.t 'languages.greek'.to_sym}", "Greek"],
+										                    ["#{I18n.t 'languages.italian'.to_sym}", "Italian"],
+										                    ["#{I18n.t 'languages.japanese'.to_sym}", "Japanese"],
+										                    ["#{I18n.t 'languages.korean'.to_sym}", "Korean"],
+										                    ["#{I18n.t 'languages.portuguese'.to_sym}", "Portuguese"],
+										                    ["#{I18n.t 'languages.russian'.to_sym}", "Russian"],
+										                    ["#{I18n.t 'languages.spanish'.to_sym}", "Spanish"]], { :include_blank => false }, 
+											:onchange=> remote_function(:with => "'language='+this.value",
+											:update => 'slang_form_partial',
+							 				:loading => "Element.show('language_indicator')" ,
+											:loaded => "Element.hide('language_indicator')",
+											:url => {:action => :update_create_for_chinese} ))%>
+						</td>
+				</tr>
+				</div>
+			</table>
+		</p>
+			<%= render :partial => 'forms/slang_form_partial', :locals => { :f => @f } %>
+	
+	<div id="definitions"> 
+	<%= render :partial => 'forms/definition', :collection => @phrase.definitions %> 
+	
+	</div> 
+
+	<p>
+		<b><%= add_definition_link "#{t 'model.add.definition'}" %></b>
+	</p> 
+	<p> 
+	
+	
+	<%= show_simple_captcha  %>
+	
+	<%= @f.submit "#{t 'search.submit'}" %> 
+	</p> 
+	<% end -%>
+	</div>
+	
+	
+	<br />
+	<b>Submission Guidelines</b>
+	<ul class = "guidelines">
+		<li><%= t 'guidelines.first' %></li>
+		<li><%= t 'guidelines.second'  %> </li>
+		<li><%= t 'guidelines.third' %> </li>
+	</ul>
+
+</div>

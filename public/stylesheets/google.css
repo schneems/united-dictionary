@@ -1,0 +1,160 @@
+/* @override http://en.dict.local:3000/stylesheets/google.css?1233070222 */
+
+/* @override http://en.dict.local:3000/stylesheets/google.css?1232842756 */
+
+/* @override http://en.dict.local:3000/stylesheets/google.css?1232430159 */
+
+/* @override http://en.dict.local:3000/stylesheets/google.css?1232429986 */
+
+/* @override http://en.dict.local:3000/stylesheets/google.css?1232418076 */
+
+/* @override http://en.dict.local:3000/stylesheets/google.css?1232413876 */
+
+/* @override http://en.dict.local:3000/stylesheets/google.css?1232413224 */
+
+/* @override http://en.dict.local:3000/stylesheets/google.css?1232159489 */
+
+/* @override 
+	http://en.dict.local:3000/stylesheets/google.css?1232153307
+	http://en.dict.local:3000/stylesheets/google.css?1232154779
+	http://en.dict.local:3000/stylesheets/google.css?1232155647
+	http://en.dict.local:3000/stylesheets/google.css?1232156439
+	http://en.dict.local:3000/stylesheets/google.css?1232158515
+	http://en.dict.local:3000/stylesheets/google.css?1232158872
+	http://en.dict.local:3000/stylesheets/google.css?1232158970
+*/
+
+ a:link{
+		text-decoration: none;
+		color: green;
+}
+
+ a:visited{
+		text-decoration: none;
+		color: green;
+}
+
+ a:hover {
+		text-decoration: none;
+		color: blue;
+}
+
+img  {
+			text-decoration: none;
+			border: none;
+}
+
+hr {
+	width: 30%;
+	
+}
+
+
+
+
+
+#greener {
+	margin-left: auto;
+	margin-right: auto;
+	height: 400px;
+	width: 800px;
+	background: url(../images/greener.png) no-repeat;
+	display: block;
+}
+
+div.top_marg {
+	position: relative;
+	top: 240px;
+}
+
+#description {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	
+}
+
+#description #ul {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#phrase_word  {
+	height: 2.5em;
+	width: 30em;
+}
+
+div.main-first-col_greener {
+	float: left; 
+	width: 10%; 
+	height: 100%;
+}
+
+
+#main-second-col_greener {
+	float: left;
+ 	width:  80%;
+}
+
+div.main-third-col_greener {
+	float: left;
+	width: 10%;
+ 	height: 100%;
+}
+
+
+div.center {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#my_swf {
+	background-color: white;
+	border: none;
+	
+}
+
+
+ .black_overlay{
+     position: absolute;
+     top: 0%;
+     left: 0%;
+     width: 120%;
+     height: 150%;
+     margin-bottom: 20%;
+     padding-bottom: 20%;
+     background-color: black;
+     z-index:1001;
+     -moz-opacity: 0.8;
+     opacity:.80;
+     filter: alpha(opacity=80);
+ }
+
+  
+
+ .white_content {
+     position: absolute;
+     top: 25%;
+     left: 25%;
+     width: 460;
+     height: 325;
+     margin-left: 5%;
+     padding: 16px;
+     border: 16px solid #00a025;
+     background-color: black;
+     z-index:1002;
+     overflow: hidden;
+	color: #00c82f;
+}
+
+#myytplayer {
+height: 340px;
+width: 400px;	
+}
+
+
+
+

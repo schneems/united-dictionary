@@ -1,0 +1,18 @@
+<div id = "show_users_stuff">
+<%= render :partial => 'profile_nav' %><br /><br />
+
+<% if @phrases[0] != nil  %>
+		<div id = "phrases_added">
+			<% for phrase in @phrases %>
+				<% @phrase = phrase %>
+				<%= link_to "#{@phrase.word}", :action => 'show', :id => phrase.id %>
+				<%= @phrase.created_at.to_s(:my_time) %><br />
+			<% end %>
+			<div class= "flickr_pagination"> <%= will_paginate @phrases %><br/></div>
+		</div>
+<% else %>
+		<p>You haven't added any main entries yet </p>
+<% end %><!-- if -->
+</div>
+
+

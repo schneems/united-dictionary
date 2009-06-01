@@ -1,0 +1,151 @@
+<!-- This is the form that shows up with the redbox -->
+	<div id= "definition_form">
+	<% form_for :definition, :url => {:action => "create", :controller  => 'definitions', :phrase => "#{@phrase.id}" } do |definition_form| %>
+
+	<fieldset class ="definition">
+		<p class="definition_legend" id = "definition_legend"><%= t 'definitions.add' %></p>
+		<p><%= t 'definitions.add' %> <%= "for  #{@phrase.word}" if @phrase.word != nil  %> <b></b>
+			<table id = "definition_form_input" >
+				<tr><td><%= t 'definitions.defined' %>:</td><td><%= definition_form.text_area :meaning -%></td></tr>
+				<tr><td><%= t 'definitions.example' %>:</td><td><%= definition_form.text_area :example -%></td></tr>
+			</table>
+		<br />
+		
+			<% if @part == "Noun" %><% @noun = true %><% end %>
+			<% if @part == "Pronoun" %><% @pronoun = true %><% end %>
+			<% if @part == "Verb" %><% @verb = true %><% end %>
+			<% if @part == "Adverb" %><% @adverb = true %><% end %>
+			<% if @part == "Adjective" %><% @adjective = true %><% end %>
+			<% if @part == "Preposition" %><% @preposition = true %><% end %>
+			<% if @part == "Conjunction" %><% @conjunction = true %><% end %>
+			<% if @part == "Interjection" %><% @interjection = true %><% end %>	
+			<% if @part == "Phrase" %><% @phrase_checked = true %><% end %>
+			<% if @part == "No Clue" %><% @no_clue = true %><% end %>
+		
+		
+<table class = "definition">
+						<tr>
+							<td>
+								<label><b><%= t 'definitions.pos' %>:</b><sup>*</sup><br /> <sub>
+											<%= t 'definitions.description' %> </sub>
+								</label>
+							</td>
+								<td> <%= definition_form.radio_button("part_of_speech", "Noun") %>
+									
+									</td>
+								<td> 
+									<acronym style="color:black" title="a person, place, thing, quality, or 
+									action and can function as
+									the subject or object of a verb, the object of a preposition, or an appositive.">
+									<a href ="http://www.youtube.com/watch?v=Tc-ukN1Rvb8" 
+										style="color:black"><%= t 'definitions.noun' %></a></accronym>	
+								</td>
+								<td> <%= definition_form.radio_button("part_of_speech", "Pronoun") %> </td>
+								<td> 
+									<acronym title="used as replacements or substitutes for nouns and noun phrases, 
+									and that have very
+									 general reference, as I, you, he, this, who, what. Pronouns are sometimes 
+									formally distinguished 
+									from nouns, as in English by the existence of special objective forms, as him 
+									for he or me for I, 
+									and by nonoccurrence with an article or adjective.">
+									<a href ="http://www.youtube.com/watch?v=yg9MKQ1OYCg"
+									 style="color:black"><%= t 'definitions.pronoun' %></a></accronym> 
+								</td>
+
+							</tr>
+							<tr>
+								<td></td>
+
+								<td> <%= definition_form.radio_button("part_of_speech", "Verb") %> </td>
+								<td>
+									<acronym title="The part of speech that expresses existence, action, or 
+									occurrence in most languages.">
+									<a href ="http://www.youtube.com/watch?v=h4QEzJe6_ok" style="color:black">Verb</a></accronym>
+								</td>
+								<td> <%= definition_form.radio_button("part_of_speech", "Adverb") %> </td>
+								<td> 
+									<acronym title="modifiers of adjectives or other adverbs or adverbial 
+									phrases, as very, well, quickly. Adverbs
+									 typically express some relation of place, time, manner, attendant 
+									circumstance, degree, cause, inference, result,
+									 condition, exception, concession, purpose, or means.">
+									<a href ="http://www.youtube.com/watch?v=W7wnT8iiR8w" style="color:black">
+													<%= t 'definitions.adverb' %></a></accronym>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+
+								<td> <%= definition_form.radio_button("part_of_speech", "Adjective") %> </td>
+								<td>
+									<acronym title="The part of speech that modifies a noun or other substantive
+									 by limiting, qualifying, or 
+									specifying and distinguished in English morphologically by one of 
+									several suffixes, such as -able, -ous, -er, 
+									and -est, or syntactically by position directly preceding a noun or
+									 nominal phrase.">
+									<a href ="http://www.youtube.com/watch?v=mYzGLzFuwxI" style="color:black"><%= t 'definitions.adjective' %></a></accronym>
+								</td>
+								<td> <%= definition_form.radio_button("part_of_speech", "Preposition") %> </td>
+								<td>
+									<acronym title="modifiers of verbs, nouns, or adjectives, and that 
+									ypically express a spatial, temporal, 
+									or other relationship, as in, on, by, to, since.">
+									<a href ="http://www.youtube.com/watch?v=L4jIC5HLBdM" style="color:black">
+												<%= t 'definitions.preposition' %></a></accronym> 
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td> <%= definition_form.radio_button("part_of_speech", "Conjunction") %> </td>
+								<td>
+									<acronym title="	any member of a small class of words distinguished in 
+									many languages by their function as 
+									connectors between words, phrases, clauses, or sentences, as and, 
+									because, but, however.">
+									<a href ="http://www.youtube.com/watch?v=mkO87mkgcNo" style="color:black">
+											<%= t 'definitions.conjunction' %></a></accronym>
+								</td>
+								<td> <%= definition_form.radio_button("part_of_speech","Interjection") %> </td>
+								<td>
+									<acronym title="words expressing emotion, distinguished in most 
+									languages by their use in grammatical isolation,
+									 as Hey! Oh! Ouch! Ugh!">
+									<a href ="http://www.youtube.com/watch?v=RhHpJ45_zwM" style="color:black">
+											<%= t 'definitions.interjection' %></a></accronym>
+									</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td> <%= definition_form.radio_button("part_of_speech", "Phrase") %> </td>
+								<td>
+									<acronym title="A used phrase that is made up of multiple parts 
+									of speech">
+									<a href ="http://www.collegehumor.com/video:1779769"
+									 style="color:black"><%= t 'definitions.phrase' %></a></accronym>
+								</td>
+								<td> <%= definition_form.radio_button("part_of_speech", "No Clue" ) %></td>
+								<td>
+									<acronym title="Come on, seriously, take two seconds to look up what the
+									other options are and pick the right one">
+									<a href ="http://www.wackywavinginflatablearmflailingtubeman.com/" 
+									style="color:black"><%= t 'definitions.no_clue' %></a></accronym>
+								</td>
+							</tr>
+			
+</table>
+					<%= show_simple_captcha if !logged_in? %><br />
+		<p>	  	
+			<%= definition_form.submit "#{t 'definitions.add'}" %>
+		</p>		
+			<p>
+			<span id = "close"><%= link_to_close_redbox("#{t 'forms.close'}") %> </span>
+			</p>
+							
+			  </fieldset>
+				
+
+		
+<% end %>
+</div> 

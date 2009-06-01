@@ -1,0 +1,16 @@
+<%= stylesheet_link_tag 'redbox' %>
+<%= javascript_include_tag 'redbox' %>
+
+<div id = "index_orphans">
+		<h2>Define Us!!</h2>
+		<ul>
+			<% for phrase in @no_definitions %>
+			<% @phrase = phrase %>
+				<li><b><%= link_to "#{@phrase.word}", :action => 'show', :controller => 'phrases', 
+													 :id => @phrase.id %></b><br />
+			<%= link_to_remote_redbox("(Define Me)", link_to_remote_options = 
+							{:url => {:action => 'show_definition_add', :phrase => @phrase, 																
+							 :type => "Definition"}}) -%></li>
+		<% end %>	
+		</ul>	
+</div><!-- index orphans -->

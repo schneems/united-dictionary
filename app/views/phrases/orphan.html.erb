@@ -1,0 +1,33 @@
+<div class="table-row">
+			<div class="left-container">
+				<div class = "center"><h1><%= t 'phrases' %> <%= t 'orphans.without_synonyms' %> </h1></div>
+				<% if @def_need_child == [] %>
+					<p><%= t 'orphans.none' %> </p>
+				<% else %>
+					<% @new_phrases = @def_need_child %>
+					<%= render :partial => 'main/recent_partial' %>
+				<% end %>
+			</div>
+
+	<div class="right-container">
+				
+			<br />
+			<div center = "center"><h1><%= t 'phrases' %><%= t 'orphans.without_definitions' %> </h1></div>
+			<br />
+
+			<% for phrase in  @phrase_need_def %>
+					<% @flag_language = phrase.language %>
+					<%= render :partial => 'flags' %>
+					<%= link_to "#{phrase.word}", :action => 'show', 
+						:word => phrase.word, :language => phrase.language %>
+					<%=  %><br />
+			<% end %>
+
+		</div><!-- no_definitions -->
+
+
+<div class="space-line"></div>
+
+</div><!-- index_page -->
+
+

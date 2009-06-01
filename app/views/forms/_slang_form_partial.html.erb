@@ -1,0 +1,33 @@
+<table class = "slang_form_partial" >
+		<% @default_language =  @phrase.language || @default_language || "English" %>
+		
+		<% @flag_language =  @default_language %>
+	
+	<% if @default_language != "Chinese" %> 
+		<tr style = "white-space: nowrap;">
+			<td> <%= render :partial => 'phrases/flags' %>
+			<%= t 'forms.entry'%>:
+			<%= text_area :phrase, :word if @default_language != "Chinese"%></td>
+		</tr>
+	<% else %>
+		<% if @default_language == "Chinese" %>
+				<tr style = "white-space: nowrap;">
+					<td><%= render :partial => 'phrases/flags' %>
+					<b><%= t 'forms.simplified' %>:</b>
+					<%= text_area :phrase, :word %></td>
+				</tr>
+				<tr style = "white-space: nowrap;">
+					<td><%= render :partial => 'phrases/flags' %>
+					<b><%= t 'forms.traditional' %>:</b><br /> <sub><%= t 'forms.not_required'%></sub>
+					<%= text_area :phrase, :second_word %></td>
+				</tr>
+				<tr style = "white-space: nowrap;">
+					<td><%= render :partial => 'phrases/flags' %>
+					<b><%= t 'forms.pinyin'%>:</b><br /> <sub><%= t 'forms.not_required'%></sub>
+					<%= text_area :phrase,  :third_word %></td>
+				</tr>
+		<% end %><!-- if default == chinese -->
+
+	<% end %><!-- if default != chinese -->
+</table>
+

@@ -1,0 +1,16 @@
+<p><%= t 'game.welcome' %> Welcome to the party, choose a language you would like to learn on the left, we'll randomly show you some slang from that language and a picture that represents it, mixed in with a few other pictures. You click on the right one, and you can feel happy inside. This is a work in progress, so bare with me and feel free to send suggestions to us:<%= link_to "Contact", :action => "contact", :controller => "phrases" %>
+
+</p>
+
+
+
+	<span>
+	<% form_for(:phrase, :url => {:action => 'begin_game', :controller => 'phrases'}) do |f| -%>
+			<% @default = @game_language||"English" -%>
+				<%= select_tag(:selectbox,
+					options_for_select(["Chinese", "Dutch", "English", "French","German",
+					"Greek", "Italian", "Japanese", "Korean", "Portuguese", "Russian", 
+					"Spanish"], @default)) -%>
+			<%= f.submit 'Let the Games Begin' %>
+	<% end %>
+	</span>

@@ -1,0 +1,55 @@
+8
+
+dir
+6
+http://rails-plugin-text-area-with-auto-resize.googlecode.com/svn/trunk/text_area_with_auto_resize
+http://rails-plugin-text-area-with-auto-resize.googlecode.com/svn
+
+
+
+2007-03-19T04:48:00.283210Z
+5
+johnwulff
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b13c8fd9-ff2b-0410-9cb7-dddb634a1619
+
+init.rb
+file
+
+
+
+
+2008-07-07T22:07:02.000000Z
+b61b5a4d6c20f7b65e12c9eccefbea70
+2007-03-19T04:30:44.583079Z
+3
+johnwulff
+
+lib
+dir
+
+README
+file
+
+
+
+
+2008-07-07T22:07:02.000000Z
+da0984f5fdef261d95eeec12766cba8f
+2007-03-19T04:48:00.283210Z
+5
+johnwulff
+

@@ -1,0 +1,31 @@
+<%= javascript_include_tag 'swfobject' %>
+
+<center>
+<div id = "flashy"  style="display:none;">
+<div id="flashcontent">
+	
+  <strong>You need to upgrade your Flash Player</strong>
+  This is replaced by the Flash content. 
+  Place your alternate content here and users without the
+  Flash plugin or with Javascript turned off will see this.
+  Content here allows you to leave out <code>noscript</code>
+  tags.
+</div>
+ 
+<script type="text/javascript">
+  // <![CDATA[
+  // path_to_swf, swf_id, width, height, fp_version, bgcolor
+  var so = new SWFObject(
+    "/flash/test.swf", "my_swf", "320", "240", "9", "#FFF"
+  )
+ 
+  // An example parameter passed to the SWF file
+  so.addVariable("my_var", "my_var_value")
+ 
+  // This is where the magic happens
+  so.write("flashcontent")
+ 
+  // ]]>
+</script>
+</div>
+</center>

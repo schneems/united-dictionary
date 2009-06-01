@@ -1,0 +1,6 @@
+супермаркет 	 supermarket 	 city 
+Бьюкенен, Джеймс 	 Buchanan ; James Buchanan ; President Buchanan 	 person 
+Франческо Петрарка 	 Petrarch ; Petrarca ; Francesco Petrarca 	 person 
+проступок ; нарушение 	 misdemeanor ; misdemeanour ; infraction ; violation ; infringement 	 law 
+отвлечённое понятие ; абстракция 	 abstraction ; abstract 	
+роковой ; фатальный 	 weird 	

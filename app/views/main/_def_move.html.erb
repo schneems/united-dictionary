@@ -1,0 +1,65 @@
+<div class = "phrase_with_id" id = <%="phrase_#{@phrase.id}"%>>	
+	<% @element = @phrase %>
+	<% @all_definitions = @phrase.definitions %>
+	<% @definition = @definition||@all_definitions[0] %><!-- this is the definition shown -->
+	<% @definition_index = @all_definitions.index(@definition) %>
+	
+	<%= render :partial => 'main/definition_arrow_wrapper' %>
+	
+	<div id = "add_new_bar">
+		<p><%= t 'model.add.add_new' %>
+		<span class = "add_new">
+			<%= link_to_remote( "#{t 'synonym'}," ,  :type=> "submit", 
+			:update => "add_child#{@definition.id}", 
+			:loading =>"Element.show('add_child_indicator#{@definition.id}')",
+			:loaded => "Element.hide('add_child_indicator#{@definition.id}');new Effect.Shake('add_child#{@definition.id}', {duration: 1})",
+			:url => {:action => 'show_child_add', :phrase => @phrase.id, 
+			:definition => @definition, :type => "synonym"}) if @definition != nil  %>	
+		</span><!-- add_new for definitions -->
+		<span  class = "add_new">
+			<%= link_to_remote("#{t 'antonym'},", :type=> "submit", 
+				:update => "add_child#{@definition.id}", 
+				:loading => "Element.show('add_child_indicator#{@definition.id}')",
+				:loaded => "Element.hide('add_child_indicator#{@definition.id}');new 
+				Effect.Shake('add_child#{@definition.id}', {duration: 1})",
+				:url => {:action => 'show_child_add', :phrase => @phrase.id, 
+				:definition => @definition, :type => "antonym", 
+				:child_language => @child_language,  }) if @definition != nil  %>
+		</span><!-- add_new for antonyms -->
+
+
+		<span  class = "add_new_definition">
+		<span  class = "add_new">
+
+			<%= link_to_remote_redbox("#{t 'definition'}", link_to_remote_options = 
+			{ :url => {:action => 'show_definition_add', 
+			:phrase => @phrase.id, 
+			:type => "Definition", 
+			:child_language => @child_language}}) %>
+		</span>	<!-- add_new for definitions -->
+		</span>	
+	</div><!-- add_new_bar -->
+
+
+	<% if @definition != nil %>
+		<div id= <%="add_child#{@definition.id}" %> 
+			<span id = "indicator">
+				<%= image_tag("redbox_spinner.gif",
+				  :id     =>  "add_child_indicator#{@definition.id}",
+				  :style  =>  'display:none;') %>
+			</span><!-- indicator -->
+		</div><!-- add_child -->
+		
+		
+	<% end %><!-- if @definition != nil -->
+
+<hr />
+
+
+	<% @definition = nil %> <!-- clears variable -->
+
+	<div id = "indicator"><%= image_tag("redbox_spinner.gif",
+	   :id     =>  "definition_change_indicator#{@phrase.id}",
+	   :style  =>  'display:none;') %>
+	</div><!-- indicator -->
+</div><!-- phrase_with_id -->

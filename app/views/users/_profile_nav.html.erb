@@ -1,0 +1,8 @@
+<% if flash[:notice] %><div id="flash"><%= flash[:notice] %></div><% end %>
+
+<div id = "profile_nav">
+<%= link_to "#{t 'my_profile'}", :action => 'show', :controller => "users" %>|
+<%= link_to "#{t 'my_definitions'}", :action => 'show_definitions', :controller => "users" %>|
+<%= link_to "#{t 'show_my'} #{t 'phrases' }", :action => 'show_phrases', :controller => "users" %>
+</div><!-- profile_nav -->
+

@@ -1,0 +1,30 @@
+<div id ="delete">
+		<% form_for :mugshot, @mugshot, :url => { :action => "battle_it", 
+				    :element => @element.id, :id => @phrase} do |f| %>
+				<% @type = "photo" %>
+								<p class="delete_legend">Delete This <%=h @type %> ?</p>
+								
+									<p>By clicking yes, you will start the silent deathclock (ooooh scary) 
+										for this <%=h @type %>. When the clock strikes zero in 30 minutes
+										if the <%=h @type %>'s rank is negative it will be fed to the Slangasaur
+										and will cease to exist!! If positive it will be spared, do you wish to judge this fine <%=h @type %>??</p>
+												
+			<% if logged_in? %>	
+				<div id = "delete_captcha_position">
+				   <img src="/images/dino.gif" height = "90px" width = "90x" /> 
+				   <p></p>
+				</div><!-- new_dino_position -->
+			<% else %>						 
+				<div id ="delete_captcha_position">
+					<%= show_simple_captcha %>
+					<sub><center>Login to Skip Captcha</center></sub>
+				</div> <!-- new_captcha_position -->
+			<% end %><!-- if logged_in -->										
+							  			<input class="submit" type="submit" value = "Start The Countdown!!"">
+											<% f.submit "Yes?" %>
+										</input>
+										<br />
+								<span class = "close"><%= link_to_close_redbox("Cancel") %> </span>
+						
+					<% end %><!-- form_for ->
+</div><!-- delete ->

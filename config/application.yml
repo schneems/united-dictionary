@@ -1,0 +1,12 @@
+development:
+    merchant_email: bob@thebuilder.com
+    language_array: [["#{t 'languages.chinese'}", "Chinese"], "English"]
+    
+test:
+    merchant_email: bob@thebuilder.com
+    language_array: [["#{t 'languages.chinese'}", "Chinese"], "English"]
+
+production:
+    merchant_email: bob@thebuilder.com
+    language_array: ["Chinese", "English"]  
+  

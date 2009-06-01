@@ -1,0 +1,52 @@
+<%= error_messages_for :user %>
+<br />
+<div id= "user_wrapper">
+	<p class = "legend"><%= t 'header.login.signup' %></p>
+	<div id="openid_option">
+		<%= t 'get_an' %> <a href ="http://openid.net/get/"><%= t 'open_id' %></a>, <%= t 'then' %> <%= link_to '#{t 'login'}', login_path, :controller => "sessions" %><br />
+	</div>
+	<div id = "regular_option">
+			<span><%= t "signup_locally" %> </span>
+			<% form_for :user, :url => users_path do |f| -%>
+			
+
+			
+			<table>
+					<tr><td><label for="login"><%= t 'username' %>:</label></td>
+					
+					<td>  <%= f.text_field(:login) -%><!-- observe field here checking to see
+						if username is taken would be cool --></td></tr>	
+					<tr><td id = "new_login_exists_position" ><%= t 'username' %> <%= t 'status'%>:</td><td id = "login_exists"></td></tr>
+					
+					<tr><td><label for="email"><%= t 'email' %>:</label></td><td><%= f.text_field :email %></td></tr>
+			
+					
+					
+					<tr><td><label for="password"><%= t 'password' %>:</label></td> <td><%= f.password_field :password %></td></tr>
+					<tr><td><label for="password_confirmation"><%= t 'confirm' %> <%= t 'password' %>:</label></td>
+					<td><%= f.password_field :password_confirmation %> <!-- observe field password and password_confirmation display if they match or not -->
+					</td></tr>
+		</table>
+
+
+	</div><!-- regular option -->
+	
+				<div id ="new_user_captcha_position">
+					<%= show_simple_captcha %>
+				</div> <!-- new_captcha_position -->
+	
+	
+	
+	
+	<input class = "submit" type = "submit" value = "Signup"><% submit_tag 'Sign Up' %></input><br />
+	<span><sub><%= t 'never_spam' %></sub></span>
+</div><!-- user_wrapper -->
+<% end %>
+
+
+<%= observe_field(:user_login, :url => {:action => :login_exists, :controller => 'users' }, :update => 'login_exists', :frequency => 0.2, :on => 'changed', :with => "'name=' + encodeURIComponent(value)"	) %>
+
+
+
+
+

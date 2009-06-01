@@ -1,0 +1,29 @@
+<div id="comments">
+	<b><%= t "comments.comments_for" %>
+		 <% @flag_language = @phrase.language %>
+		 <%= render :partial => 'phrases/flags'%>
+		 <%= @phrase.word %> 
+	</b>
+	<p><%= "#{t 'comments.no_comments' }" if @comments.empty? %></p>
+		<% for comment in @comments %>
+			<div id ="individual_comments">
+				<p><%= t "comments.name" %> <%= comment.name %>
+				<% @element = comment %> <%= render :partial => "rank_one" %></p>
+				<p><%= comment.comment_field %></p>
+			</div><!-- individual_comments -->
+		<% end %>
+</div><!-- comments -->
+
+<div id= "new_comment_show">		
+	<span id = "comment_show_indicator"><%= image_tag("redbox_spinner.gif",
+								   :id     => "add_comment_indicator",
+								   :style  =>  'display:none;') %>
+	</span><!-- indicator --> 
+
+	<div id = "add_comment">
+				<%= link_to_remote( "#{t 'comments.add_new'}", :update => "new_comment_show", 
+				:loading => "Element.show('add_comment_indicator')",
+				:loaded => "Element.hide('add_comment_indicator');new Effect.Shake('new_comment_show',
+				{duration: 1})", :url => {:action => 'comment_form_show', :phrase => @phrase.id} ) -%>
+	</div><!-- add_comment -->
+</div><!-- new_comment_show -->

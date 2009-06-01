@@ -1,0 +1,14 @@
+<% for element in LANGUAGE_ARRAY %>
+	<% language = element[1].downcase %>
+				
+	<div class = "flag_redirect" %>
+		<%= link_to(image_tag("/images/flags/"+language+".jpg"), :controller => 'phrases', 
+												:action => 'I18n_change_language' , :language => language )%>	
+		<span >
+		</span>									
+		<span id = <%= "language_#{language}" %> >
+			<%= link_to("#{t "languages" + "."+ language }", :controller => 'phrases', 
+													:action => 'I18n_change_language' , :language => language) %> 
+		</span>
+	</div>
+<% end %>

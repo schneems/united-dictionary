@@ -1,0 +1,72 @@
+<div class="table-row">
+	<br /><!--   -->
+	<% cache ({:page => params[:page] || 1, :word => @word, :language => @language}) do %>
+		<% @page_title = "#{@phrase.word} : #{@phrase.language}" %>
+		<% @page_word = "#{@phrase.word}" %>
+		<% @page_language = "#{@phrase.language}" %>
+		
+		<div class="left-container">
+					<div class = "main_ranking">
+						<% @element = @phrase %>
+						<%= render :partial => 'rank_one' %>
+					</div><!-- main_ranking_for_show -->
+					<span>
+					<h1 id = "main_entry">
+								<% @flag_language = @element.language %>
+								<%= render :partial => 'flags'%><%=h @phrase.word -%>
+								<%=  render :partial => 'multiple_language_phrase' %>
+					</h1><br />
+							<p id = "added_by" >
+								<%= link_to "#{@phrase.user.login},", :action=> 'user_search' , 
+										:controller => 'phrases', :id => @phrase.user.id  if @phrase.user != nil %>
+									  <%= "Anon." if @phrase.user == nil %>
+									  <%= @phrase.created_at.to_s(:my_time)%>
+							</p>
+							<p id = "translations" ><%= t 'translations' %>:
+								<%= select_tag(:child_language, options_for_select(@child_lang, "All"),
+											:onchange => remote_function(:with => "'child_language='+this.value", 
+											:update => 'definition',
+											 :loading => "Element.show('fool_indicator')" ,
+											:loaded => "Element.hide('fool_indicator')",
+											:url => {:action => :child_language,:array => @child_lang,
+											:phrase => @phrase, :page => params[:page]||1, :per_page => params[:per_page]||5
+										
+											} )) %>
+							</p>
+					</span><!-- main_entry -->
+							<center>
+								<%= image_tag("fool.gif", :id => "fool_indicator", :style  =>  'display:none;') %>
+							</center>
+			<!-- LOOK HERE!!! -->	
+				<% if @phrase.definitions.empty? %>
+						<div id = "add_new_def">
+						 	<%= link_to_remote_redbox("#{ t 'definitions.add'} #{t 'to' } #{@phrase.word}", link_to_remote_options = 
+									{ :url => {:action => 'show_definition_add', :phrase => @phrase.id, 
+										:type => "Definition", 
+										:child_language => @child_language}}) -%>
+						</div><!-- add_new_def -->
+				<% else %><!-- if @phrase.definitions.empty?? -->
+					<div id="definition">
+						<%= render :partial => "main/definition_partial" %>
+					</div><!-- definition -->	
+					<%= render :partial => 'mugshots/picture_show' %>
+
+
+					<%= render :partial => 'comments/comment_show'%>
+
+							<div id = "comments" class = "center" >
+								<%= render :partial => 'main/horizontal_ad' %>
+							</div>
+			<% end %>
+		</div><!-- main_left -->
+		<% end %><!-- cacheing -->
+	<div class="right-container">
+			<br />
+			<%= render :partial => 'main/vertical_ad' %><br /><br />
+			<%= render :partial => 'main/vertical_ad' %>
+	</div><!-- right_nav -->
+	
+	
+	<div class="space-line"></div>
+
+</div><!-- table-row -->

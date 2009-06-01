@@ -1,0 +1,61 @@
+
+<div id= "profile">
+
+	<p><b><%= t 'username' %>: </b><%= current_user.login %>
+	  
+		<%= link_to_remote( "#{ t 'edit' }", 
+						:update => "profile_edit", :loading => "Element.show('profile_indicator')" , :loaded => "Element.hide('profile_indicator');new Effect.Shake('profile_edit', {duration: 1})",
+						:url => {:action => 'show_profile_login', :controller => 'users', :user => current_user.id }) -%>
+		<br />
+	<b><%= t 'email' %>: </b><%= current_user.email %>
+	<%= link_to_remote(  "#{ t 'edit' }", 
+					:update => "profile_edit", :loading => "Element.show('profile_indicator')" , :loaded => "Element.hide('profile_indicator');new Effect.Shake('profile_edit', {duration: 1})",
+					:url => {:action => 'show_profile_email', :controller => 'users', :user => current_user.id }) -%>
+
+	<span id = "indicator"><%= image_tag("redbox_spinner.gif",
+				   :id     =>  "profile_indicator",
+				   :style  =>  'display:none;') %>
+	</span><!-- indicator --> <br />
+</div><!-- profile -->
+
+<div id = "profile_edit">
+</div><!-- profile_edit -->
+
+<div id = "show_user">
+<%= t 'user' %>:<%= link_to "#{@user.login}", :action=> 'user_search' , 
+	:controller => 'phrases', :id => @user.id  %><br />
+<%= t 'rank' %>: <%= @user.rank||1 %><br />
+<div id = "definitions_added">
+	<b><%= t 'definitions' %> <%= t 'added_by' %><%= @user.login %>:</b><br />
+<% if @definitions[0] != nil  %>
+			<% for definition in @definitions %>
+				<% @definition = definition %>
+				<% phrase_id = @definition.phrase_id %>
+				<% @phrase = Phrase.find(phrase_id) %>
+				<%= link_to "#{@phrase.word}", :action => 'show', :controller => 'phrases', :id => @phrase.id %>
+				<%= @definition.created_at.to_s(:my_time) %><br />
+				<%= @definition.meaning %>
+				<br />
+			<% end %>
+			<div class= "flickr_pagination"> <%= will_paginate @definitions %><br/></div>
+<% else %>
+			<p>You haven't added any definitions yet </p>
+<% end %><!-- if -->
+</div>
+
+		<div id = "phrases_added">
+				<b><%= t 'definitions' %> <%= t 'added_by' %> <%= @user.login %>:</b><br />
+<% if @phrases[0] != nil  %>
+
+			<% for phrase in @phrases %>
+				<% @phrase = phrase %>
+				<%= link_to "#{@phrase.word}", :action => 'show', :controller => 'phrases', :id => phrase.id %>
+				<%= @phrase.created_at.to_s(:my_time) %><br />
+			<% end %>
+			<div class= "flickr_pagination"> <%= will_paginate @phrases %><br/></div>
+<% else %>
+		<p>You haven't added any main entries yet </p>
+<% end %><!-- if ->
+
+
+</div>

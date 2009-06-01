@@ -1,0 +1,10 @@
+:backgroundrb:
+  :ip: 0.0.0.0
+  :port: 11006
+:schedules:
+  :cleanup_worker:
+    :delete_elements:
+      :trigger_args:
+        :start: <%= Time.now + 5.seconds %>
+        :end: <%= Time.now + 2.minutes %>
+        :repeat_interval: <%= 2.minutes + 30.seconds %>

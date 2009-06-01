@@ -1,0 +1,136 @@
+<% @site_name = inline_get_site_name %>
+<% if true %>
+<div class = "center">
+	
+	<h2 id = "big">
+	<%= inline_get_site_name %><%= t 'welcome.main' %><br />
+	</h2><!-- id = big -->
+	<p><%= t 'welcome.message' %></p><br />
+	<p>Also Don't Forget to Checkout My Latest Creation <a href="http://www.greenerthangoogle.com/google">Greener Than Google</a></p>
+</div><!-- center -->
+
+
+<span class = "plain" ><hr /></span>
+	
+			<div class = "center">
+				<% render :partial => 'main/horizontal_ad' %>
+			</div>
+	
+
+<div id = "main_page" class = "float-wrapper" >
+	<div class="main_left_column">
+		<div class = "center">
+			<%= link_to "<h2>Recently Added</h2>",  :action => "recently_added", :controller => "phrases"  %>
+			<%= link_to image_tag( "/images/recent.png"),  :action => "recently_added", :controller => "phrases"  %>
+			<%= link_to "<h4>The Latest and Greatest</h4>",  :action => "recently_added", :controller => "phrases"  %>
+		</div>
+	</div><!-- left_container -->
+	
+	<div class="main_middle_column">	
+		<div class = "center">
+			<%= link_to "<h2>Orphans</h2>",  :action => "orphans", :controller => "phrases"  %>
+			<%= link_to image_tag( "/images/orphans.png"),  :action => "orphans", :controller => "phrases"  %>
+			<%= link_to "<h4>Help An Entry Adopt a Definition</h4>",  :action => "orphans", :controller => "phrases"  %>
+		</div>
+	</div><!-- left_container -->
+	
+	<div class="main_right_column">
+			<div class = "center">
+				<%= link_to "<h2>The Game</h2>",  :action => "slang_game", :controller => "phrases"  %>
+				<%= link_to image_tag( "/images/the_game.png"),  :action => "slang_game", :controller => "phrases"  %>
+				<%= link_to "<h4>Pick A Pic, Learn a Language</h4>",  :action => "slang_game", :controller => "phrases"  %>
+			</div>
+	</div><!-- right-container -->
+	
+	<div class = "space-line"></div><br />
+	
+	<div class="main_left_column">	
+		<div class = "center">
+			<%= link_to "<h2>Random</h2>",  :action => "random", :controller => "phrases"  %>
+			<%= link_to image_tag( "/images/random.png"),  :action => "random", :controller => "phrases"  %>
+			<%= link_to "<h4>Let the Wind be your guide</h4>",  :action => "random", :controller => "phrases"  %>
+		</div>
+	</div><!-- left_container -->
+	
+	<div class="main_middle_column">
+		<div class = "center">			
+			<%= link_to "<h2>Download</h2>",  :action => "download", :controller => "phrases"  %>
+			<%= link_to image_tag( "/images/download.png"),  :action => "download", :controller => "phrases"  %>
+			<%= link_to "<h4>This Whole Dictionary</h4>",  :action => "download", :controller => "phrases"  %>
+		</div>
+	</div><!-- left_container -->
+	
+	<div class="main_right_column">
+			<div  class = "center">
+				<%= link_to "<h2>Top Users</h2>",  :action => "top_users", :controller => "phrases"  %>
+				<%= link_to image_tag( "/images/topuser.png"),  :action => "top_users", :controller => "phrases"  %>
+				<%= link_to "<h4>Are You Worthy?</h4>",  :action => "top_users", :controller => "phrases"  %>
+			</div>
+	</div><!-- right-container -->
+
+	<div class="space-line"></div><br />
+	<div class="main_left_column">	
+		<div class = "center">
+			<%= link_to "<h2>Alphabetical Listing</h2>",   :action=> 'a_z' , :controller => 'phrases', :ltr => 'A'  %>
+			<%= link_to image_tag( "/images/atoz.png"),   :action=> 'a_z' , :controller => 'phrases', :ltr => 'A'  %>
+			<%= link_to "<h4>A Listing of Alphabeticals</h4>",   :action=> 'a_z' , :controller => 'phrases', :ltr => 'A'  %>
+		</div>
+	</div><!-- left_container -->
+	
+	<div class="main_middle_column">
+		<div id = "special">	
+			<%= render :partial => 'forms/slang_form' %>
+		</div>
+	</div><!-- left_container -->
+	
+	<div class="main_right_column">
+			<div  class = "center">
+				<%= link_to "<h2>Home<h2>",   :action=> 'index' , :controller => 'phrases'  %>
+				<%= link_to image_tag( "/images/home.png"),   :action=> 'index' , :controller => 'phrases'  %>
+				<%= link_to "<h4>P.S. You're already here</h4>",   :action=> 'index' , :controller => 'phrases' %>
+			</div>
+	</div><!-- right-container -->
+	<br />
+
+	<div class="space-line"></div><br />
+	<br />
+	
+
+<div class = "center">
+	<%= render :partial => 'main/horizontal_ad' %>
+</div>
+	<br />
+	<br />
+</div><!-- main_left -->
+
+
+
+<% else %>
+	<div class = "center">
+		<h2 id = "big">
+		<%= @site_name %><%= t 'welcome.main' %><br />
+		</h2><!-- id = big -->
+		<p><%= t 'welcome.message' %></p>
+	</div><!-- center -->
+	
+	
+	<div class="table-row">
+
+		<div class="left-container">
+			<div class = "center">
+				<h2><%= t 'recently_added' %></h2>
+			</div>
+			<%= render :partial => 'main/recent_partial' %>
+		</div><!-- main_left -->
+
+		<div class="right-container">
+			<br />
+				<%= render :partial => 'main/vertical_ad' %><br /><br />
+				<%= render :partial => 'main/vertical_ad' %>
+		</div><!-- right_nav -->
+
+
+		<div class="space-line"></div>
+
+	</div><!-- table-row -->
+<% end %>

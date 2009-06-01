@@ -1,0 +1,17 @@
+Answer: <%= @response %><br />
+Variable: <%= @variable %><br />
+<% @phrase = Phrase.new %>
+
+				
+ <% form_for @phrase, :url => {:action => "testing"} do |f| %>
+
+<%= f.text_field :word %>
+<%= f.submit 'Ask The Maxima' %>
+
+<% end %>
+<!-- algebra ["solve(","factor(","expand(","zeros(","approx(","comDenom(","propFrac(","nSolve("] -->
+	<!-- Trig ["tExpand(","tCollect("] -->
+	<!-- Complex ["cSolve(","cFactor(", "cZeros("] -->
+	<!-- Extract ["getNum(","getDenom(", "left(", "right("] -->
+
+<!-- calc ["differentiate(" , "integrate(" , "limit(" , "sum(" , "product(" , "fMin(" , "fMax(", "arcLen(" , "taylor(" , "nDeriv(", "nInt(" , "deSolve(" ] -->

@@ -1,0 +1,36 @@
+# File: config/facebooker-mock.yml 
+# The api key, secret key, and canvas page name are required to 
+# get started 
+# Tunnel configuration is only needed if you are going to use the 
+# facebooker: tunnel Rake tasks 
+# Your callback url in Facebook should be set to http:// 
+# public_host:public_port 
+
+development: 
+ api_key: 30742023352e18d000c930bd7764a741 
+ secret_key: 96585c4293727bc3a9b5713d4b51d915 
+ canvas_page_name: Slangasaurus  
+ callback_url: http://www.slangasaurus.morphexchange.com/facebook
+ tunnel: 
+     public_host_username: slangasaur 
+     public_host: http://www.slangasaurus.morphexchange.com/facebook
+     public_port: 1111 
+     local_port: 3000    
+test: 
+  api_key: 30742023352e18d000c930bd7764a741
+  secret_key: 96585c4293727bc3a9b5713d4b51d915 
+  canvas_page_name: Slangasaurus 
+  tunnel: 
+    public_host_username: slangasaur 
+    public_host: http://www.slangasaurus.morphexchange.com/facebook
+    public_port: 1111 
+    local_port: 3000 
+production: 
+  api_key: 30742023352e18d000c930bd7764a741
+  secret_key: 96585c4293727bc3a9b5713d4b51d915 
+  canvas_page_name: Slangasaurus 
+  tunnel: 
+    public_host_username: slangasaur 
+    public_host: http://www.slangasaurus.morphexchange.com/facebook
+    public_port: 1111 
+    local_port: 3000

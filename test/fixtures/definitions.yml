@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+duplicate_definition:
+    meaning: "allreadyexists"
+    part_of_speech: "Noun"
+    example: "none"
+    phrase: duplicate_phrase
+    rank: 1
+
+breast_definition:
+    meaning: "baby human moo cows"
+    part_of_speech: "Noun"
+    example: "none"
+    phrase: breasts
+    rank: 1

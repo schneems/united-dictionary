@@ -1,0 +1,29 @@
+
+
+
+<div id = "sessions_wrapper">
+	<p class = "legend"> <%= t 'login' %>  </p>
+	<div id = "sessions_login_regular">
+		<% form_tag session_path do -%>
+		<table>
+			<tr><td><%= t 'username' %>:</td><td><%= text_field_tag 'login' %></td></tr>
+			<tr><td><%= t 'password' %>:</td><td><%= password_field_tag 'password' %></td>
+		</table>
+	</div>
+	<!-- Uncomment this if you want this functionality-->
+	
+	<p><label for="remember_me"><%= t "remember_me" %> :</label>
+	<%= check_box_tag 'remember_me' %></p>
+		
+	<div id = "sessions_login_openid">
+			<label for ="openid_url"><%= t "open_id" %> <%= t 'url'%>:</label>
+			<%= text_field_tag "openid_url" %></span><br />
+		<p class = "what">What is <a href ="http://openid.net/get/"><%= t 'open_id' %></a>?</p>
+	</div> <!-- sessions_login_openid -->
+
+<div class = "center">
+<%= submit_tag "#{ t 'log_in'}" %>
+</div>
+</div><!-- id = sessions_wrapper -->
+
+<% end -%>

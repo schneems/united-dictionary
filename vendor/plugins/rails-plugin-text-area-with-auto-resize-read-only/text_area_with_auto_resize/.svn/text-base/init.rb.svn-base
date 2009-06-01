@@ -1,0 +1,1 @@
+require 'text_area_with_auto_resize'

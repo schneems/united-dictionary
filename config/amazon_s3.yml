@@ -1,0 +1,15 @@
+development:
+  bucket_name: gen-slang
+  access_key_id: 1HT0H5JTR1W4W9686S02
+  secret_access_key: NmSKTlHFNSrI/AQhbUxexT1gVqQtJ3Akxxl/gonP   
+
+test:
+  bucket_name: gen-slang
+  access_key_id: 1HT0H5JTR1W4W9686S02
+  secret_access_key: NmSKTlHFNSrI/AQhbUxexT1gVqQtJ3Akxxl/gonP
+
+production:
+  bucket_name: gen-slang
+  access_key_id: 1HT0H5JTR1W4W9686S02
+  secret_access_key: NmSKTlHFNSrI/AQhbUxexT1gVqQtJ3Akxxl/gonP
+

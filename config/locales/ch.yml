@@ -1,0 +1,206 @@
+ch:
+  phrase:                     “主要进入”
+  phrases:                    “主要作品”
+  definition:                 “定义”
+  definitions:                “定义”
+  synonym:                    “别名”
+  synonyms:                   “别名”
+  antonym:                    “反义词”
+  antonyms:                   “反义词”
+  mugshot:                    “图片”
+  mugshots:                   “图片”
+  comment:                    “评论”
+  comments:                   “意见”
+  search:                     
+    submit:                   “提交”
+    all:                      “全部”
+    simplified:               “简化”
+    pinyin:                   “汉语拼音”
+    traditional:              “传统”
+  header:                     
+    navigation:               
+      add:                    “添加”
+      home:                   “首页”
+      game:                   “游戏”
+      orphans:                “孤儿”
+      recent:                 “最近”
+      random:                 “随机”
+      top_users:              “顶端用户”
+      download:               “下载”
+      a_z:                    “字母”
+    login:                    
+      no_username:            "点击此处设置您的用户名"
+      logout:                 "退出"
+      login:                  '登录'
+      signup:                 '注册'
+  footer:                     
+    terms:                    “使用条款”
+    privacy:                  “隐私”
+    contact:                  “联系”
+    about:                    “关于”
+  welcome:                    
+    main:                     “是用户提交的字典里”
+    message:                  “如果您没有看到它...新增它，如果你不喜欢它...级及删除”
+    top_ranked:               “排行定义！ ”
+  forms:                      
+    entry:                    “条目： ”
+    synonym:                  “别名： ”
+    antonym:                  “反义词： ”
+    update:                   “更新”
+    not_required:             “没有必要”
+    required:                 “规定”
+    close:                    “关闭X ” ＃ ＃的X就是有给一些用户点击
+    language:                 “语言： ”
+    simplified:               “简体： ” ＃ ＃在简体中文
+    traditional:              “传统的： ” ＃ ＃ ''
+    trad:                     “传统”
+    pinyin:                   “汉语拼音”
+  user:                       
+    added_by:                 “增加了”
+  comments:                   
+    add_comment:              '添加评论'
+    submit:                   “提交您的评论”
+    comments_for:             “意见” ＃ “的评论此项目”
+    no_comments:              “没有评论尚未新增”
+    name:                     “名称： ” ＃ '请输入您的姓名：
+    comments:                 “评论： ”
+    add_new:                  “添加新的评论”
+  delete:                     
+    delete_this:              “删除此”
+    start:                    “开始倒计时？ ”
+    note_one:                 “注意：此选项仅适用于”
+    note_two:                 “负排名或少于24小时老”
+    marked:                   
+      first:                  “这” ＃ ＃大写
+      second:                 “已标记为删除。如果”
+      third:                  “的排名是不利的”
+      fourth:                 “这将是美联储的Slangasaur和将不复存在！如果你想
+      fifth:                  “然后提高其排名按一下竖起大拇指！ ”
+    explain:                  
+      first:                  “通过点击提交按钮，您就可以开始沉默deathclock （邻
+      second:                 “当罢工24小时零30分钟，如果这个”
+      third:                  “的排名是否定这将是美联储的Slangasaur和将停止前
+  definitions:                
+    def:                      “高清” 。
+    add:                      “新增的定义”
+    defined:                  “界定为： ”
+    example:                  “例如”
+    pos:                      “词性”
+    description:              “ （点击查看更多描述） ”
+    noun:                     “名词”
+    pronoun:                  “代词”
+    verb:                     “动词”
+    adverb:                   “副词”
+    adjective:                “形容词”
+    preposition:              “介词”
+    conjunction:              “连词”
+    interjection:             “感叹词”
+    phrase:                   “词组”
+    no_clue:                  “不知道”
+    remove:                   “删除这一定义”
+    warning:                  “所有的数据表中的定义都将丢失，继续吗？ ”
+  model:                      
+    add:                      
+      add_new:                “添加新： ”
+      comment:                “添加”
+      definition:             “添加新的定义”
+      phrase:                 “添加一个新的主要入境”
+      antonym:                “添加了反义词” ＃帽
+      synonym:                “添加一个别名” ＃帽
+  languages:                  
+    chinese:                  “中华”
+    dutch:                    “荷兰”
+    english:                  “英语”
+    french:                   “法国”
+    german:                   “德国的”
+    greek:                    “希腊”
+    italian:                  “意大利”
+    japanese:                 “日本”
+    korean:                   “韩国”
+    portuguese:               “葡萄牙语”
+    russian:                  “俄罗斯”
+    spanish:                  “西班牙”
+  guidelines:                 
+    first:                    “写大量受众（无内部笑林） ”
+    second:                   “没有名字，但公众人物”
+    third:                    “充分利用您的加入，增加定义，同义词，反义词，一个
+  meta:                       
+    title:                    “ Slangasaurus -在俚语词典，城市词典您写了一篇”
+    description:              “俚语同义词，反义词，定义，翻译和图片为”
+    altdescription:           “ Slangasaurusaurus用户提交俚语词典和字典。搜索
+    keywords:                 “俚语，定义，同义词，反义词，翻译，城市字典， thesa
+    altkeywords:              “俚语，城市词典，俚语辞典，俚语辞典， slangasaurus ，
+  products:                   
+    title:                    “产品”
+    released:                 “释放”
+  flash:                      
+    login:                    “中记录成功。 ”
+    new_success:              “成功添加了新的”
+    update_success:           “成功更新”
+    error:                    “的错误，同时节省”
+    correct:                  “正确的”
+    incorrect:                “不正确”
+    three_zero_one:           “这个网址是感动”
+    ticking:                  “ 30分钟...时间在流逝！ ”
+    search_one:               “没有人说”
+    search_two:               “帮助每个人都增加了它！ ”
+  error:                      
+    captcha:                  “信中不符的形象”
+    saving:                   “的错误，同时节省”
+  download:                   
+    explain:                  “让您的语言成长！下载并使用这些词典，您h
+  contact_me:                 “请给任何意见和问题，对上述电子邮件。我会写
+  a_z:                        
+    begin_with:               “所有参赛作品开头的字母”
+    no_words:                 “没有任何语言中增加了”
+    that_begin_with:          “开头的”
+  about:                      
+    welcome:                  “欢迎， Slangasaur.us是一个多语言用户提交的词库，这
+    why:                      “ <h3>但是，为什么... ？ ” /蛋白H3 “ <p>当然有一吨的字典在线，但
+    how:                      “ <h3>但如何... ？ ” /蛋白H3 “ <p>此网站书面使用Ruby on Rails的这
+    who:                      “ <h3>但谁... ？ ” /蛋白H3 “ <p>理查德Schneeman绝对没有网上进步
+  orphans:                    
+    without_synonyms:         “如果没有同义词或<br />反义词”
+    without_definitions:      “没有<br />定义”
+    no_orphans:               “所有的定义同义词和反义词，以帮助使他们的公司。
+  recently_added:             “最近新增的”
+  search_results:             “搜索结果”
+  translations:               “翻译”
+  add:                        “添加” ＃ ＃添加到您的清单
+  yet:                        “然而”
+  or:                         “或”
+  to:                         “到” ＃ ＃成功地增加了一个新的别名“到”此项目
+  in:                         “中的” ＃ ＃ “把这个'的'丑”
+  dictionary:                 “字典”
+  alpha:                      “这个功能仍然在Alpha ，请稍后再试”
+  user:                       “用户”
+  rank:                       “排名”
+  added_by:                   “增加的”
+  no_definitions_added:       “您尚未添加任何定义，但”
+  no_phrases_added:           “您尚未添加任何主要条目尚未”
+  top_users:                  “前25位最佳用户”
+  login:                      “登录”
+  skip_authentication:        “跳过验证”
+  username:                   “用户名”
+  password:                   “密码”
+  remember_me:                “记得我吗？ ”
+  open_id:                    “的OpenID ”
+  url:                        “网址”
+  log_in:                     “登录”
+  email:                      “电子邮件”
+  status:                     “状态”
+  my_profile:                 “我的个人资料”
+  my_definitions:             “查看我的定义”
+  show_my:                    “ show_my ”
+  then:                       “ ，然后选择”
+  get_an:                     “得到一个” ＃ ＃的OpenID登录
+  weird_login:                “由于一些奇怪的原因，您未登录现在，请登录1
+  signup_locally:             “ ...或创建一个本地用户帐户”
+  confirm:                    “确认”
+  never_spam:                 “永不投降，永远不是垃圾邮件！ ”
+  edit:                       “编辑”
+  every_time:                 “每一次的”
+  gets_a:                     “获得”
+  an_angel:                   “天使得到它的翅膀！ <br />焦耳/钾，但认真帮助”
+  out:                        “出去！ ！ ”
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

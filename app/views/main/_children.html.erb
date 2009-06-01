@@ -1,0 +1,16 @@
+<% @flag_language = @element.language %>
+<span class = "dontwrap" onmouseover= <%= "DisplayDIV('child_rank_#{@element.id}')" %> 
+			onmouseout= <%= "HideDIV('child_rank_#{@element.id}');" %>
+	 		style="cursor:pointer">
+	<%= render :partial => 'flags' %>
+	<%= link_to "#{@element.word}", :action => 'show', 
+	:word => @element.word, :language => @element.language 
+	-%>
+<%=  render :partial => 'multiple_language_phrase' if @element.language == "Chinese"
+	 			-%>
+				<span id = <%= "child_rank_#{@element.id}"%> style="display:none;">
+					<%= render :partial => 'rank_one' %>
+				</span><!-- invisible span -->	
+</span><!-- big span -->
+				
+	<i>,</i>

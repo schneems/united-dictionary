@@ -1,0 +1,29 @@
+<span id = "indicator"><%= image_tag("redbox_spinner.gif",
+	   	:id     =>  "comment_indicator",
+	   	:style  =>  'display:none;') %>
+</span><!-- indicator -->
+
+	<% if @failed != nil %>
+		<p>Incorrect Captcha, Please Try Again</p>
+	<% end%>
+	<% if logged_in? %>	
+			   <img src="/images/dino.gif" height = "90px" width = "90x" /> 
+			   <p>Thanks for Signing In!
+			</div><!-- new_dino_position -->
+		<% else %>	
+		<div id="comment_replace_captcha">					 
+				<div id ="new_captcha_position">
+				    <% form_remote_tag(:update => "comment_replace_captcha",
+										:loading => "Element.show('comment_indicator')" ,
+										:loaded => "Element.hide('comment_indicator')",
+				                       :url =>{:controller => 'comments', :action => 'check_captcha' }) do
+				                        %>	
+					
+					<%= show_simple_captcha %>
+					<sub><center>Login to Skip Captcha</center></sub>
+				</div> <!-- new_captcha_position -->
+
+				<br /><br />
+			 		<%= submit_tag "Add item with Ajax" %>
+					<% end %><!-- form_remote_tag -->
+	<% end %>

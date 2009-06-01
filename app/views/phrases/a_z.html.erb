@@ -1,0 +1,82 @@
+<div id = "a_z_navigation">
+	<% english_alphabet = [' A ',' B ',' C ',' D ', ' E ',' F ',' G ',' H ',
+							' I ',' J ',' K ',' L ',' M ',' N ',' O ',' P ',' Q ',' R ',' S ',' T ',' U ',
+							' V ',' W ',' X ',' Y ',' Z '] %>
+	<%=  english_alphabet.collect { |letter| link_to(letter, :action => 'a_z', 
+						:ltr => letter, :controller => 'phrases') }.join(' ') %>
+</div>
+<% @value = @value||params[:ltr]%>
+<div class = "center">
+	<p><%= t 'a_z.begin_with' %>  <%= @value %> </p>
+</div>
+
+<div id = "a_z">
+	<% cache (:page => params[:page]||1, :ltr => @value||"All") do %>
+		<% if @phrases[0]==nil %>
+			<p><%= t 'a_z.no_words' %> <%= "#{@language}" %> <%= t 'a_z.that_begin_with' %> <%= "#{@value}" %></p>
+		<% else %>
+		<% total_size = @phrases.size-1 %>
+		<% first_column = total_size/3 %>
+		<% second_column = 2*first_column %>
+		<% third_column = 3*first_column %>
+
+		<div class="float-wrapper">
+
+			<div class="first-col">
+
+			<p>
+			<% 0.upto(first_column) do |count| %>
+				<% @element = @phrases[count] %><% @flag_language = @element.language %>
+				<%= render :partial => 'flags' %>
+				<%= link_to "#{@element.word}", :action => 'show', 
+						:word => @element.word, 
+						:language => @element.language %>
+						<br />
+			<% end %><!-- o upto(@phrasaes.length ) -->
+			</p>
+		</div>
+		<div class="second-col">
+
+			<p>
+			<% (first_column+1).upto(second_column) do |count| %>
+			<% @element = @phrases[count] %><% @flag_language = @element.language %>
+			<%= render :partial => 'flags' %>
+			<%= link_to "#{@element.word}", :action => 'show', 
+					:word => @element.word, 
+					:language => @element.language %>
+						<br />
+			<% end %><!-- o upto(@phrasaes.length ) -->
+			</p>
+		</div>
+
+
+		<div class="third-col">
+
+			<p>
+			<% (second_column+1).upto(third_column) do |count| %>
+			<% @element = @phrases[count] %><% @flag_language = @element.language %>
+			<%= render :partial => 'flags' %>
+			<%= link_to "#{@element.word}", :action => 'show', 
+					:word => @element.word, 
+					:language => @element.language %>
+						<br />
+			<% end %><!-- o upto(@phrasaes.length ) -->
+			</p>
+		</div>
+		</div>
+		<br />
+
+		<p class="clearfooter">
+			<div class= "flickr_pagination"> <%= will_paginate @mugshots %><br/></div>
+		</p>
+		<% end %><!-- if @phrases[0] -->
+
+	<% end %>
+</div>
+<p>
+	Currently This feature is only available for the English Entries, i'm working on the other eleven languages, but i'm only one person. Check back later.
+</p>
+
+<br />
+<br />
+<br />

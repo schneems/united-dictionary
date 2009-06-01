@@ -1,0 +1,29 @@
+<table id = "slang_form_partial">
+
+<% @flag_language  = @default_language =  @element.language || "English" %>	
+<% if @default_language != "Chinese" %> 
+	<tr>
+		<td> &nbsp  &nbsp   <%= render :partial => 'phrases/flags' %></td><td><%= "#{@type.capitalize}" %></td><td><%= text_area :child, :word %></td>
+	</tr>
+<% else %>
+	<% if @default_language == "Chinese" %>
+			<tr>
+				<td><%= render :partial => 'phrases/flags' %></td>
+				<td><b><%= t 'forms.simplified' %></b><br /><sub><center><%= t 'forms.required' %></center></sub></td>
+				<td> <%= text_area :child, :word %></td>
+			</tr>
+			<tr>
+				<td><%= render :partial => 'phrases/flags' %></td>
+				<td><b><%= t 'forms.traditional' %></b></td>
+				<td><%= text_area :child, :second_word %></td>
+			</tr>
+			<tr>
+				<td><%= render :partial => 'phrases/flags' %></td>
+				<td><b><%= t 'forms.pinyin' %></b></td>
+				<td><%= text_area :child, :third_word %></td>
+			</tr>
+	<% end %><!-- if default == chinese -->
+
+<% end %><!-- if default != chinese -->
+</table>
+

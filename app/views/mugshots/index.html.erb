@@ -1,0 +1,32 @@
+<h1>Listing mugshots</h1>
+
+<table>
+  <tr>
+    <th>Parent</th>
+    <th>Content type</th>
+    <th>Filename</th>
+    <th>Thumbnail</th>
+    <th>Size</th>
+    <th>Width</th>
+    <th>Height</th>
+  </tr>
+
+<% for mugshot in @mugshots %>
+  <tr>
+    <td><%=h mugshot.parent_id %></td>
+    <td><%=h mugshot.content_type %></td>
+    <td><%=h mugshot.filename %></td>
+    <td><%=h mugshot.thumbnail %></td>
+    <td><%=h mugshot.size %></td>
+    <td><%=h mugshot.width %></td>
+    <td><%=h mugshot.height %></td>
+    <td><%= link_to 'Show', mugshot %></td>
+    <td><%= link_to 'Edit', edit_mugshot_path(mugshot) %></td>
+    <td><%= link_to 'Destroy', mugshot, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New mugshot', new_mugshot_path %>

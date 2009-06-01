@@ -1,0 +1,48 @@
+<div class = "center">
+	<h2 id = "big">
+	<%= inline_get_site_name %><%= t 'welcome.main' %><br />
+	</h2><!-- id = big -->
+	<p><%= t 'welcome.message' %></p>
+</div><!-- center -->
+
+<span class = "plain" ><hr /></span>
+
+	<div class="main_left_column">	
+		<div class = "center">
+			<br />
+			<h2>The Game</h2>
+			<%= image_tag( "/images/random.png") %><br /><br />
+			<h3>Pick A Pic, Learn A Language<h3>
+		</div>
+	</div><!-- left_container -->
+	
+	<div class="main_middle_column">	
+		<div class = "center">
+			<br />
+			<h2>The Game</h2>
+			<%= image_tag( "/images/the_game_1.png") %><br /><br />
+			<h3>Pick A Pic, Learn A Language<h3>
+		</div>
+	</div><!-- left_container -->
+	
+	<div class="main_right_column">
+			<div class = "center">
+				<br />
+				<h2>The Game</h2>
+				<%= image_tag( "/images/the_game_1.png") %><br /><br />
+				<h3>Pick A Pic, Learn A Language<h3>
+			</div>
+
+	</div><!-- right-container -->
+	<div class = "space-line"></div>
+	<br />
+	<% render :partial => 'main/digg_slang' %>
+
+	<div class="space-line"></div>
+
+</div><!-- main_left -->
+
+
+
+=============================================THE ORIGIONAL IN INDEX ================================================
+

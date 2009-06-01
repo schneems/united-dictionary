@@ -1,0 +1,411 @@
+po:                           
+  phrase:                     "Entrada principal"
+  phrases:                    "Main Entries"
+  definition:                 "Definição"
+  definitions:                "Definições"
+  synonym:                    "Sinónimo"
+  synonyms:                   "Sinônimos"
+  antonym:                    "Antonym"
+  antonyms:                   "Antônimos"
+  mugshot:                    "Imagem"
+  mugshots:                   "Imagens"
+  comment:                    "Comentário"
+  comments:                   "Comentários"
+  search:                     
+    submit:                   "Enviar"
+    all:                      "Todos"
+    simplified:               "Simplificado"
+    pinyin:                   "Pinyin"
+    traditional:              "Tradicional"
+  header:                     
+    navigation:               
+      add:                    "Adicionar"
+      home:                   "Home"
+      game:                   "The Game"
+      orphans:                "Órfãos"
+      recent:                 "Recentes"
+      random:                 "Random"
+      top_users:              "Top Usuários"
+      download:               "Download"
+      a_z:                    "A-Z"
+    login:                    
+      no_username:            "Clique aqui para definir seu nome de usuário "
+      logout:                 "Logout"
+      login:                  "Login"
+      signup:                 "Sign Up"
+  footer:                     
+    terms:                    "Termos de Uso"
+    privacy:                  "Privacidade"
+    contact:                  "Contato"
+    about:                    "Sobre"
+  welcome:                    
+    main:                     "É um usuário-submetidos dicionário"
+    message:                  "Se você não vê-la ... adicioná-lo, se você não gostar dele ... rank e eliminá-lo"
+    top_ranked:               "Top Ranked Definições!"
+  forms:                      
+    entry:                    "Entrada:"
+    synonym:                  "Sinónimo:"
+    antonym:                  "Antônimo:"
+    update:                   "Update"
+    not_required:             "Not Required"
+    required:                 "Necessário"
+    close:                    "Fechar X" # # O X é só lá para dar alguma coisa para que o usuário clique em
+    language:                 "Idioma:"
+    simplified:               "Simplificado:" # # como em chinês simplificado
+    traditional:              "Tradicional:" # #''
+    trad:                     "Trad"
+    pinyin:                   "Pinyin"
+  user:                       
+    added_by:                 "Added By"
+  comments:                   
+    add_comment:              "Adicionar um comentário"
+    submit:                   "Envie o seu comentário"
+    comments_for:             "Comentários Para" # "Comentários para esta entrada"
+    no_comments:              "Nenhum Comentário adicionado ainda"
+    name:                     "Nome:" # "Por favor escreva o seu nome: '
+    comments:                 "Comentário:"
+    add_new:                  "Adicionar novo comentário"
+  delete:                     
+    delete_this:              "Excluir este"
+    start:                    "Iniciar a contagem?"
+    note_one:                 "Nota: Esta opção só está disponível para"
+    note_two:                 ", Com uma classificação negativa ou inferior a 24 horas de idade"
+    marked:                   
+      first:                  "Isto" # # capitalizados
+      second:                 "Já tenha sido marcada para apagamento. Se o"
+      third:                  " 'S é negativo no rank"
+      fourth:                 "Será levado à Slangasaur e deixará de existir! Se quiser salvar este"
+      fifth:                  "Aumentar a sua classificação, em seguida, clicando no polegares para cima!"
+    explain:                  
+      first:                  "Ao clicar no botão enviar, você irá iniciar o silêncio deathclock (Ooooh assustador) para esta"
+      second:                 "Quando o relógio greves zero em 30 minutos, se esta"
+      third:                  " 'S rank seja negativo, será levado à Slangasaur e deixará de existir! Se o resultado for positivo, será poupado, quer para julgar esta multa entrada?"
+  definitions:                
+    def:                      "Def."
+    add:                      "Add Definition"
+    defined:                  "Definido como:"
+    example:                  "Exemplo"
+    pos:                      "Parte do Discurso"
+    description:              "(Clique para mais descrição)"
+    noun:                     "Substantivos"
+    pronoun:                  "Pronome"
+    verb:                     "Verbo"
+    adverb:                   "Advérbio"
+    adjective:                "Adjectivo"
+    preposition:              "Preposição"
+    conjunction:              "Conjunto"
+    interjection:             "Exclamação"
+    phrase:                   "Frase"
+    no_clue:                  "Não Clue"
+    remove:                   "Retirar essa definição"
+    warning:                  "Todos os dados no formulário será Definição Lost, Proceed?"
+  model:                      
+    add:                      
+      add_new:                "Adicionar Novo:"
+      comment:                "Adicionar um"
+      definition:             "Adicionar uma nova definição"
+      phrase:                 "Adicionar uma nova entrada principal"
+      antonym:                "Adicionar um antonym" # caps
+      synonym:                "Adicionar um Sinónimo" # caps
+  languages:                  
+    chinese:                  "Chinês"
+    dutch:                    "Holandês"
+    english:                  "Inglês"
+    french:                   "Francês"
+    german:                   "Alemão"
+    greek:                    "Grego"
+    italian:                  "Italiano"
+    japanese:                 "Japonês"
+    korean:                   "Coreanos"
+    portuguese:               "Português"
+    russian:                  "Russo"
+    spanish:                  "Espanhol"
+  guidelines:                 
+    first:                    "Escrever para uma grande audiência (n. º Dentro Anedotas)"
+    second:                   "Sem nomes, com exceção de Figuras Públicas"
+    third:                    "Aproveite o máximo da sua entrada, acrescentando definições, sinônimos, antônimos, e imagens"
+  meta:                       
+    title:                    "Slangasaurus - The Slang Dictionary, e Urban Thesaurus Você escreveu"
+    description:              "Gíria sinônimos, antônimos, definições, traduções e imagens para"
+    altdescription:           "Slangasaurusaurus um utilizador apresentou calão thesaurus e dicionário. Pesquisa e adicionar calão, definições, sinônimos, antônimos, traduções e imagens; em Chinês, Holandês, Inglês, francês, alemão, grego, italiano, japonês, coreano, Português, Russo, e espanhol. "
+    keywords:                 "Gíria, definição, sinônimo, antônimo, tradução, urbano dicionário, tesauro"
+    altkeywords:              "Calão urbano, dicionário, dicionário gíria, calão tesauro, slangasaurus, tradução gíria, calão gíria, definida pelo usuário, o usuário submetidos"
+  products:                   
+    title:                    "Produtos"
+    released:                 "Liberado"
+  flash:                      
+    login:                    "Identificados com sucesso."
+    new_success:              "Foi adicionado um novo"
+    update_success:           "Foi atualizada com sucesso"
+    error:                    "Erro ao salvar"
+    correct:                  "Correto"
+    incorrect:                "Incorreta"
+    three_zero_one:           "Esta URL foi movida"
+    ticking:                  "30 minutos ... o tempo está passando!"
+    search_one:               "Ninguém tem acrescentado"
+    search_two:               "Ajuda a todos, adicionando-o!"
+  error:                      
+    captcha:                  "Cartas da caixa não coincidem com os da imagem"
+    saving:                   "Erro ao salvar"
+  download:                   
+    explain:                  "Let Your Language Cresça! Faça o download e usar esses dicionários que você ajudou a construir. <br /> Não se esqueça de ajudar todos os outros fora, adicionando suas próprias palavras!"
+  contact_me:                 "Por favor, envie quaisquer comentários e problemas para o e-mail acima. Vou escrever uma forma mais tarde, obrigado pela sua ajuda!"
+  a_z:                        
+    begin_with:               "Todas as entradas que começam com a letra"
+    no_words:                 "Não há palavras que foram adicionadas ao"
+    that_begin_with:          "Que começam com"
+  about:                      
+    welcome:                  "Bem-vindo, Este é um multi-lingual utilizador apresentou tesauro, que lhe permite olhar para cima e adicionar palavras, gírias e frases em vários idiomas."
+    why:                      "<h3> Mas porquê ...? </ H3> <p> certeza de que há uma tonelada de dicionários on-line, mas quantos deles têm os mais frescos definições que fornecê-lo com as palavras e frases de pessoas em todo o mundo são realmente usando? Outro usuário-submetidos dicionários existem, eu recomendo wiktionary, mas também lutar para ir acima e para além das suas capacidades limitadas, e as interfaces de usuário. Se alguma coisa não um site ou organização deve ter uma estrangularei detêm sobre recursos linguísticos, para uso tudo o que existe lá fora. Esta é uma ferramenta para as pessoas a escrever a sua própria história, e se conectar com um outro. </ p> "
+    how:                      "<h3> Mas como ...? </ H3> <p> Este site foi escrito usando Ruby on Rails, que é um quadro de programação web. Permite que você escreva as coisas em caixas para serem enviados para um servidor e salva em um base de dados. Tis' absolutamente fabuloso. </ p> "
+    who:                      "<h3> Mas quem ...? </ H3> <p> Richard Schneeman tem absolutamente nenhuma programação na Web fundo e foi capaz de aprender o suficiente para fazer a maior parte desta aplicação a partir do zero em um pouco menos de um ano, isto inclui também a perder totalidade do seu código quando seu computador foi roubado pela segunda vez. Ele é um Engenheiro Mecânico que graduado de Georgia Tech de Maio de 2008. Ele ama wakeboard, snowboard, espeleologia, escalada, e fazendo coisas louco. Ele atualmente trabalha para a National Instruments (eles fazer a aquisição dos dados de software e hardware, e não calculadoras) e vive em Austin, TX. </ p> "
+  orphans:                    
+    without_synonyms:         "Sem sinônimos ou antônimos <br />"
+    without_definitions:      "Sem <br /> Definições"
+    no_orphans:               "Todas as definições de sinônimos e antônimos para ajudar a mantê-los empresa. Yay para eles"
+  recently_added:             "Recentemente Adicionado"
+  search_results:             "Resultados da pesquisa"
+  translations:               "Traduções"
+  add:                        "Adicionar" # # adicionar este item à sua lista
+  yet:                        "Ainda"
+  or:                         "Ou"
+  to:                         "Para" # # adicionado com sucesso um novo sinônimo "para" esta entrada
+  in:                         "No" # # "ponha esta 'em' o armário"
+  dictionary:                 "Dicionário"
+  alpha:                      "Esse recurso ainda está em alfa, por favor, tente novamente mais tarde"
+  user:                       "Usuário"
+  rank:                       "Posto"
+  added_by:                   "Acrescentado pelo"
+  no_definitions_added:       "Você não adicionou quaisquer definições ainda"
+  no_phrases_added:           "Você não adicionou nenhum principais entradas ainda"
+  top_users:                  "Top 25 Users"
+  login:                      "Login"
+  skip_authentication:        "Passar a autenticação"
+  username:                   "Username"
+  password:                   "Senha"
+  remember_me:                "Lembra de mim?"
+  open_id:                    "OpenID"
+  url:                        "URL"
+  log_in:                     "Entrar"
+  email:                      "E-Mail"
+  status:                     "Status"
+  my_profile:                 "Meu perfil"
+  my_definitions:             "Mostrar meu Definições"
+  show_my:                    "Show_my"
+  then:                       "Então"
+  get_an:                     "Obter um" # # OpenID login
+  weird_login:                "Por alguma estranha razão você não está registrado no momento, por favor login e tente novamente"
+  signup_locally:             "... Ou Criar uma conta de usuário local"
+  confirm:                    "Confirmar"
+  never_spam:                 "Never Surrender, Spam Nunca!"
+  edit:                       "Editar"
+  every_time:                 "Toda vez que um"
+  gets_a:                     "Recebe um"
+  an_angel:                   ", Ele recebe um Angel's wings! <br /> J / K, Mas um sério ajudar"
+  out:                        "Fora!"
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              

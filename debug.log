@@ -1,0 +1,331 @@
+# Logfile created on Wed Sep 03 19:30:58 -0500 2008 by /
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000129)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.000098)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.000972)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.583174)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.289311)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.001000)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.000502)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000196)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000190)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000189)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000174)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000188)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000187)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000233)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000182)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000350)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000449)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000204)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000168)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000175)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000247)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000186)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhrases (1)
+  [4;35;1mSQL (0.000196)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.025054)[0m   [0;1mCREATE TABLE `phrases` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `word` varchar(255) DEFAULT NULL NULL, `language` varchar(255) DEFAULT NULL NULL, `rank` int(11) DEFAULT NULL NULL, `marked_at` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000956)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateDefinitions (2)
+  [4;36;1mSQL (0.000339)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.072778)[0m   [0mCREATE TABLE `definitions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `meaning` text DEFAULT NULL NULL, `example` varchar(255) DEFAULT NULL NULL, `part_of_speech` varchar(255) DEFAULT NULL NULL, `phrase_id` int(11) DEFAULT NULL NULL, `rank` int(11) DEFAULT NULL NULL, `marked_at` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000756)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to CreateSynonyms (3)
+  [4;35;1mSQL (0.000409)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003147)[0m   [0;1mCREATE TABLE `synonyms` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `word` varchar(255) DEFAULT NULL NULL, `language` varchar(255) DEFAULT NULL NULL, `definition_id` int(11) DEFAULT NULL NULL, `rank` int(11) DEFAULT NULL NULL, `marked_at` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000956)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to CreateChildren (7)
+  [4;36;1mSQL (0.000719)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003131)[0m   [0mCREATE TABLE `children` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `word` varchar(255) DEFAULT NULL NULL, `language` varchar(255) DEFAULT NULL NULL, `variety` varchar(255) DEFAULT NULL NULL, `definition_id` int(11) DEFAULT NULL NULL, `rank` int(11) DEFAULT NULL NULL, `marked_at` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001636)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('7')[0m
+Migrating to CreateRelateds (8)
+  [4;35;1mSQL (0.000751)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003119)[0m   [0;1mCREATE TABLE `relateds` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `word` varchar(255) DEFAULT NULL NULL, `language` varchar(255) DEFAULT NULL NULL, `phrase_id` int(11) DEFAULT NULL NULL, `rank` int(11) DEFAULT NULL NULL, `marked_at` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000630)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('8')[0m
+Migrating to CreateAlternates (9)
+  [4;36;1mSQL (0.000458)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.009332)[0m   [0mCREATE TABLE `alternates` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `word` varchar(255) DEFAULT NULL NULL, `language` varchar(255) DEFAULT NULL NULL, `phrase_id` int(11) DEFAULT NULL NULL, `rank` int(11) DEFAULT NULL NULL, `marked_at` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000610)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('9')[0m
+Migrating to CreateSessions (11)
+  [4;35;1mSQL (0.000383)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.003848)[0m   [0;1mCREATE TABLE `sessions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000764)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('11')[0m
+Migrating to CreateSimpleCaptchaData (12)
+  [4;36;1mSQL (0.000326)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001948)[0m   [0mCREATE TABLE `simple_captcha_data` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `key` varchar(40) DEFAULT NULL NULL, `value` varchar(6) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001597)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('12')[0m
+Migrating to CreateUsers (13)
+  [4;35;1mSQL (0.000385)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.052639)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT NULL NULL, `email` varchar(255) DEFAULT NULL NULL, `crypted_password` varchar(40) DEFAULT NULL NULL, `salt` varchar(40) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL, `remember_token` varchar(255) DEFAULT NULL NULL, `remember_token_expires_at` datetime DEFAULT NULL NULL, `activation_code` varchar(40) DEFAULT NULL NULL, `activated_at` datetime DEFAULT NULL NULL, `state` varchar(255) DEFAULT 'passive' NULL, `deleted_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000999)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('13')[0m
+Migrating to AddOpenIdAuthenticationTables (14)
+  [4;35;1mSQL (0.000658)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.007873)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.004137)[0m   [0mCREATE TABLE `open_id_authentication_associations` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `issued` int(11) DEFAULT NULL NULL, `lifetime` int(11) DEFAULT NULL NULL, `handle` varchar(255) DEFAULT NULL NULL, `assoc_type` varchar(255) DEFAULT NULL NULL, `server_url` blob DEFAULT NULL NULL, `secret` blob DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001311)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.003242)[0m   [0mCREATE TABLE `open_id_authentication_nonces` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `timestamp` int(11) NOT NULL, `server_url` varchar(255) DEFAULT NULL NULL, `salt` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.101941)[0m   [0;1mALTER TABLE `users` ADD `identity_url` varchar(255)[0m
+  [4;35;1mSQL (0.000983)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('14')[0m
+Migrating to Comments (15)
+  [4;36;1mSQL (0.000733)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.016611)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `comment_field` text DEFAULT NULL NULL, `name` varchar(255) DEFAULT NULL NULL, `phrase_id` int(11) DEFAULT NULL NULL, `rank` int(11) DEFAULT NULL NULL, `marked_at` datetime DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000885)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('15')[0m
+Migrating to UsersToPhrases (16)
+  [4;35;1mSQL (0.000685)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.012189)[0m   [0;1mALTER TABLE `children` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (0.013797)[0m   [0mALTER TABLE `definitions` ADD `user_id` int(11)[0m
+  [4;36;1mSQL (0.007646)[0m   [0;1mALTER TABLE `phrases` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (0.182304)[0m   [0mALTER TABLE `users` ADD `rank` int(11)[0m
+  [4;36;1mSQL (0.000905)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('16')[0m
+Migrating to CreateMugshots (18)
+  [4;35;1mSQL (0.000531)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.005879)[0m   [0;1mCREATE TABLE `mugshots` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `parent_id` int(11) DEFAULT NULL NULL, `content_type` varchar(255) DEFAULT NULL NULL, `filename` varchar(255) DEFAULT NULL NULL, `thumbnail` varchar(255) DEFAULT NULL NULL, `size` int(11) DEFAULT NULL NULL, `width` int(11) DEFAULT NULL NULL, `height` int(11) DEFAULT NULL NULL, `rank` int(11) DEFAULT NULL NULL, `created_at` datetime DEFAULT NULL NULL, `updated_at` datetime DEFAULT NULL NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.006490)[0m   [0mALTER TABLE `users` ADD `extra_rank` int(11)[0m
+  [4;36;1mSQL (0.008455)[0m   [0;1mALTER TABLE `relateds` ADD `user_id` int(11)[0m
+  [4;35;1mSQL (0.011290)[0m   [0mALTER TABLE `alternates` ADD `user_id` int(11)[0m
+  [4;36;1mSQL (0.001373)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('18')[0m
+Migrating to PhrasesToMugshots (19)
+  [4;35;1mSQL (0.000476)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.008483)[0m   [0;1mALTER TABLE `mugshots` ADD `phrase_id` int(11)[0m
+  [4;35;1mSQL (0.012345)[0m   [0mALTER TABLE `mugshots` ADD `user_id` int(11)[0m
+  [4;36;1mSQL (0.012137)[0m   [0;1mALTER TABLE `mugshots` ADD `marked_at` datetime[0m
+  [4;35;1mSQL (0.001525)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('19')[0m
+Migrating to CharacterLanguageSupport (20)
+  [4;36;1mSQL (0.000436)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.013187)[0m   [0mALTER TABLE `children` ADD `second_word` varchar(255)[0m
+  [4;36;1mSQL (0.008620)[0m   [0;1mALTER TABLE `children` ADD `third_word` varchar(255)[0m
+  [4;35;1mSQL (0.008165)[0m   [0mALTER TABLE `phrases` ADD `second_word` varchar(255)[0m
+  [4;36;1mSQL (0.010884)[0m   [0;1mALTER TABLE `phrases` ADD `third_word` varchar(255)[0m
+  [4;35;1mSQL (0.399712)[0m   [0mALTER TABLE `phrases` ADD `pronunciation` varchar(255)[0m
+  [4;36;1mSQL (0.000708)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20')[0m
+Migrating to IndexPhrases (21)
+  [4;35;1mSQL (0.000723)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.028881)[0m   [0;1mCREATE INDEX `index_phrases_on_word_and_language` ON `phrases` (`word`, `language`)[0m
+  [4;35;1mSQL (0.018076)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('21')[0m
+Migrating to Aav (20080831204715)
+  [4;36;1mSQL (0.000932)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000854)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.005630)[0m   [0;1mCREATE TABLE `votes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `vote` tinyint(1) DEFAULT 0 NULL, `created_at` datetime NOT NULL, `voteable_type` varchar(15) DEFAULT '' NOT NULL, `voteable_id` int(11) DEFAULT 0 NOT NULL, `user_id` int(11) DEFAULT 0 NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.012588)[0m   [0mCREATE INDEX `fk_votes_user` ON `votes` (`user_id`)[0m
+  [4;36;1mSQL (0.001655)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20080831204715')[0m
+  [4;35;1mSQL (0.002841)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001083)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006080)[0m   [0mSHOW FIELDS FROM `alternates`[0m
+  [4;36;1mSQL (0.006024)[0m   [0;1mdescribe `alternates`[0m
+  [4;35;1mSQL (0.001705)[0m   [0mSHOW KEYS FROM `alternates`[0m
+  [4;36;1mSQL (0.024796)[0m   [0;1mSHOW FIELDS FROM `children`[0m
+  [4;35;1mSQL (0.004431)[0m   [0mdescribe `children`[0m
+  [4;36;1mSQL (0.022241)[0m   [0;1mSHOW KEYS FROM `children`[0m
+  [4;35;1mSQL (0.004632)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.005354)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.001341)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.011492)[0m   [0;1mSHOW FIELDS FROM `definitions`[0m
+  [4;35;1mSQL (0.277316)[0m   [0mdescribe `definitions`[0m
+  [4;36;1mSQL (0.000805)[0m   [0;1mSHOW KEYS FROM `definitions`[0m
+  [4;35;1mSQL (0.002206)[0m   [0mSHOW FIELDS FROM `mugshots`[0m
+  [4;36;1mSQL (0.004450)[0m   [0;1mdescribe `mugshots`[0m
+  [4;35;1mSQL (0.003248)[0m   [0mSHOW KEYS FROM `mugshots`[0m
+  [4;36;1mSQL (0.003240)[0m   [0;1mSHOW FIELDS FROM `open_id_authentication_associations`[0m
+  [4;35;1mSQL (0.004052)[0m   [0mdescribe `open_id_authentication_associations`[0m
+  [4;36;1mSQL (0.002979)[0m   [0;1mSHOW KEYS FROM `open_id_authentication_associations`[0m
+  [4;35;1mSQL (0.002510)[0m   [0mSHOW FIELDS FROM `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (0.002245)[0m   [0;1mdescribe `open_id_authentication_nonces`[0m
+  [4;35;1mSQL (0.000714)[0m   [0mSHOW KEYS FROM `open_id_authentication_nonces`[0m
+  [4;36;1mSQL (0.002273)[0m   [0;1mSHOW FIELDS FROM `phrases`[0m
+  [4;35;1mSQL (0.001744)[0m   [0mdescribe `phrases`[0m
+  [4;36;1mSQL (0.000821)[0m   [0;1mSHOW KEYS FROM `phrases`[0m
+  [4;35;1mSQL (0.002208)[0m   [0mSHOW FIELDS FROM `relateds`[0m
+  [4;36;1mSQL (0.001780)[0m   [0;1mdescribe `relateds`[0m
+  [4;35;1mSQL (0.000750)[0m   [0mSHOW KEYS FROM `relateds`[0m
+  [4;36;1mSQL (0.001916)[0m   [0;1mSHOW FIELDS FROM `sessions`[0m
+  [4;35;1mSQL (0.002187)[0m   [0mdescribe `sessions`[0m
+  [4;36;1mSQL (0.000750)[0m   [0;1mSHOW KEYS FROM `sessions`[0m
+  [4;35;1mSQL (0.002396)[0m   [0mSHOW FIELDS FROM `simple_captcha_data`[0m
+  [4;36;1mSQL (0.002452)[0m   [0;1mdescribe `simple_captcha_data`[0m
+  [4;35;1mSQL (0.000727)[0m   [0mSHOW KEYS FROM `simple_captcha_data`[0m
+  [4;36;1mSQL (0.002431)[0m   [0;1mSHOW FIELDS FROM `synonyms`[0m
+  [4;35;1mSQL (0.001692)[0m   [0mdescribe `synonyms`[0m
+  [4;36;1mSQL (0.001497)[0m   [0;1mSHOW KEYS FROM `synonyms`[0m
+  [4;35;1mSQL (0.003308)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.003287)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.000798)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.001997)[0m   [0;1mSHOW FIELDS FROM `votes`[0m
+  [4;35;1mSQL (0.001613)[0m   [0mdescribe `votes`[0m
+  [4;36;1mSQL (0.000777)[0m   [0;1mSHOW KEYS FROM `votes`[0m
+  [4;36;1mSQL (0.000250)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000405)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000412)[0m   [0;1mSET client_encoding TO 'utf8'[0m
+  [4;35;1mSQL (0.006271)[0m   [0mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (0.005758)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.000783)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000352)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000337)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000336)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000338)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000337)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000330)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000341)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000338)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000336)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000322)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000323)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000399)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000526)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000366)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000341)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000341)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhrases (1)
+  [4;36;1mSQL (0.000342)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.013240)[0m   [0mCREATE TABLE "phrases" ("id" serial primary key, "word" character varying(255) DEFAULT NULL NULL, "language" character varying(255) DEFAULT NULL NULL, "rank" integer DEFAULT NULL NULL, "marked_at" timestamp DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.002468)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateDefinitions (2)
+  [4;35;1mSQL (0.002123)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.014164)[0m   [0;1mCREATE TABLE "definitions" ("id" serial primary key, "meaning" text DEFAULT NULL NULL, "example" character varying(255) DEFAULT NULL NULL, "part_of_speech" character varying(255) DEFAULT NULL NULL, "phrase_id" integer DEFAULT NULL NULL, "rank" integer DEFAULT NULL NULL, "marked_at" timestamp DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.001885)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+Migrating to CreateSynonyms (3)
+  [4;36;1mSQL (0.000516)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.011047)[0m   [0mCREATE TABLE "synonyms" ("id" serial primary key, "word" character varying(255) DEFAULT NULL NULL, "language" character varying(255) DEFAULT NULL NULL, "definition_id" integer DEFAULT NULL NULL, "rank" integer DEFAULT NULL NULL, "marked_at" timestamp DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.002188)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('3')[0m
+Migrating to CreateChildren (7)
+  [4;35;1mSQL (0.000976)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.014705)[0m   [0;1mCREATE TABLE "children" ("id" serial primary key, "word" character varying(255) DEFAULT NULL NULL, "language" character varying(255) DEFAULT NULL NULL, "variety" character varying(255) DEFAULT NULL NULL, "definition_id" integer DEFAULT NULL NULL, "rank" integer DEFAULT NULL NULL, "marked_at" timestamp DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002136)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('7')[0m
+Migrating to CreateRelateds (8)
+  [4;36;1mSQL (0.000833)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.012238)[0m   [0mCREATE TABLE "relateds" ("id" serial primary key, "word" character varying(255) DEFAULT NULL NULL, "language" character varying(255) DEFAULT NULL NULL, "phrase_id" integer DEFAULT NULL NULL, "rank" integer DEFAULT NULL NULL, "marked_at" timestamp DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.002373)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('8')[0m
+Migrating to CreateAlternates (9)
+  [4;35;1mSQL (0.001171)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.011378)[0m   [0;1mCREATE TABLE "alternates" ("id" serial primary key, "word" character varying(255) DEFAULT NULL NULL, "language" character varying(255) DEFAULT NULL NULL, "phrase_id" integer DEFAULT NULL NULL, "rank" integer DEFAULT NULL NULL, "marked_at" timestamp DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002349)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('9')[0m
+Migrating to CreateSessions (11)
+  [4;36;1mSQL (0.001045)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.007363)[0m   [0mCREATE TABLE "sessions" ("id" serial primary key, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.002177)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('11')[0m
+Migrating to CreateUsers (13)
+  [4;35;1mSQL (0.001641)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.016599)[0m   [0;1mCREATE TABLE "users" ("id" serial primary key, "login" character varying(255) DEFAULT NULL NULL, "email" character varying(255) DEFAULT NULL NULL, "crypted_password" character varying(40) DEFAULT NULL NULL, "salt" character varying(40) DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL, "remember_token" character varying(255) DEFAULT NULL NULL, "remember_token_expires_at" timestamp DEFAULT NULL NULL, "activation_code" character varying(40) DEFAULT NULL NULL, "activated_at" timestamp DEFAULT NULL NULL, "state" character varying(255) DEFAULT E'passive' NULL, "deleted_at" timestamp DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.004159)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('13')[0m
+Migrating to AddOpenIdAuthenticationTables (14)
+  [4;36;1mSQL (0.001101)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.012348)[0m   [0mCREATE TABLE "open_id_authentication_associations" ("id" serial primary key, "issued" integer DEFAULT NULL NULL, "lifetime" integer DEFAULT NULL NULL, "handle" character varying(255) DEFAULT NULL NULL, "assoc_type" character varying(255) DEFAULT NULL NULL, "server_url" bytea DEFAULT NULL NULL, "secret" bytea DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.011740)[0m   [0;1mCREATE TABLE "open_id_authentication_nonces" ("id" serial primary key, "timestamp" integer NOT NULL, "server_url" character varying(255) DEFAULT NULL NULL, "salt" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (0.002151)[0m   [0mALTER TABLE "users" ADD COLUMN "identity_url" character varying(255)[0m
+  [4;36;1mSQL (0.001063)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('14')[0m
+Migrating to Comments (15)
+  [4;35;1mSQL (0.000761)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.011465)[0m   [0;1mCREATE TABLE "comments" ("id" serial primary key, "comment_field" text DEFAULT NULL NULL, "name" character varying(255) DEFAULT NULL NULL, "phrase_id" integer DEFAULT NULL NULL, "rank" integer DEFAULT NULL NULL, "marked_at" timestamp DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002246)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('15')[0m
+Migrating to UsersToPhrases (16)
+  [4;36;1mSQL (0.001503)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001957)[0m   [0mALTER TABLE "children" ADD COLUMN "user_id" integer[0m
+  [4;36;1mSQL (0.002207)[0m   [0;1mALTER TABLE "definitions" ADD COLUMN "user_id" integer[0m
+  [4;35;1mSQL (0.002193)[0m   [0mALTER TABLE "phrases" ADD COLUMN "user_id" integer[0m
+  [4;36;1mSQL (0.002063)[0m   [0;1mALTER TABLE "users" ADD COLUMN "rank" integer[0m
+  [4;35;1mSQL (0.001852)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('16')[0m
+Migrating to CreateMugshots (18)
+  [4;36;1mSQL (0.001752)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.014567)[0m   [0mCREATE TABLE "mugshots" ("id" serial primary key, "parent_id" integer DEFAULT NULL NULL, "content_type" character varying(255) DEFAULT NULL NULL, "filename" character varying(255) DEFAULT NULL NULL, "thumbnail" character varying(255) DEFAULT NULL NULL, "size" integer DEFAULT NULL NULL, "width" integer DEFAULT NULL NULL, "height" integer DEFAULT NULL NULL, "rank" integer DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;36;1mSQL (0.002526)[0m   [0;1mALTER TABLE "users" ADD COLUMN "extra_rank" integer[0m
+  [4;35;1mSQL (0.002135)[0m   [0mALTER TABLE "relateds" ADD COLUMN "user_id" integer[0m
+  [4;36;1mSQL (0.001807)[0m   [0;1mALTER TABLE "alternates" ADD COLUMN "user_id" integer[0m
+  [4;35;1mSQL (0.001302)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('18')[0m
+Migrating to PhrasesToMugshots (19)
+  [4;36;1mSQL (0.001485)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001750)[0m   [0mALTER TABLE "mugshots" ADD COLUMN "phrase_id" integer[0m
+  [4;36;1mSQL (0.001740)[0m   [0;1mALTER TABLE "mugshots" ADD COLUMN "user_id" integer[0m
+  [4;35;1mSQL (0.001943)[0m   [0mALTER TABLE "mugshots" ADD COLUMN "marked_at" timestamp[0m
+  [4;36;1mSQL (0.002622)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('19')[0m
+Migrating to CharacterLanguageSupport (20)
+  [4;35;1mSQL (0.001770)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001935)[0m   [0;1mALTER TABLE "children" ADD COLUMN "second_word" character varying(255)[0m
+  [4;35;1mSQL (0.001972)[0m   [0mALTER TABLE "children" ADD COLUMN "third_word" character varying(255)[0m
+  [4;36;1mSQL (0.002533)[0m   [0;1mALTER TABLE "phrases" ADD COLUMN "second_word" character varying(255)[0m
+  [4;35;1mSQL (0.001877)[0m   [0mALTER TABLE "phrases" ADD COLUMN "third_word" character varying(255)[0m
+  [4;36;1mSQL (0.002041)[0m   [0;1mALTER TABLE "phrases" ADD COLUMN "pronunciation" character varying(255)[0m
+  [4;35;1mSQL (0.001870)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20')[0m
+Migrating to IndexPhrases (21)
+  [4;36;1mSQL (0.001807)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.003763)[0m   [0mCREATE INDEX "index_phrases_on_word_and_language" ON "phrases" ("word", "language")[0m
+  [4;36;1mSQL (0.003315)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('21')[0m
+Migrating to CreateSimpleCaptchaData (20081012193036)
+  [4;35;1mSQL (0.001722)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.008455)[0m   [0;1mCREATE TABLE "simple_captcha_data" ("id" serial primary key, "key" character varying(40) DEFAULT NULL NULL, "value" character varying(6) DEFAULT NULL NULL, "created_at" timestamp DEFAULT NULL NULL, "updated_at" timestamp DEFAULT NULL NULL) [0m
+  [4;35;1mSQL (0.002175)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081012193036')[0m
+Migrating to DefinitionIndex (20081029002946)
+  [4;36;1mSQL (0.002184)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.005022)[0m   [0mCREATE INDEX "index_definitions_on_meaning_and_rank" ON "definitions" ("meaning", "rank")[0m
+  [4;36;1mSQL (0.004448)[0m   [0;1mCREATE INDEX "index_phrases_on_rank_and_second_word_and_third_word" ON "phrases" ("rank", "second_word", "third_word")[0m
+  [4;35;1mSQL (0.001990)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20081029002946')[0m
+  [4;36;1mSQL (0.002537)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000566)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000431)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000293)[0m   [0;1mSET client_encoding TO 'utf8'[0m
+  [4;35;1mSQL (0.019249)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001323)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to DefinitionIndex (20081029002946)
+  [4;35;1mSQL (0.001056)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mRuntimeError: ERROR	C42704	Mindex "index_definitions_on_id_and_phrase_id_and_meaning_and_rank" does not exist	Futility.c	L152	RDropErrorMsgNonExistent: DROP INDEX index_definitions_on_id_and_phrase_id_and_meaning_and_rank[0m
+  [4;36;1mSQL (0.000297)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.000456)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.000458)[0m   [0;1mSET client_encoding TO 'utf8'[0m
+  [4;35;1mSQL (0.001863)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001178)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001175)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001185)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001138)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001124)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001126)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001141)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001166)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001186)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001228)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001128)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001153)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001106)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001141)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001185)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001176)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.001268)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001140)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePhrases (1)
+  [4;36;1mSQL (0.001151)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateDefinitions (2)
+  [4;35;1mSQL (0.001191)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSynonyms (3)
+  [4;36;1mSQL (0.001135)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateChildren (7)
+  [4;35;1mSQL (0.001127)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRelateds (8)
+  [4;36;1mSQL (0.001100)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateAlternates (9)
+  [4;35;1mSQL (0.001111)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSessions (11)
+  [4;36;1mSQL (0.001110)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (13)
+  [4;35;1mSQL (0.001093)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddOpenIdAuthenticationTables (14)
+  [4;36;1mSQL (0.001093)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to Comments (15)
+  [4;35;1mSQL (0.001122)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to UsersToPhrases (16)
+  [4;36;1mSQL (0.001129)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateMugshots (18)
+  [4;35;1mSQL (0.001139)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to PhrasesToMugshots (19)
+  [4;36;1mSQL (0.001123)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CharacterLanguageSupport (20)
+  [4;35;1mSQL (0.001218)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to IndexPhrases (21)
+  [4;36;1mSQL (0.001172)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateSimpleCaptchaData (20081012193036)
+  [4;35;1mSQL (0.001137)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to DefinitionIndex (20081029002946)
+  [4;36;1mSQL (0.001166)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateMoreIndexes (20081203143239)
+  [4;35;1mSQL (0.001187)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddExceptionTable (20081211144147)
+  [4;36;1mSQL (0.001153)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.001299)[0m   [0mSELECT version FROM schema_migrations[0m

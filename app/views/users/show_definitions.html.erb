@@ -1,0 +1,23 @@
+<div id = "show_users_stuff">
+<%= render :partial => 'profile_nav' %><br />
+
+
+<% if @definitions[0] != nil  %>
+<div id = "definitions_added">
+			<% for definition in @definitions %>
+				<% @definition = definition %>
+				<% phrase_id = @definition.phrase_id %>
+				<% @phrase = Phrase.find(phrase_id) %>
+				<% ## @phrase = Phrase.find(@definition.phrase_id) %>
+				<%= link_to "#{@phrase.word}", :action => 'show', :id => @phrase.id %>
+				<%= @definition.created_at.to_s(:my_time) %><br />
+				<%= @definition.meaning %>
+				<br />
+			<% end %>
+			<div class= "flickr_pagination"> <%= will_paginate @definitions %><br/></div>
+		</div>
+		
+<% else %>
+			<p>You haven't added any definitions yet </p>
+<% end %><!-- if -->
+</div>

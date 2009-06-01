@@ -1,0 +1,24 @@
+# Config file for the acts_as_solr plugin.
+#
+# If you change the host or port number here, make sure you update 
+# them in your Solr config file
+## url: http://localhost:8982/solr
+
+
+
+development:
+  url: http://localhost:8982/solr 
+## http://67.202.54.234:8080/solr_slangasaurus
+##  username: 'solr_slangasaurus'
+## password: 's1nga9ur4s'    
+
+test:
+  url: http://localhost:8981/solr
+  username:
+  password:
+      
+production:
+  url: http://10.254.98.227:8080/solr_slangasaurus
+  username: 'solr_slangasaurus'
+  password: 's1nga9ur4s'
+  

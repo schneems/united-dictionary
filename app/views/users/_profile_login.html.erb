@@ -1,0 +1,22 @@
+
+
+<% if logged_in? %>
+<% form_for :user, :url => {:action => 'update_login', :id => current_user} do |f| %>
+<div id="profile_login">
+	<%= t 'username' %>: 
+	<%= f.text_field(:login, :value => current_user.login) -%>  <%= submit_tag 'Sign Up' %> &nbsp <%= link_to 'Cancel', profile_path, :controller => "users" %>
+	<% end %><!-- form_for -->
+
+	
+<% else %>
+	<%= t 'weird_login' %>
+<% end %>
+
+
+
+<%= observe_field(:user_login, :url => {:action => :login_exists, :controller => 'users' }, :update => 'login_exists', :frequency => 0.2, :on => 'changed', :with => "'name=' + encodeURIComponent(value)"	) %>
+
+<div id = "login_exists_position">
+<%= t 'status' %>:<span id="login_exists"></span>
+</div><!-- profile_login -->
+</div>

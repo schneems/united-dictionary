@@ -1,0 +1,101 @@
+<div class="table-row">
+
+	<div class="left-container">
+		<div class="center">
+			<table>
+				<tr><td>Selected Language:</td>
+					<td>
+				<% form_for(:phrase, :url => {:action => 'begin_game', :controller => 'phrases'}) do |f| -%>
+						<% @default = @game_language||"English" -%>
+							<%= select_tag(:selectbox,
+								options_for_select(["Chinese", "Dutch", "English", "French","German",
+								"Greek", "Italian", "Japanese", "Korean", "Portuguese", "Russian", 
+								"Spanish"], @default)) -%>
+					</td>
+					<td>
+						<span class = "game">	<%= f.submit 'Let the Games Begin', :id => 'game_phrase_submit'%>	</span>
+					</td>
+					</tr>
+				</table>
+						
+						
+				<% end %>
+
+
+			<% if @winning_phrase != nil && @selected_mugshot != nil %>
+					<b><%= @winning_phrase.word %></b>, Language: <%= @winning_phrase.language%><br />
+					<b>Def 1)</b><%= @winning_phrase.definitions[0].meaning %>
+					<div class = "center">
+						<table border = 1>
+						<td>This was the correct choice<br />
+						<%= image_tag(@winning_mugshot.public_filename) %>
+							</td>
+						<td>You chose <br />
+						<%= image_tag(@selected_mugshot.public_filename) %>
+							</td>
+						</table>
+					</div>
+			<% end %>
+
+
+			<% if @winning_phrase == nil || @pictures.size < 4 %>
+			<b>Either no-one has added any <%= @game_language %> slang or no-one has added any pictures. <br />
+				Go tell your <%= @game_language %> speaking friends to step up their game <br />
+				and hit up www.slangslang.com 
+			</b>
+
+			<% else %>
+					<div id ="slang_game">
+						<b>Click on a picture that represents <%= @winning_phrase.word %></b>
+						<p><%= @winning_phrase.word %>: </p>
+						<p><b>Def 1) </b><%= @winning_phrase.definitions[0].meaning %></p>
+
+						<table border ="1">
+							<tr><td><%= link_to image_tag(@pictures[0].public_filename), 
+										:action => 'game_submit',:controller => "phrases", 
+										:winning_id =>  @winning_phrase, :mugshot_selected => @pictures[0].id,
+										:winning_mugshot => @winning_mugshot %>
+										</td>
+
+								<td><%= link_to image_tag(@pictures[1].public_filename), 
+										:action => 'game_submit',:controller => "phrases", 
+										:winning_id =>  @winning_phrase, :mugshot_selected => @pictures[1].id,
+										:winning_mugshot => @winning_mugshot %>
+										</td> </tr>
+
+							<tr><td><%= link_to image_tag(@pictures[2].public_filename),
+										:action => 'game_submit',:controller => "phrases", 
+										:winning_id =>  @winning_phrase, :mugshot_selected => @pictures[2].id,
+										:winning_mugshot => @winning_mugshot %>
+										</td> 
+
+								<td><%= link_to image_tag(@pictures[3].public_filename), 
+										:action => 'game_submit',:controller => "phrases", 
+										:winning_id =>  @winning_phrase, :mugshot_selected => @pictures[3].id,
+										:winning_mugshot => @winning_mugshot %> 
+										
+										</td> </tr>
+						</table>
+					</div><!-- slang_game -->
+
+
+				<%= link_to "Skip This One", :action=> 'slang_game' , :controller => 'phrases', :language => @winning_phrase.language  %>
+					<% end %>
+
+
+			<br />
+			<br />
+			<p>Welcome to the party, choose a language you would like to learn, we'll randomly show you some word and definitions from that language and a picture that represents it, mixed in with a few other pictures. You click on the right one, and you can feel happy inside. This is a work in progress, so bare with me and feel free to send suggestions to us:<%= link_to "Contact", :action => "contact", :controller => "phrases" %>
+			</p>
+	</div><!-- main_left -->
+	</div><!-- center -->
+
+	<div class="right-container">
+		<br />
+			<%= render :partial => 'main/vertical_ad' %>
+	</div><!-- right_container -->
+	
+	
+	<div class="space-line"></div>
+
+</div><!-- table-row -->

@@ -1,0 +1,22 @@
+<% if @element.language == "Chinese" %>
+	<small>(<i>
+		<small><%= t 'forms.trad' %>: </small>
+			<% if @element.second_word == nil || @element.second_word.empty?  %>
+				<%= link_to_remote_redbox("#{t 'add'}", link_to_remote_options = 
+						{:url => {:action => 'pinyin_form_show', :phrase => @phrase, 
+						:element => @element, :type => @element.class }}) -%>
+			<% else %>
+				<%= @element.second_word %>, 
+			<% end %>
+		<small><%= t 'forms.pinyin' %>:</small> 
+			<% if @element.third_word == nil || @element.third_word.empty?  %>
+				<%= link_to_remote_redbox("#{t 'add'}", link_to_remote_options = 
+						{:url => {:action => 'pinyin_form_show', :phrase => @phrase, 
+						:element => @element, :type => @element.class}}) -%>
+			<% else %>
+				<%= @element.third_word %>
+			<% end %>
+			</i>)
+	</small>
+<% end %>
+

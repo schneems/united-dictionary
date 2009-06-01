@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  word: MyString
+  definition_id: 1
+  rank: 1
+
+two:
+  word: MyString
+  definition_id: 1
+  rank: 1

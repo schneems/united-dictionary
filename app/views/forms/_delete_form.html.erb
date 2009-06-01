@@ -1,0 +1,39 @@
+<div id ="delete">
+	<% @element.class.to_s == "Child" ? @type = @element.variety.to_s.downcase : 
+			@type = @element.class.to_s.downcase  %>
+	<% if @element.marked_at != nil %>
+			<p class="delete_legend"><%= t 'delete.delete_this' %> <% %> ?</p>
+				<p>
+						<%= t 'delete.marked.first' %> <%= t @type %> <%= t 'delete.marked.second' %>  <%= t @type %> <%= t 'delete.marked.third' %> 
+						<%= (@element.marked_at + 1800).to_s(:my_time) %> <%= t 'delete.marked.fourth' %><%= t @type %> 
+						<%= t 'delete.marked.fifth' %>
+						<br /><br />
+						<small><i><%= t 'delete.note_one' %>  <%= t @type.pluralize %> <%= t 'delete.note_two' %></i></small>
+				</p>
+				<br />
+	
+	<% else %>
+	
+		<% form_for @element.class.to_s.to_sym, @element, :url => { :action => "mark_element_for_delete", 
+					:element => @element.id, :type => @element.class } do |f| %>
+								<p class="delete_legend"><%= t 'delete.delete_this' %> <%= t @type %> ?</p>
+									<p><%= t  'delete.explain.first' %><%= t @type %>. <%= t  'delete.explain.second' %>
+										<%= t @type %><%= t 'delete.explain.third' %></p>
+												
+
+					<%= show_simple_captcha if !logged_in? %>
+				<p>
+					<%= f.submit "#{t 'delete.start'}" %>
+					<br / >
+					<small><i><%= t 'delete.note_one' %>  <%= t @type.pluralize %> <%= t 'delete.note_two' %></i></small>
+
+				</p>
+			<% end %><!-- form_for -->
+	<% end %><!-- if -->
+	<p>
+	<span id = "close"><%= link_to_close_redbox("#{t 'forms.close'}") %> </span>
+	</p>
+	<br />
+	<br />
+
+</div>	

@@ -1,0 +1,30 @@
+<% @flag_language = @default %>
+	<% if @default != "Chinese" %> 	
+		<tr><td><%= render :partial => 'phrases/flags' %></td><td><%= t 'forms.entry'%></td><td><%= text_area(:word, :nil) %></td></tr>
+	<% else %>
+		<% if @default == "Chinese" %>
+			<% if @first_word_exists == nil %>
+			<%= @first_word_exists %>
+				<tr><td><%= render :partial => 'phrases/flags' %></td>
+					<td><b><%= t 'forms.simplified'%></b></td>
+					<td><%= text_area :word %></td>
+				</tr>
+			<% end %><!-- if first word -->
+			<% if @second_word_exists == nil %>
+				<tr><td><%= render :partial => 'phrases/flags' %></td>
+					<td><b><%= t 'forms.traditional'%></b><br /> <sub><%= t 'forms.not_required' %></sub></td>
+					<td><%= text_area :second_word %></td>
+				</tr>
+			<% end %><!-- if second word -->
+			<% if @third_word_exists == nil %>
+				<tr><td><%= render :partial => 'phrases/flags' %></td>
+					<td><b><%= t 'forms.pinyin'%></b><br /> <sub><%= t 'forms.not_required' %></sub></td>
+					<td><%= text_area :third_word %></td>
+				</tr>
+			<% end %><!-- if third word -->
+		<% end %><!-- if default == chinese -->
+		
+		
+	<% end %><!-- if default != chinese -->
+
+

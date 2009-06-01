@@ -1,0 +1,42 @@
+<%= javascript_include_tag :defaults %>
+	<% form_for :search, @search, :url => { :action => "search_slang", :controller => 'phrases'}, :html => { :name => 'my-superb-form'}, :method => 'get'  do |f| %>
+	<table>
+		<tr>
+		<% @default = params[:language]||@over_ride||"English" %>
+		<% if @default == "Chinese" %>
+			<% @second_language = params[:second_language]||@second_language %>
+		<% end %>
+		
+		<td><%= text_field(:query, nil)%></td>
+			
+		<td><%= f.submit  t 'search.submit'	 %></td>
+			<td>	
+				<% @default = params[:language]||@over_ride||"English" %>
+					<%= select_tag(:language, 
+						options_for_select([
+						                    ["#{I18n.t 'languages.chinese'.to_sym}", "Chinese"],
+						                    ["#{I18n.t 'languages.dutch'.to_sym}", "Dutch"],
+						                    ["#{I18n.t 'languages.english'.to_sym}","English"],
+						                    ["#{I18n.t 'languages.french'.to_sym}", "French"],
+						                    ["#{I18n.t 'languages.german'.to_sym}", "German"],
+						                    ["#{I18n.t 'languages.greek'.to_sym}", "Greek"],
+						                    ["#{I18n.t 'languages.italian'.to_sym}", "Italian"],
+						                    ["#{I18n.t 'languages.japanese'.to_sym}", "Japanese"],
+						                    ["#{I18n.t 'languages.korean'.to_sym}", "Korean"],
+						                    ["#{I18n.t 'languages.portuguese'.to_sym}", "Portuguese"],
+						                    ["#{I18n.t 'languages.russian'.to_sym}", "Russian"],
+						                    ["#{I18n.t 'languages.spanish'.to_sym}", "Spanish"]
+						                  ]	, @default||"English"), :onchange => remote_function(:with => 
+						"'language='+this.value", :update => 'language_select', 
+						:url => {:action => :change_first_language, :controller => 'phrases'})) %> 
+				</td>
+				<td>
+					<span id = "language_select">
+					
+				<%= render :partial => 'layouts/search_for_second_lang' %>
+				</span>
+				
+			</td>
+		</tr>
+	</table>
+	<% end %>

@@ -1,0 +1,14 @@
+
+<% if logged_in? %>
+<% form_for :user, :url => {:action => 'update_login', :id => current_user} do |f| %>
+<span id="profile_login">
+	<%= t 'email' %>: 
+	<%= f.text_field(:email, :value => current_user.email) -%>  <%= submit_tag 'Sign Up' %> &nbsp <%= link_to 'Cancel', profile_path, :controller => "users" %>
+	<% end %><!-- form_for -->
+</span>
+	
+<% else %>
+	<%= t 'weird_login' %>
+<% end %>
+
+

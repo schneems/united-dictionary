@@ -1,0 +1,618 @@
+ru:
+  phrase:                     "Главная Вступление"
+  phrases:                    "Основные позиции"
+  definition:                 "Определение"
+  definitions:                "Определения"
+  synonym:                    "Синоним"
+  synonyms:                   "Синонимы"
+  antonym:                    "Антоним"
+  antonyms:                   "Антоним"
+  mugshot:                    "Фотография"
+  mugshots:                   "Картинки"
+  comment:                    "Комментарий"
+  comments:                   "Комментарии"
+  search:                     
+    submit:                   "Отправить"
+    all:                      "Все"
+    simplified:               "Упрощенные"
+    pinyin:                   "Pinyin"
+    traditional:              "Традиционные"
+  header:                     
+    navigation:               
+      add:                    "Добавить"
+      home:                   "Домашний"
+      game:                   "Игра"
+      orphans:                "Сироты"
+      recent:                 "Последние"
+      random:                 "Случайный"
+      top_users:              "Топ пользователей"
+      download:               "Скачать"
+      a_z:                    "А-Я"
+    login:                    
+      no_username:            "Нажмите здесь, чтобы задать Имя пользователя "
+      logout:                 'Выход'
+      login:                  'Логин'
+      signup:                 'Зарегистрироваться'
+  footer:                     
+    terms:                    "Условия пользования"
+    privacy:                  "Конфиденциальность"
+    contact:                  "Контакт"
+    about:                    "О"
+  welcome:                    
+    main:                     "Является пользователем представили словарь"
+    message:                  "Если вы не видите его ... добавить его, если вам это не нравится ... И звание удалить"
+    top_ranked:               "Топ Ранжированные Определения!!"
+  forms:                      
+    entry:                    "Вступление:"
+    synonym:                  "Синоним:"
+    antonym:                  "Антоним:"
+    update:                   "Обновить"
+    not_required:             "Не требуется"
+    required:                 "Required"
+    close:                    "Закрыть X" # # X-это просто, чтобы дать пользователю то, чтобы нажать на
+    language:                 "Язык:"
+    simplified:               "Упрощенный:" # #, как и в упрощенном китайском
+    traditional:              "Традиционные:" # #''
+    trad:                     "Trad"
+    pinyin:                   "Pinyin"
+  user:                       
+    added_by:                 "Добавлено"
+  comments:                   
+    add_comment:              "Добавить комментарий"
+    submit:                   "Отправить комментарий"
+    comments_for:             "Комментарии к" # "Комментарии к данной записи"
+    no_comments:              "Нет Комментарии добавил Однако"
+    name:                     "Имя:" # 'Пожалуйста, введите свое имя: "
+    comments:                 "Комментарий:"
+    add_new:                  "Добавить комментарий"
+  delete:                     
+    delete_this:              "Удалить Это "
+    start:                    "Старт отсчет?"
+    note_one:                 "Примечание: Эта опция доступна только для "
+    note_two:                 "С негативным ранга или менее чем за 24 часа"
+    marked:                   
+      first:                  "Это" # # капитализирован
+      second:                 "Уже был отмечен для удаления. Если"
+      third:                  "S ранга отрицательно на"
+      fourth:                 "Это будет подаваться в Slangasaur и прекратит свое существование! Если вы хотите сохранить эту"
+      fifth:                  ", А затем увеличить свой рейтинг с помощью нажатия пальцами вверх!"
+    explain:                  
+      first:                  "Нажав на кнопку отправить , вы начнете молчание deathclock (OOOOH страшно) за это"
+      second:                 "Когда часы забастовки нуля в 30 минут, если это"
+      third:                  "S ранга отрицательный он будет сыт по Slangasaur и прекратит свое существование!! Если положительно будут избавлены, вы хотели бы судить этот штраф Вступление??"
+  definitions:                
+    def:                      "Def."
+    add:                      "Добавить Определение "
+    defined:                  "Определяется как:"
+    example:                  "Пример"
+    pos:                      "Часть речи"
+    description:              "(Нажмите для более описание)"
+    noun:                     "Имена"
+    pronoun:                  "Местоимение"
+    verb:                     "Глагол"
+    adverb:                   "Наречие"
+    adjective:                "Прилагательным"
+    preposition:              "Предлог"
+    conjunction:              "Союз"
+    interjection:             "Междометие"
+    phrase:                   "Фраза"
+    no_clue:                  "Нет Clue"
+    remove:                   "Снимите это определение"
+    warning:                  "Все данные в определении формы будут потеряны, дальше?"
+  model:                      
+    add:                      
+      add_new:                "Добавить новые: "
+      comment:                "Добавить"
+      definition:             "Добавить новое определение"
+      phrase:                 "Добавить новое главное Вступление"
+      antonym:                "Добавить антонимом "# шапки
+      synonym:                "Добавить Синоним "# шапки
+  languages:                  
+    chinese:                  "Китайский"
+    dutch:                    "Голландский"
+    english:                  "Английский язык"
+    french:                   "Французский"
+    german:                   "German"
+    greek:                    "Греческий"
+    italian:                  "Итальянский"
+    japanese:                 "Японский"
+    korean:                   "Корейский"
+    portuguese:               "Португальский"
+    russian:                  "Русский"
+    spanish:                  "Испанский"
+  guidelines:                 
+    first:                    "Написать для большой аудитории (Нет Внутри Шутки)"
+    second:                   "Ни названий, за исключением общественных деятелей"
+    third:                    "Получите максимум от вашей вступления добавив определений, синонимов, антонимов, а также фотографии"
+  meta:                       
+    title:                    "Slangasaurus - В Жаргон словарь и тезаурус Городские вы написали"
+    description:              "Жаргон синонимов, антонимов, определений, переводы, и фотографии для"
+    altdescription:           "Slangasaurusaurus пользователя представила сленг тезаурус и словарь. Поиск и добавить сленг, определений, синонимов, антонимов, переводы, и картинки, на китайском, голландском, Английский, французский, немецкий, греческий, итальянский, японский, корейский, португальский, русский, испанском языке. "
+    keywords:                 "Жаргон, определение, синонимы, антонимы, перевод, городской словарь, тезаурус"
+    altkeywords:              "Жаргон, городское словарь, словарь сленга, жаргона тезаурусом, slangasaurus, перевод сленг, жаргон сленг, определенным пользователем, пользователя представляться"
+  products:                   
+    title:                    "Продукты"
+    released:                 "Релиз"
+  flash:                      
+    login:                    "Зарегистрированный успешно"
+    new_success:              "Успешно добавлен новый"
+    update_success:           "Успешно обновлено"
+    error:                    "Ошибка при сохранении"
+    correct:                  "Правильный"
+    incorrect:                "Неверных"
+    three_zero_one:           "Это URL был переведен"
+    ticking:                  "30 минут ... Время идет!"
+    search_one:               "Никто не добавил:"
+    search_two:               "Помощь каждому из добавив его!"
+  error:                      
+    captcha:                  "Письма из коробки, не совпадают с изображением"
+    saving:                   "Ошибка при сохранении"
+  download:                   
+    explain:                  "Пусть ваш язык вырасту! Загрузка и использование этих словарей, которые вы помогли построить. <br /> Не забывайте, чтобы помочь каждому из другой, добавляя свои собственные слова!!"
+  contact_me:                 "Пожалуйста, направляйте все замечания и проблемы, которые выше электронной почте. Я напишу позже форму, спасибо за вашу помощь!!"
+  a_z:                        
+    begin_with:               "Все заявки, которые начинаются с буквы"
+    no_words:                 "Нет слов, которые были добавлены в"
+    that_begin_with:          ", Которые начинаются с"
+  about:                      
+    welcome:                  "Добро пожаловать, это многоязычный пользователя представила тезаурус, который позволяет искать и добавлять слова, сленг, и фразы на разных языках"
+    why:                      "<h3> Но почему ...? </ H3> <p> Конечно Есть тонна словарей в Интернете, но, как многие из них имеют самые свежие определения, чтобы предоставить вам слова и фразы, люди со всего мира фактически используете? других пользователей представлены словари существуют, я рекомендую, Викисловарь, но я также стремиться идти выше и за их ограниченных возможностей, и для пользователей интерфейс. Если ничего не один веб-сайт или организация должны иметь душу провести на языковые ресурсы, чтобы использовать все, что есть там. Это инструмент для людей, чтобы написать свою собственную историю, и познакомьтесь с одной другой. </ P> "
+    how:                      "<h3> Но как ...? </ H3> <p> Этот сайт был написан с использованием Ruby On Rails, который является веб-программирования. Это позволяет вам вещи типа в ящиках для отправки на сервер и сохраняются в База данных. Тис 'довольно Awesome. </ P> "
+    who:                      "<h3> Но кто ...? </ H3> <p> Ричард Schneeman имеет абсолютно никакого программирования веб-справочных и смог получить достаточно, чтобы большая часть этого приложения с нуля в чуть менее года, это также включает потери все его код, если его компьютер был украден во второй раз. Инженер-механик, что окончил Грузии техническая мая 2008 года. Он любит Вейкбординг, сноубординг, обрушения, альпинизм, и делая сумасшедшие вещи. В настоящее время он работает на National Instruments (они внести данные приобретение программного обеспечения и аппаратных средств, а не калькуляторы) и живет в Остине, Tx. </ P> "
+  orphans:                    
+    without_synonyms:         "Без синонимы и антонимы <br />"
+    without_definitions:      "Без <br /> Определения"
+    no_orphans:               "Все определения синонимов и антонимов, чтобы помочь держать их компанией. Yay для них"
+  recently_added:             "Недавно добавлено"
+  search_results:             "Результаты поиска"
+  translations:               "Переводы"
+  add:                        "Добавить" # # добавить в свой список
+  yet:                        "Пока"
+  or:                         "Или"
+  to:                         "До" # # успешно добавлен новый синоним "на" эту запись
+  in:                         "В" # # "положить этому" в "буфете"
+  dictionary:                 "Словарь"
+  alpha:                      "Эта функция находится в альфа-, пожалуйста, повторите попытку позже"
+  user:                       "Пользователь"
+  rank:                       "Ранг"
+  added_by:                   "Добавлена"
+  no_definitions_added:       "Вы еще не добавили еще каких-либо определений"
+  no_phrases_added:           "Вы не добавили основные позиции еще"
+  top_users:                  "Топ 25 пользователей"
+  login:                      "Логин"
+  skip_authentication:        "Перейти к подлинности"
+  username:                   "Имя пользователя"
+  password:                   "Пароль"
+  remember_me:                "Помните меня?"
+  open_id:                    "OpenID"
+  url:                        "URL"
+  log_in:                     "Войти"
+  email:                      "E-Mail"
+  status:                     "Статус"
+  my_profile:                 "Мой профиль"
+  my_definitions:             "Показывать мой Определения"
+  show_my:                    "Show_my"
+  then:                       ", А затем"
+  get_an:                     "Взять" # # OpenID логин
+  weird_login:                "Для какой-то странной причине вы не вошли в систему прямо сейчас, пожалуйста, войдите в систему и попробуйте еще раз"
+  signup_locally:             "... Или создать локальную учетную запись пользователя"
+  confirm:                    "Подтвердить"
+  never_spam:                 "Никогда не распоряжение, не спам!"
+  edit:                       "Изменить"
+  every_time:                 "Каждый раз, когда"
+  gets_a:                     "Получает"
+  an_angel:                   ", Ангел получает ее крыльев!!! <br /> J / K, но серьезно помочь"
+  out:                        "Out!"
+                              
+                              
+  en:                         
+    phrase:                   
+    phrases:                  
+    definition:               
+    definitions:              
+    synonym:                  
+    synonyms:                 
+    antonym:                  
+    antonyms:                 
+    mugshot:                  
+    mugshots:                 
+    comment:                  
+    comments:                 
+    search:                   
+      submit:                 
+      all:                    
+      simplified:             
+      pinyin:                 
+      traditional:            
+    header:                   
+      navigation:             
+        add:                  
+        home:                 
+        game:                 
+        orphans:              
+        recent:               
+        random:               
+        top_users:            
+        download:             
+        a_z:                  
+      login:                  
+        no_username:          
+        logout:               
+        login:                
+        signup:               
+    footer:                   
+      terms:                  
+      privacy:                
+      contact:                
+      about:                  
+    welcome:                  
+      main:                   
+      message:                
+      top_ranked:             
+    forms:                    
+      entry:                  
+      synonym:                
+      antonym:                
+      update:                 
+      not_required:           
+      required:               
+      close:                  
+      language:               
+      simplified:             
+      traditional:            
+      trad:                   
+      pinyin:                 
+    user:                     
+      added_by:               
+    comments:                 
+      add_comment:            
+      submit:                 
+      comments_for:           
+      no_comments:            
+      name:                   
+      comments:               
+      add_new:                
+    delete:                   
+      delete_this:            
+      start:                  
+      note_one:               
+      note_two:               
+      marked:                 
+        first:                
+        second:               
+        third:                
+        fourth:               
+        fifth:                
+      explain:                
+        first:                
+        second:               
+        third:                
+    definitions:              
+      def:                    
+      add:                    
+      defined:                
+      example:                
+      pos:                    
+      description:            
+      noun:                   
+      pronoun:                
+      verb:                   
+      adverb:                 
+      adjective:              
+      preposition:            
+      conjunction:            
+      interjection:           
+      phrase:                 
+      no_clue:                
+      remove:                 
+      warning:                
+    model:                    
+      add:                    
+        add_new:              
+        comment:              
+        definition:           
+        phrase:               
+        antonym:              
+        synonym:              
+    languages:                
+      chinese:                
+      dutch:                  
+      english:                
+      french:                 
+      german:                 
+      greek:                  
+      italian:                
+      japanese:               
+      korean:                 
+      portuguese:             
+      russian:                
+      spanish:                
+    guidelines:               
+      first:                  
+      second:                 
+      third:                  
+    meta:                     
+      title:                  
+      description:            
+      altdescription:         
+      keywords:               
+      altkeywords:            
+    products:                 
+      title:                  
+      released:               
+    flash:                    
+      login:                  
+      new_success:            
+      update_success:         
+      error:                  
+      correct:                
+      incorrect:              
+      three_zero_one:         
+      ticking:                
+      search_one:             
+      search_two:             
+    error:                    
+      captcha:                
+      saving:                 
+    download:                 
+      explain:                
+    contact_me:               
+    a_z:                      
+      begin_with:             
+      no_words:               
+      that_begin_with:        
+    about:                    
+      welcome:                
+      why:                    
+      how:                    
+      who:                    
+    orphans:                  
+      without_synonyms:       
+      without_definitions:    
+      no_orphans:             
+    recently_added:           
+    search_results:           
+    translations:             
+    add:                      
+    yet:                      
+    or:                       
+    to:                       
+    in:                       
+    dictionary:               
+    alpha:                    
+    user:                     
+    rank:                     
+    added_by:                 
+    no_definitions_added:     
+    no_phrases_added:         
+    top_users:                
+    login:                    
+    skip_authentication:      
+    username:                 
+    password:                 
+    remember_me:              
+    open_id:                  
+    url:                      
+    log_in:                   
+    email:                    
+    status:                   
+    my_profile:               
+    my_definitions:           
+    show_my:                  
+    then:                     
+    get_an:                   
+    weird_login:              
+    signup_locally:           
+    confirm:                  
+    never_spam:               
+    edit:                     
+    every_time:               
+    gets_a:                   
+    an_angel:                 
+    out:                      
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              
+                              

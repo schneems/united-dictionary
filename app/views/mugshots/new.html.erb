@@ -1,0 +1,30 @@
+<div id ="new_picture_show">
+		<%= error_messages_for :mugshot %>
+		<% form_for(:mugshot, :url => {:action => 'create', :controller => 'mugshots', 
+							:type => @element.class, :value => @element.id}, :html => {:multipart => true }) do |f| -%>
+		  <p>
+		    <label for="mugshot">Upload A Picture:</label>
+		    <%= f.file_field :uploaded_data %>
+		  </p>
+		<div id = "picture_explained">
+			<p>By clicking submit and uploading, you agree to abide by the terms and conditions 
+				of this website, that this material is not pornographic or inappropriate, and that 
+				you have the right to distribute this material. 
+			</p><br />
+		</div><!-- picture_explained -->
+		<% if logged_in? %>	
+				<div id = "new_mugshot_captcha_position">
+				   <img src="/images/dino.gif" height = "90px" width = "90x" /> 
+				   <p>Thanks for Signing In!
+				</div><!-- new_dino_position -->
+			<% else %>						 
+				<div id ="new_mugshot_captcha_position">
+					<%= show_simple_captcha %>
+				</div> <!-- new_captcha_position -->
+		<% end %>
+		
+		  <p>
+		    <%= submit_tag 'Submit Picture' %>
+		  </p>
+		<% end -%>
+</div><!--new_picture_show -->

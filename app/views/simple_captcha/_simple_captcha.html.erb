@@ -1,0 +1,18 @@
+<!-- Copyright (c) 2007 [Sur http://expressica.com] -->
+
+<div id='simple_captcha'>
+  <div class='simple_captcha_image'>
+    <%= @simple_captcha_options[:image] %>
+  </div>
+  
+  <div class='simple_captcha_field'>
+    <%= @simple_captcha_options[:field] %>
+  </div>
+  
+  <div class='simple_captcha_label'>
+	<p>
+    	<% @simple_captcha_options[:label] %>
+		<small>(<%= link_to "#{t 'login'}", login_path %> <%= t 'skip_authentication' %>)</small>
+	</p>
+  </div>
+</div>
