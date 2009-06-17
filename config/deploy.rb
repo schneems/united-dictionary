@@ -1,7 +1,7 @@
 set :user, "snowmaninthesun"
 set :application, "uniteddictionary.com"
 set :app_folder, "current"
-set :repository, "git://github.com/snowmaninthesun/united-dictionary.git"
+set :repository, "git@github.com:snowmaninthesun/united-dictionary.git"
 
 
 

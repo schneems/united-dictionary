@@ -1,0 +1,6 @@
+g.DS_Store
+log/*.log
+tmp/**/*
+config/database.yml
+Private_Readme
+
