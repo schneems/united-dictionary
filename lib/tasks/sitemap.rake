@@ -5,7 +5,7 @@ namespace :google_sitemap do
   task(:generate => :environment) do
     # Generate sitemaps for each of the models listed in the array
     sources = %w( Phrase )
-    sitemap = GoogleSitemapGenerator.new('http://www.slangasaur.us', sources)
+    sitemap = GoogleSitemapGenerator.new('http://www.uniteddictionary.com', sources)
     sitemap.generate
   end
 end

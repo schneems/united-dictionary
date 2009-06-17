@@ -23,15 +23,20 @@ class GoogleSitemapGenerator
       # initialize the class and call the get_paths method on it.
       # path_ar = eval("phrase.get_paths")
       
-      path_ar = eval("#{source}.get_paths")
+      
+      path_size = eval("#{source}.count")
+      
+      
+     # path_ar = eval("#{source}.get_paths")
       ## path_ar is an array of every path in the website
       
-      path_size = path_ar.size
       @number_of_xml_files = path_size/50000
       
       ## this is what makes multiple xml files
+      
       0.upto(@number_of_xml_files) do |count|
-        individual_path = path_ar[count*50000,50000]
+        path_ar = eval("#{source}.get_paths(50000, count*50000, #{path_size})")
+        individual_path = path_ar
         xml = generate_sitemap(individual_path)
         save_file(source+count.to_s, xml)
         @new_sources = []

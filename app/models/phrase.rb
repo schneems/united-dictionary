@@ -79,14 +79,19 @@ class Phrase < ActiveRecord::Base
   end
 
 
-     
-     def self.get_paths
-       path_ar = []       
-       self.find(:all).each do |model|
+
+
+     def self.get_paths(limit, offset, element_count)
+       path_ar = []            
+       ## this code checks to see if we're in our last iteration and adjusts accordingly
+       if (limit + offset) >= element_count
+         limit = element_count - offset
+         start = element_count 
+       end
+       self.find(:all, :limit => limit, :offset => offset).each do |model|
          path_ar << {:url => "/slang/#{model.language}/#{model.word}", :last_mod => model.updated_at.strftime('%Y-%m-%d')}
        end
        path_ar
-       ## path_ar is an array of every path in the website
      end
      
      
