@@ -1,8 +1,8 @@
 set :user, 'snowmaninthesun'  # Your dreamhost account's username
-set :domain, 'wolverine'  # Dreamhost servername where your account is located 
+set :domain, 'wolverine.dreamhost.com'  # Dreamhost servername where your account is located 
 #set :project, 'myapp_name_from_repository'  # Your application as its called in the repository
 set :application, 'uniteddictionary.com'  # Your app's location (domain or sub-domain name as setup in panel)
-set :applicationdir, "/home/#{user}/current/#{application}"  # The standard Dreamhost setup
+set :applicationdir, "/home/#{user}/#{application}"  # The standard Dreamhost setup
 
 # version control config
 
