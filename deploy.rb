@@ -1,13 +1,16 @@
-set :user, "my_user_name"
-set :application, "gridworlds.com"
-set :repository, "http://svn.gridworlds.com/trunk"
+set :user, "snowmaninthesun"
+set :application, "uniteddictionary.com"
+set :app_folder, "current"
+set :repository, "git://github.com/snowmaninthesun/united-dictionary.git"
+
+
 
 role :web, application
 role :app, application
 role :db,  application, :primary => true
 
 
-set :deploy_to, "/home/#{user}/#{application}"
+set :deploy_to, "/home/#{user}/#{application}/#{app_folder}"
 set :use_sudo, false
 set :checkout, "export"
 set :scm_verbose, true
