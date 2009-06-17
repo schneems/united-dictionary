@@ -26,7 +26,7 @@ task :after_update_code, :roles => [:app, :db, :web] do
   # set permissions
   run "chmod +x #{release_path}/script/process/reaper"
   run "chmod +x #{release_path}/script/process/spawner"
-  run "chmod 755 #{release_path}/script/spin"
+  # run "chmod 755 #{release_path}/script/spin"
   run "chmod 755 #{release_path}/public/dispatch.*"
   # switch to production mode in config/environment.rb
   run "sed 's/# ENV\\[/ENV\\[/g' #{release_path}/config/environment.rb > #{release_path}/config/environment.temp"
