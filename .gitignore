@@ -1,6 +1,6 @@
 g.DS_Store
 log/*.log
 tmp/**/*
-zconfig/database.yml
+config/database.yml
 Private_Readme
 

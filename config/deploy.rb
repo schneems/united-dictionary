@@ -2,12 +2,14 @@ set :user, 'snowmaninthesun'  # Your dreamhost account's username
 set :domain, 'wolverine.dreamhost.com'  # Dreamhost servername where your account is located 
 #set :project, 'myapp_name_from_repository'  # Your application as its called in the repository
 set :application, 'uniteddictionary.com'  # Your app's location (domain or sub-domain name as setup in panel)
-set :applicationdir, "/home/#{user}/#{application}/current"  # The standard Dreamhost setup
+set :applicationdir, "/home/#{user}/#{application}/"  # The standard Dreamhost setup
 
 # version control config
 
 set :scm, 'git'
 set :repository,  "git://github.com/snowmaninthesun/united-dictionary.git"
+# file:///users/home/anoop/git/mephisto.git
+
 set :deploy_via, :remote_cache
 set :git_enable_submodules, 1 # if you have vendored rails
 set :branch, 'master'

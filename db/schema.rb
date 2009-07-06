@@ -36,7 +36,8 @@ ActiveRecord::Schema.define(:version => 20081211144147) do
     t.string   "third_word"
   end
 
-  add_index "children", ["definition_id", "id"], :name => "index_children_on_id_and_definition_id"
+  add_index "children", ["definition_id"], :name => "index_children_on_definition_id"
+  add_index "children", ["id"], :name => "index_children_on_id"
 
   create_table "comments", :force => true do |t|
     t.text     "comment_field"
@@ -63,7 +64,7 @@ ActiveRecord::Schema.define(:version => 20081211144147) do
     t.integer  "user_id"
   end
 
-  add_index "definitions", ["id", "meaning", "phrase_id", "rank"], :name => "index_definitions_on_id_and_phrase_id_and_meaning_and_rank"
+  add_index "definitions", ["id"], :name => "index_definitions_on_id"
   add_index "definitions", ["phrase_id"], :name => "index_definitions_on_phrase_id"
   add_index "definitions", ["rank"], :name => "index_definitions_on_rank"
   add_index "definitions", ["user_id"], :name => "index_definitions_on_user_id"
@@ -127,9 +128,8 @@ ActiveRecord::Schema.define(:version => 20081211144147) do
   end
 
   add_index "phrases", ["created_at"], :name => "index_phrases_on_created_at"
-  add_index "phrases", ["id", "rank", "second_word", "third_word"], :name => "index_phrases_on_id_and_rank_and_second_word_and_third_word"
-  add_index "phrases", ["language", "word"], :name => "phrases_1_idx"
   add_index "phrases", ["user_id"], :name => "index_phrases_on_user_id"
+  add_index "phrases", ["word", "language"], :name => "index_phrases_on_word_and_language"
 
   create_table "relateds", :force => true do |t|
     t.string   "word"
@@ -154,16 +154,6 @@ ActiveRecord::Schema.define(:version => 20081211144147) do
     t.datetime "updated_at"
   end
 
-  create_table "synonyms", :force => true do |t|
-    t.string   "word"
-    t.string   "language"
-    t.integer  "definition_id"
-    t.integer  "rank"
-    t.datetime "marked_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "login"
     t.string   "email"
@@ -183,15 +173,5 @@ ActiveRecord::Schema.define(:version => 20081211144147) do
   end
 
   add_index "users", ["id"], :name => "index_users_on_id"
-
-  create_table "votes", :force => true do |t|
-    t.integer  "vote",          :limit => 2
-    t.datetime "created_at",                                  :null => false
-    t.string   "voteable_type", :limit => 15, :default => "", :null => false
-    t.integer  "voteable_id",                 :default => 0,  :null => false
-    t.integer  "user_id",                     :default => 0,  :null => false
-  end
-
-  add_index "votes", ["user_id"], :name => "votes_user_id_idx"
 
 end

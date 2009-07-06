@@ -6,6 +6,9 @@ class UsersController < ApplicationController
   # before_filter :admin_required, :only => [:suspend, :unsuspend, :destroy, :purge]
   before_filter :find_user, :only => [:suspend, :unsuspend, :destroy, :purge]
 
+
+
+  
   def no_spam
     email = params[:email]
     site = params[:site]

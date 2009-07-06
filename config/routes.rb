@@ -11,7 +11,6 @@
   # map.orphans '/orphans', :controller => 'phrases', :action => 'orphans'
    
 
-
    
    map.simple_captcha '/simple_captcha/:action', :controller => 'simple_captcha'
    map.open_id_complete 'session', :controller => "sessions", :action => "create", :requirements => { :method => :get }
