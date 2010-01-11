@@ -7,7 +7,7 @@ set :applicationdir, "/home/#{user}/#{application}/"  # The standard Dreamhost s
 # version control config
 
 set :scm, 'git'
-set :repository,  "git://github.com/snowmaninthesun/united-dictionary.git"
+set :repository,  "git://github.com/thinkbohemian/united-dictionary.git"
 # file:///users/home/anoop/git/mephisto.git
 
 set :deploy_via, :remote_cache
