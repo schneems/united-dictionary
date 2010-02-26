@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/views/phrases/index.html.erb</string>
+	<string>lib/tasks/spider.rake</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,9 +18,23 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>218</integer>
+	<integer>326</integer>
 	<key>metaData</key>
 	<dict>
+		<key>Capfile</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>Private_Readme</key>
 		<dict>
 			<key>caret</key>
@@ -96,39 +110,23 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>42</integer>
+				<integer>0</integer>
 				<key>line</key>
-				<integer>12</integer>
+				<integer>95</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>26</integer>
-				<key>line</key>
-				<integer>12</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>42</integer>
-				<key>line</key>
-				<integer>12</integer>
-			</dict>
+			<integer>91</integer>
 		</dict>
 		<key>app/views/phrases/index.html.erb</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>40</integer>
+				<integer>15</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>4</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -208,6 +206,20 @@
 				<key>line</key>
 				<integer>38</integer>
 			</dict>
+		</dict>
+		<key>config/deploy.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>33</integer>
+				<key>line</key>
+				<integer>104</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>98</integer>
 		</dict>
 		<key>config/environment.rb</key>
 		<dict>
@@ -298,14 +310,28 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>32</integer>
+				<integer>115</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>17</integer>
+			<integer>102</integer>
+		</dict>
+		<key>lib/tasks/spider.rake</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>126</integer>
+				<key>line</key>
+				<integer>28</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>21</integer>
 		</dict>
 		<key>public/languages/korean/practice.txt</key>
 		<dict>
@@ -371,10 +397,13 @@
 		<string>app/models/phrase.rb</string>
 		<string>script/plugin</string>
 		<string>lib/tasks/chinese.rake</string>
+		<string>Capfile</string>
+		<string>config/deploy.rb</string>
 		<string>config/routes.rb</string>
 		<string>app/views/simple_captcha/_simple_captcha.erb</string>
 		<string>app/views/simple_captcha/_simple_captcha.html.erb</string>
 		<string>app/views/layouts/phrases.html.erb</string>
+		<string>lib/tasks/spider.rake</string>
 		<string>app/helpers/application_helper.rb</string>
 		<string>config/locales/en.yml</string>
 		<string>deploy_readme</string>
@@ -387,6 +416,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{519, 26}, {936, 302}}</string>
+	<string>{{355, 80}, {1039, 376}}</string>
 </dict>
 </plist>
